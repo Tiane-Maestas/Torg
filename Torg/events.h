@@ -20,7 +20,9 @@ class Reminder
  public:
     //@param - "reminder" should be a string of ints separated by ' '.
     Reminder(std::string date, std::string reminder);
-    ~Reminder();
+    Reminder(){ date = "none"; }
+    //No data should be allocated
+    ~Reminder(){}
 
     //checks to see if any of the reminder conditions have been met.
     //if a condtion is met it returns true.
@@ -30,6 +32,7 @@ class Reminder
     //Keeps track of the number of days before the date to remind the user.
     //This is a list so that mulitple reminders can be set.
     std::vector<int> reminderList;
+    std::string date;
 };
 
 
@@ -43,7 +46,11 @@ public:
     //Assign member varibles. Construct reminder object. @param - "reminder" should be a string of ints separated by ' '.
     SingleEvent(std::string title, std::string startTime, std::string endTime, std::string notes,
                 std::string repeat, std::string date,  std::string reminder, std::string color, bool concrete);
-    ~SingleEvent();
+    SingleEvent(const SingleEvent& event);
+    SingleEvent(){ this->title = "none"; this->startTime = "none"; this->endTime = "none"; this->notes = "none"; this->repeat = "none";
+                   this->reminder = Reminder(); this->color = "none"; this->concrete = 1; }
+    //No data should be allocated
+    ~SingleEvent(){}
 
     //Returns a string to represent the event on the display.
     const std::string toString() const;
@@ -75,7 +82,8 @@ class DayEvent
 {
  public:
     DayEvent(std::string date, SingleEvent event);
-    ~DayEvent();
+    //No data should be allocated
+    ~DayEvent(){}
 
     //All single events in this day.
     //Held as a map between title and event to allow for
@@ -83,10 +91,10 @@ class DayEvent
     std::map<std::string, SingleEvent> eventMap;
 
     //adds a SingleEvent to event map.
-    bool addEvent();
+    void addEvent(SingleEvent event);
 
     //erases all data of single event.
-    bool deleteEvent(std::string title);
+    void deleteEvent(std::string title);
 
     //Saves all events in the event map.
     //Writes each single event to the save file under this date.
@@ -95,7 +103,7 @@ class DayEvent
     //-The event does not exist in the save file already.
     //-Not a duplicate event. (due to repition)
     //Returns true if saved succesfully.
-    bool save();
+    bool save(std::string path);
 
     //Getters
     const std::string getDate() const{ return this->date; }
