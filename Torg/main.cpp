@@ -3,7 +3,6 @@
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
-#include <QFile>
 #include <QDir>
 
 #include "events.h"
@@ -36,8 +35,8 @@ int main(int argc, char *argv[])
     a.setWindowIcon(QIcon(QString::fromStdString(iconPath)));
 
     SingleEvent event1("title1", "startTime1", "endTime1", "notes1", "repeat1", "TestDate",  "1 2 3 ", "color1", 0);
-    SingleEvent event2("title2", "startTime2", "endTime2", "notes2", "repeat2", "TestDate",  "reminder2", "color2", 0);
-    SingleEvent event3("title3", "startTime3", "endTime3", "notes3", "repeat3", "TestDate",  "reminder3", "color3", 0);
+    SingleEvent event2("title2", "startTime2", "endTime2", "notes2", "repeat2", "TestDate",  "1 2 3 ", "color2", 0);
+    SingleEvent event3("title3", "startTime3", "endTime3", "notes3", "repeat3", "TestDate",  "1 2 3 ", "color3", 0);
     event1.needsSave();
     event2.needsSave();
     event3.needsSave();

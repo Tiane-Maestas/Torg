@@ -3,15 +3,13 @@
 #include <QtCore>
 #include <iostream>
 #include <QIODevice>
-#include <QFile> //Include somewhere else becuse it is also used in main
 
 Reminder::Reminder(std::string date,  std::string reminder){
     this->date = date;
-    return; //TO-DO
     std::istringstream string_stream(reminder);
     std::string num;
     while(getline(string_stream, num, ' ')){
-        reminderList.push_back(stoi(num));
+        reminderList.push_back(std::stoi(num));
     }
 }
 
@@ -28,6 +26,7 @@ SingleEvent::SingleEvent(std::string title, std::string startTime, std::string e
     this->notes = notes;
     this->repeat = repeat;
     this->reminder = Reminder(date, reminder);
+    this->rem = reminder;
     this->color = color;
     this->concrete = concrete;
     this->duplicate = false;
@@ -35,14 +34,15 @@ SingleEvent::SingleEvent(std::string title, std::string startTime, std::string e
 }
 
 SingleEvent::SingleEvent(const SingleEvent& event,  bool isDuplicate){
-    this->title = event.title;
-    this->startTime = event.startTime;
-    this->endTime = event.endTime;
-    this->notes = event.notes;
-    this->repeat = event.repeat;
-    this->reminder = event.reminder;
-    this->color = event.color;
-    this->concrete = event.concrete;
+    this->title = event.getTitle();
+    this->startTime = event.getStartTime();
+    this->endTime = event.getEndTime();
+    this->notes = event.getNotes();
+    this->repeat = event.getRepeat();
+    this->reminder = event.getReminder();
+    this->rem = event.getRem();
+    this->color = event.getColor();
+    this->concrete = event.getConcrete();
     this->duplicate = isDuplicate;
     this->updated = false;
 }
@@ -53,7 +53,7 @@ const std::string SingleEvent::toString() const{
 
 DayEvent::DayEvent(std::string date, SingleEvent event){
     this->date = date;
-    this->dayOfTheWeek = "Monday"; //TO-DO
+    this->dayOfTheWeek = dayOfWeek(date);
     this->eventMap[event.getTitle()] = event;
 }
 
@@ -61,7 +61,6 @@ void DayEvent::addEvent(SingleEvent event){
     this->eventMap[event.getTitle()] = event;
 }
 
-//TO-DO: delete from save file.
 bool DayEvent::deleteEvent(std::string date, std::string path){
 
     QFile file(QString::fromStdString(path));
@@ -107,11 +106,22 @@ bool DayEvent::save(std::string path){
 
         QJsonObject event;
 
-        //TO-DO
         QJsonValue title(QString::fromStdString(it->second.getTitle()));
         QJsonValue notes(QString::fromStdString(it->second.getNotes()));
+        QJsonValue startTime(QString::fromStdString(it->second.getStartTime()));
+        QJsonValue endTime(QString::fromStdString(it->second.getEndTime()));
+        QJsonValue repeat(QString::fromStdString(it->second.getRepeat()));
+        QJsonValue reminder(QString::fromStdString(it->second.getRem()));
+        QJsonValue color(QString::fromStdString(it->second.getColor()));
+        QJsonValue concrete(it->second.getConcrete());
         event.insert("title", title);
         event.insert("notes", notes);
+        event.insert("start-time", startTime);
+        event.insert("end-time", endTime);
+        event.insert("repeat", repeat);
+        event.insert("reminder", reminder);
+        event.insert("color", color);
+        event.insert("concrete", concrete);
 
         events.push_back(event);
 

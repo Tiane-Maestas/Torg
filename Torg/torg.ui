@@ -75,14 +75,14 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>0</y>
+           <y>-1334</y>
            <width>547</width>
            <height>1836</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_75">
+           <layout class="QHBoxLayout" name="horizontalLayout_1230AM">
             <item>
              <widget class="QLabel" name="label_140">
               <property name="sizePolicy">
@@ -116,7 +116,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -126,14 +126,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_77">
+           <layout class="QHBoxLayout" name="horizontalLayout_100AM">
             <item>
              <widget class="QLabel" name="label_144">
               <property name="sizePolicy">
@@ -167,7 +167,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -177,14 +177,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_63">
+           <layout class="QHBoxLayout" name="horizontalLayout_130AM">
             <item>
              <widget class="QLabel" name="label_116">
               <property name="sizePolicy">
@@ -218,7 +218,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -228,14 +228,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_73">
+           <layout class="QHBoxLayout" name="horizontalLayout_200AM">
             <item>
              <widget class="QLabel" name="label_136">
               <property name="sizePolicy">
@@ -269,7 +269,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -279,14 +279,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_57">
+           <layout class="QHBoxLayout" name="horizontalLayout_230AM">
             <item>
              <widget class="QLabel" name="label_104">
               <property name="sizePolicy">
@@ -320,7 +320,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -330,14 +330,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_78">
+           <layout class="QHBoxLayout" name="horizontalLayout_300AM">
             <item>
              <widget class="QLabel" name="label_146">
               <property name="sizePolicy">
@@ -371,7 +371,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -381,14 +381,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_58">
+           <layout class="QHBoxLayout" name="horizontalLayout_330AM">
             <item>
              <widget class="QLabel" name="label_106">
               <property name="sizePolicy">
@@ -422,7 +422,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -432,14 +432,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_59">
+           <layout class="QHBoxLayout" name="horizontalLayout_400AM">
             <item>
              <widget class="QLabel" name="label_108">
               <property name="sizePolicy">
@@ -473,7 +473,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -483,14 +483,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_65">
+           <layout class="QHBoxLayout" name="horizontalLayout_430AM">
             <item>
              <widget class="QLabel" name="label_120">
               <property name="sizePolicy">
@@ -524,7 +524,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -534,14 +534,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_66">
+           <layout class="QHBoxLayout" name="horizontalLayout_500AM">
             <item>
              <widget class="QLabel" name="label_122">
               <property name="sizePolicy">
@@ -575,7 +575,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -585,14 +585,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_64">
+           <layout class="QHBoxLayout" name="horizontalLayout_530AM">
             <item>
              <widget class="QLabel" name="label_118">
               <property name="sizePolicy">
@@ -626,7 +626,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -636,14 +636,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_76">
+           <layout class="QHBoxLayout" name="horizontalLayout_600AM">
             <item>
              <widget class="QLabel" name="label_142">
               <property name="sizePolicy">
@@ -677,7 +677,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -687,14 +687,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_68">
+           <layout class="QHBoxLayout" name="horizontalLayout_630AM">
             <item>
              <widget class="QLabel" name="label_126">
               <property name="sizePolicy">
@@ -728,7 +728,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -738,14 +738,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_67">
+           <layout class="QHBoxLayout" name="horizontalLayout_700AM">
             <item>
              <widget class="QLabel" name="label_124">
               <property name="sizePolicy">
@@ -779,7 +779,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -789,14 +789,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_33">
+           <layout class="QHBoxLayout" name="horizontalLayout_730AM">
             <item>
              <widget class="QLabel" name="label_56">
               <property name="sizePolicy">
@@ -830,7 +830,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -840,14 +840,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_34">
+           <layout class="QHBoxLayout" name="horizontalLayout_800AM">
             <item>
              <widget class="QLabel" name="label_58">
               <property name="sizePolicy">
@@ -881,7 +881,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -891,14 +891,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <layout class="QHBoxLayout" name="horizontalLayout_830AM">
             <item>
              <widget class="QLabel" name="label_2">
               <property name="sizePolicy">
@@ -932,7 +932,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -942,14 +942,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_69">
+           <layout class="QHBoxLayout" name="horizontalLayout_900AM">
             <item>
              <widget class="QLabel" name="label_128">
               <property name="sizePolicy">
@@ -983,7 +983,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -993,14 +993,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_35">
+           <layout class="QHBoxLayout" name="horizontalLayout_930AM">
             <item>
              <widget class="QLabel" name="label_60">
               <property name="sizePolicy">
@@ -1034,7 +1034,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1044,14 +1044,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_36">
+           <layout class="QHBoxLayout" name="horizontalLayout_1000AM">
             <item>
              <widget class="QLabel" name="label_62">
               <property name="sizePolicy">
@@ -1085,7 +1085,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1095,14 +1095,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_37">
+           <layout class="QHBoxLayout" name="horizontalLayout_1030AM">
             <item>
              <widget class="QLabel" name="label_64">
               <property name="sizePolicy">
@@ -1136,7 +1136,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1146,14 +1146,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_38">
+           <layout class="QHBoxLayout" name="horizontalLayout_1100AM">
             <item>
              <widget class="QLabel" name="label_66">
               <property name="sizePolicy">
@@ -1187,7 +1187,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1197,14 +1197,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_39">
+           <layout class="QHBoxLayout" name="horizontalLayout_1130AM">
             <item>
              <widget class="QLabel" name="label_68">
               <property name="sizePolicy">
@@ -1238,7 +1238,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1248,14 +1248,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_40">
+           <layout class="QHBoxLayout" name="horizontalLayout_1200PM">
             <item>
              <widget class="QLabel" name="label_70">
               <property name="sizePolicy">
@@ -1289,7 +1289,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1299,14 +1299,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_41">
+           <layout class="QHBoxLayout" name="horizontalLayout_1230PM">
             <item>
              <widget class="QLabel" name="label_72">
               <property name="sizePolicy">
@@ -1340,7 +1340,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1350,14 +1350,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_42">
+           <layout class="QHBoxLayout" name="horizontalLayout_100PM">
             <item>
              <widget class="QLabel" name="label_74">
               <property name="sizePolicy">
@@ -1391,7 +1391,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1401,14 +1401,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_43">
+           <layout class="QHBoxLayout" name="horizontalLayout_130PM">
             <item>
              <widget class="QLabel" name="label_76">
               <property name="sizePolicy">
@@ -1442,7 +1442,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1452,14 +1452,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_44">
+           <layout class="QHBoxLayout" name="horizontalLayout_200PM">
             <item>
              <widget class="QLabel" name="label_78">
               <property name="sizePolicy">
@@ -1493,7 +1493,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1503,14 +1503,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_45">
+           <layout class="QHBoxLayout" name="horizontalLayout_230PM">
             <item>
              <widget class="QLabel" name="label_80">
               <property name="sizePolicy">
@@ -1544,7 +1544,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1554,14 +1554,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_46">
+           <layout class="QHBoxLayout" name="horizontalLayout_300PM">
             <item>
              <widget class="QLabel" name="label_82">
               <property name="sizePolicy">
@@ -1595,7 +1595,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1605,14 +1605,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_47">
+           <layout class="QHBoxLayout" name="horizontalLayout_330PM">
             <item>
              <widget class="QLabel" name="label_84">
               <property name="sizePolicy">
@@ -1646,7 +1646,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1656,14 +1656,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_48">
+           <layout class="QHBoxLayout" name="horizontalLayout_400PM">
             <item>
              <widget class="QLabel" name="label_86">
               <property name="sizePolicy">
@@ -1697,7 +1697,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1707,14 +1707,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_49">
+           <layout class="QHBoxLayout" name="horizontalLayout_430PM">
             <item>
              <widget class="QLabel" name="label_88">
               <property name="sizePolicy">
@@ -1748,7 +1748,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1758,14 +1758,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_50">
+           <layout class="QHBoxLayout" name="horizontalLayout_500PM">
             <item>
              <widget class="QLabel" name="label_90">
               <property name="sizePolicy">
@@ -1799,7 +1799,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1809,14 +1809,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_51">
+           <layout class="QHBoxLayout" name="horizontalLayout_530PM">
             <item>
              <widget class="QLabel" name="label_92">
               <property name="sizePolicy">
@@ -1850,7 +1850,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1860,14 +1860,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_52">
+           <layout class="QHBoxLayout" name="horizontalLayout_600PM">
             <item>
              <widget class="QLabel" name="label_94">
               <property name="sizePolicy">
@@ -1901,7 +1901,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1911,14 +1911,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_53">
+           <layout class="QHBoxLayout" name="horizontalLayout_630PM">
             <item>
              <widget class="QLabel" name="label_96">
               <property name="sizePolicy">
@@ -1952,7 +1952,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -1962,14 +1962,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_54">
+           <layout class="QHBoxLayout" name="horizontalLayout_700PM">
             <item>
              <widget class="QLabel" name="label_98">
               <property name="sizePolicy">
@@ -2003,7 +2003,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -2013,14 +2013,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_55">
+           <layout class="QHBoxLayout" name="horizontalLayout_730PM">
             <item>
              <widget class="QLabel" name="label_100">
               <property name="sizePolicy">
@@ -2054,7 +2054,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -2064,14 +2064,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_56">
+           <layout class="QHBoxLayout" name="horizontalLayout_800PM">
             <item>
              <widget class="QLabel" name="label_102">
               <property name="sizePolicy">
@@ -2105,7 +2105,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -2115,14 +2115,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_80">
+           <layout class="QHBoxLayout" name="horizontalLayout_830PM">
             <item>
              <widget class="QLabel" name="label_150">
               <property name="sizePolicy">
@@ -2156,7 +2156,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -2166,14 +2166,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_79">
+           <layout class="QHBoxLayout" name="horizontalLayout_900PM">
             <item>
              <widget class="QLabel" name="label_148">
               <property name="sizePolicy">
@@ -2207,7 +2207,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -2217,14 +2217,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_72">
+           <layout class="QHBoxLayout" name="horizontalLayout_930PM">
             <item>
              <widget class="QLabel" name="label_134">
               <property name="sizePolicy">
@@ -2258,7 +2258,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -2268,14 +2268,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_71">
+           <layout class="QHBoxLayout" name="horizontalLayout_1000PM">
             <item>
              <widget class="QLabel" name="label_132">
               <property name="sizePolicy">
@@ -2309,7 +2309,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -2319,14 +2319,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_70">
+           <layout class="QHBoxLayout" name="horizontalLayout_1030PM">
             <item>
              <widget class="QLabel" name="label_130">
               <property name="sizePolicy">
@@ -2360,7 +2360,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -2370,14 +2370,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_62">
+           <layout class="QHBoxLayout" name="horizontalLayout_1100PM">
             <item>
              <widget class="QLabel" name="label_114">
               <property name="sizePolicy">
@@ -2411,7 +2411,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -2421,14 +2421,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_61">
+           <layout class="QHBoxLayout" name="horizontalLayout_1130PM">
             <item>
              <widget class="QLabel" name="label_112">
               <property name="sizePolicy">
@@ -2462,7 +2462,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -2472,14 +2472,14 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_60">
+           <layout class="QHBoxLayout" name="horizontalLayout_1200AM">
             <item>
              <widget class="QLabel" name="label_110">
               <property name="sizePolicy">
@@ -2513,7 +2513,7 @@
               <property name="minimumSize">
                <size>
                 <width>50</width>
-                <height>25</height>
+                <height>30</height>
                </size>
               </property>
               <property name="baseSize">
@@ -2523,7 +2523,7 @@
                </size>
               </property>
               <property name="text">
-               <string>Date</string>
+               <string/>
               </property>
              </widget>
             </item>

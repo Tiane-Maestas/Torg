@@ -1,7 +1,7 @@
 #ifndef EVENTS_H
 #define EVENTS_H
 
-#include <string>
+#include "helper.h"
 #include <vector>
 #include <map>
 
@@ -47,7 +47,7 @@ public:
     SingleEvent(std::string title, std::string startTime, std::string endTime, std::string notes,
                 std::string repeat, std::string date,  std::string reminder, std::string color, bool concrete);
     SingleEvent(const SingleEvent& event, bool isDuplicate);
-    SingleEvent(){ this->title = "none"; this->startTime = "none"; this->endTime = "none"; this->notes = "none"; this->repeat = "none";
+    SingleEvent(){ this->title = "none"; this->startTime = "none"; this->endTime = "none"; this->notes = "none"; this->repeat = "none"; this->rem = "none";
                    this->reminder = Reminder(); this->color = "none"; this->concrete = 1; this->duplicate = false; this->updated = false; }
     //No data should be allocated
     ~SingleEvent(){}
@@ -60,6 +60,9 @@ public:
     const std::string getEndTime() const{ return this->endTime; }
     const std::string getTitle() const{ return this->title; }
     const std::string getNotes() const{ return this->notes; }
+    const std::string getColor() const{ return this->color; }
+    const std::string getRem() const{ return this->rem; }
+    const std::string getRepeat() const{ return this->repeat; }
     bool getConcrete() const{ return this->concrete; }
     Reminder getReminder() const{ return this->reminder; }
     bool getUpdatedStatus() const{ return this->updated; }
@@ -75,8 +78,8 @@ public:
 
 private:
     //Initialization/Save variables
-    std::string title; std::string startTime; std::string endTime;
-    std::string notes; std::string repeat; Reminder reminder; std::string color; bool concrete;
+    std::string title; std::string startTime; std::string endTime; std::string notes;
+    std::string rem; std::string repeat; Reminder reminder; std::string color; bool concrete;
     //Save functionality members
     bool updated; //Default: false -> if true then save to file. (assumes event was loaded from an existing file)
     bool duplicate; //Default: false -> if true then don't save. (base events are kept. any repitions of an

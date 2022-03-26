@@ -10,11 +10,13 @@ CONFIG += c++17
 
 SOURCES += \
     events.cpp \
+    helper.cpp \
     main.cpp \
     torg.cpp
 
 HEADERS += \
     events.h \
+    helper.h \
     torg.h
 
 FORMS += \
