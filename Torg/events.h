@@ -46,9 +46,9 @@ public:
     //Assign member varibles. Construct reminder object. @param - "reminder" should be a string of ints separated by ' '.
     SingleEvent(std::string title, std::string startTime, std::string endTime, std::string notes,
                 std::string repeat, std::string date,  std::string reminder, std::string color, bool concrete);
-    SingleEvent(const SingleEvent& event);
+    SingleEvent(const SingleEvent& event, bool isDuplicate);
     SingleEvent(){ this->title = "none"; this->startTime = "none"; this->endTime = "none"; this->notes = "none"; this->repeat = "none";
-                   this->reminder = Reminder(); this->color = "none"; this->concrete = 1; }
+                   this->reminder = Reminder(); this->color = "none"; this->concrete = 1; this->duplicate = false; this->updated = false; }
     //No data should be allocated
     ~SingleEvent(){}
 
@@ -62,16 +62,25 @@ public:
     const std::string getNotes() const{ return this->notes; }
     bool getConcrete() const{ return this->concrete; }
     Reminder getReminder() const{ return this->reminder; }
+    bool getUpdatedStatus() const{ return this->updated; }
+    bool getDuplicateStatus() const{ return this->duplicate; }
 
     //Setters
-    void editTime(std::string startTime, std::string endTime){ this->startTime = startTime; this->endTime = endTime; }
-    void editColor(std::string color){ this->color = color; }
-    void editNotes(std::string notes){ this->notes = notes; }
+    void editTime(std::string startTime, std::string endTime){ this->startTime = startTime; this->endTime = endTime; this->updated = true; }
+    void editColor(std::string color){ this->color = color; this->updated = true; }
+    void editNotes(std::string notes){ this->notes = notes; this->updated = true; }
+    void editTitle(std::string title){ this->title = title; this->updated = true; }
+    //Must call if event is created from code and not from a file load.
+    void needsSave(){ this->updated = true; }
 
 private:
-    //Initialization Variables---
+    //Initialization/Save variables
     std::string title; std::string startTime; std::string endTime;
     std::string notes; std::string repeat; Reminder reminder; std::string color; bool concrete;
+    //Save functionality members
+    bool updated; //Default: false -> if true then save to file. (assumes event was loaded from an existing file)
+    bool duplicate; //Default: false -> if true then don't save. (base events are kept. any repitions of an
+                    //event are calculated on creation based off of a base events repetition)
 };
 
 
@@ -93,14 +102,17 @@ class DayEvent
     //adds a SingleEvent to event map.
     void addEvent(SingleEvent event);
 
-    //erases all data of single event.
-    void deleteEvent(std::string title);
+    //erases all data of the day in save file. returns true if delete was succesful.
+    bool deleteEvent(std::string date, std::string path);
+
+    //Removes a single event from the eventMap.
+    void removeEvent(std::string title);
 
     //Saves all events in the event map.
     //Writes each single event to the save file under this date.
     //Conditions that should permit a save:
     //-The event was updated.
-    //-The event does not exist in the save file already.
+    //-The event does not exist in the save file already. (handled by user if created from code and not loaded from a file)
     //-Not a duplicate event. (due to repition)
     //Returns true if saved succesfully.
     bool save(std::string path);
