@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1004</width>
-    <height>669</height>
+    <width>1006</width>
+    <height>653</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -116,7 +116,7 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>1401</width>
+               <width>595</width>
                <height>1836</height>
               </rect>
              </property>
@@ -3690,8 +3690,8 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>-768</y>
-                 <width>463</width>
+                 <y>0</y>
+                 <width>464</width>
                  <height>1836</height>
                 </rect>
                </property>
@@ -6220,7 +6220,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1004</width>
+     <width>1006</width>
      <height>21</height>
     </rect>
    </property>
@@ -6266,20 +6266,32 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>Single Event</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
   </action>
   <action name="actionDay_View">
    <property name="text">
     <string>Day View</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
    </property>
   </action>
   <action name="actionWeek_View">
    <property name="text">
     <string>Week View</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
   </action>
   <action name="actionMonth_View">
    <property name="text">
     <string>Month View</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
    </property>
   </action>
   <action name="actionAbout">

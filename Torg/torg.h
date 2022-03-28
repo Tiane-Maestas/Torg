@@ -15,6 +15,19 @@ public:
     Torg(QWidget *parent = nullptr);
     ~Torg();
 
+private slots:
+    void on_actionDay_View_triggered();
+
+    void on_actionWeek_View_triggered();
+
+    void on_actionMonth_View_triggered();
+
+    void on_actionDay_Event_triggered();
+
+    void on_actionWeek_Event_triggered();
+
+    void on_actionSingle_Event_triggered();
+
 private:
     Ui::Torg *ui;
 };

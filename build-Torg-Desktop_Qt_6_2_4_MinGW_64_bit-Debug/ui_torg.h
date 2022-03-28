@@ -444,7 +444,7 @@ public:
     {
         if (Torg->objectName().isEmpty())
             Torg->setObjectName(QString::fromUtf8("Torg"));
-        Torg->resize(1004, 669);
+        Torg->resize(1006, 653);
         QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -520,7 +520,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 1401, 1836));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 595, 1836));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         horizontalLayout_1230AM = new QHBoxLayout();
@@ -2092,7 +2092,7 @@ public:
         scrollArea_3->setWidgetResizable(true);
         scrollAreaWidgetContents_3 = new QWidget();
         scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, -768, 463, 1836));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 464, 1836));
         verticalLayout_14 = new QVBoxLayout(scrollAreaWidgetContents_3);
         verticalLayout_14->setObjectName(QString::fromUtf8("verticalLayout_14"));
         horizontalLayout_1230AM_3 = new QHBoxLayout();
@@ -3246,7 +3246,7 @@ public:
         Torg->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Torg);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1004, 21));
+        menubar->setGeometry(QRect(0, 0, 1006, 21));
         menuCreate = new QMenu(menubar);
         menuCreate->setObjectName(QString::fromUtf8("menuCreate"));
         menuView = new QMenu(menubar);
@@ -3282,9 +3282,21 @@ public:
         actionDay_Event->setText(QCoreApplication::translate("Torg", "Day Event", nullptr));
         actionWeek_Event->setText(QCoreApplication::translate("Torg", "Week Event", nullptr));
         actionSingle_Event->setText(QCoreApplication::translate("Torg", "Single Event", nullptr));
+#if QT_CONFIG(shortcut)
+        actionSingle_Event->setShortcut(QCoreApplication::translate("Torg", "Ctrl+C", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionDay_View->setText(QCoreApplication::translate("Torg", "Day View", nullptr));
+#if QT_CONFIG(shortcut)
+        actionDay_View->setShortcut(QCoreApplication::translate("Torg", "Ctrl+D", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionWeek_View->setText(QCoreApplication::translate("Torg", "Week View", nullptr));
+#if QT_CONFIG(shortcut)
+        actionWeek_View->setShortcut(QCoreApplication::translate("Torg", "Ctrl+W", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionMonth_View->setText(QCoreApplication::translate("Torg", "Month View", nullptr));
+#if QT_CONFIG(shortcut)
+        actionMonth_View->setShortcut(QCoreApplication::translate("Torg", "Ctrl+M", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionAbout->setText(QCoreApplication::translate("Torg", "About", nullptr));
         actionTheme->setText(QCoreApplication::translate("Torg", "Theme", nullptr));
         decButton->setText(QCoreApplication::translate("Torg", "<", nullptr));
