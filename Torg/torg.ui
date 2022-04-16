@@ -116,11 +116,26 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>595</width>
-               <height>1836</height>
+               <width>954</width>
+               <height>1536</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_2">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_1230AM">
                 <item>
@@ -1092,6 +1107,9 @@
               </item>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_1000AM">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="label_62">
                   <property name="sizePolicy">
@@ -3129,8 +3147,19 @@ p, li { white-space: pre-wrap; }
                 <height>30</height>
                </size>
               </property>
+              <property name="font">
+               <font>
+                <underline>false</underline>
+               </font>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
               <property name="placeholderText">
                <string>Repeat</string>
+              </property>
+              <property name="frame">
+               <bool>true</bool>
               </property>
               <item>
                <property name="text">

@@ -1,14 +1,18 @@
 #include "torg.h"
 #include "ui_torg.h"
 
-Torg::Torg(QWidget *parent): QMainWindow(parent), ui(new Ui::Torg)
-{
+Torg::Torg(QWidget *parent): QMainWindow(parent), ui(new Ui::Torg){
+
     ui->setupUi(this);
+    ui->Day_View->findChild<QLabel *>("label_63")->setStyleSheet(colorMap["blue"]);
+    ui->Day_View->findChild<QLabel *>("label_65")->setStyleSheet(colorMap["green"]);
+
 }
 
-Torg::~Torg()
-{
+Torg::~Torg(){
+
     delete ui;
+
 }
 
 //Menu Controls

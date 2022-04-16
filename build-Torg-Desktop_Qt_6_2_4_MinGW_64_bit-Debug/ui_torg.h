@@ -520,9 +520,11 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 595, 1836));
+        scrollAreaWidgetContents->setGeometry(QRect(0, -483, 954, 1536));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
+        verticalLayout_2->setSpacing(0);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_1230AM = new QHBoxLayout();
         horizontalLayout_1230AM->setObjectName(QString::fromUtf8("horizontalLayout_1230AM"));
         label_140 = new QLabel(scrollAreaWidgetContents);
@@ -964,6 +966,7 @@ public:
         verticalLayout_2->addLayout(horizontalLayout_930AM);
 
         horizontalLayout_1000AM = new QHBoxLayout();
+        horizontalLayout_1000AM->setSpacing(0);
         horizontalLayout_1000AM->setObjectName(QString::fromUtf8("horizontalLayout_1000AM"));
         label_62 = new QLabel(scrollAreaWidgetContents);
         label_62->setObjectName(QString::fromUtf8("label_62"));
@@ -2092,7 +2095,7 @@ public:
         scrollArea_3->setWidgetResizable(true);
         scrollAreaWidgetContents_3 = new QWidget();
         scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 464, 1836));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 136, 1836));
         verticalLayout_14 = new QVBoxLayout(scrollAreaWidgetContents_3);
         verticalLayout_14->setObjectName(QString::fromUtf8("verticalLayout_14"));
         horizontalLayout_1230AM_3 = new QHBoxLayout();
@@ -3270,7 +3273,7 @@ public:
 
         retranslateUi(Torg);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Torg);
