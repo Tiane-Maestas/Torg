@@ -1,6 +1,6 @@
 #include <helper.h>
 
-std::string dayOfWeek(std::string date){
+QString dayOfWeek(QString date){
 
     //TO-DO
 

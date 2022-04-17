@@ -4,9 +4,9 @@
 #include <iostream>
 #include <QIODevice>
 
-Reminder::Reminder(std::string date,  std::string reminder){
+Reminder::Reminder(QString date,  QString reminder){
     this->date = date;
-    std::istringstream string_stream(reminder);
+    std::istringstream string_stream(reminder.toStdString());
     std::string num;
     while(getline(string_stream, num, ' ')){
         reminderList.push_back(std::stoi(num));
@@ -18,8 +18,8 @@ bool Reminder::check(){
     return 0;
 }
 
-SingleEvent::SingleEvent(std::string title, std::string startTime, std::string endTime, std::string notes,
-                    std::string repeat, std::string date,  std::string reminder, std::string color, bool concrete){
+SingleEvent::SingleEvent(QString title, QString startTime, QString endTime, QString notes,
+                    QString repeat, QString date,  QString reminder, QString color, bool concrete){
     this->title = title;
     this->startTime = startTime;
     this->endTime = endTime;
@@ -47,11 +47,11 @@ SingleEvent::SingleEvent(const SingleEvent& event,  bool isDuplicate){
     this->updated = false;
 }
 
-const std::string SingleEvent::toString() const{
+const QString SingleEvent::toString() const{
     return this->title + ": " + this->notes;
 }
 
-DayEvent::DayEvent(std::string date, SingleEvent event){
+DayEvent::DayEvent(QString date, SingleEvent event){
     this->date = date;
     this->dayOfTheWeek = dayOfWeek(date);
     this->eventMap[event.getTitle()] = event;
@@ -61,9 +61,9 @@ void DayEvent::addEvent(SingleEvent event){
     this->eventMap[event.getTitle()] = event;
 }
 
-bool DayEvent::deleteEvent(std::string date, std::string path){
+bool DayEvent::deleteEvent(QString date, QString path){
 
-    QFile file(QString::fromStdString(path));
+    QFile file(path);
     if( !file.open( QIODevice::ReadWrite ) ){
         return false; //file open failed
     }
@@ -74,7 +74,7 @@ bool DayEvent::deleteEvent(std::string date, std::string path){
         //All days are saved as json objects with 1 key as the date
         QStringList currentDayObject = it->toObject().keys(); //qDebug() << currentDayObject[0];
 
-        if(QString::fromStdString(date).compare(currentDayObject[0]) == 0){
+        if(date.compare(currentDayObject[0]) == 0){
             allInfo.erase(it);
             //Because the end iterator changes after erasing.
             it--;
@@ -91,11 +91,11 @@ bool DayEvent::deleteEvent(std::string date, std::string path){
     return true;
 }
 
-void DayEvent::removeEvent(std::string title){
+void DayEvent::removeEvent(QString title){
     this->eventMap.erase(title);
 }
 
-bool DayEvent::save(std::string path){
+bool DayEvent::save(QString path){
     //Create all single events as Json Objects
     std::vector<QJsonObject> events;
     bool needsSave = false;
@@ -106,13 +106,13 @@ bool DayEvent::save(std::string path){
 
         QJsonObject event;
 
-        QJsonValue title(QString::fromStdString(it->second.getTitle()));
-        QJsonValue notes(QString::fromStdString(it->second.getNotes()));
-        QJsonValue startTime(QString::fromStdString(it->second.getStartTime()));
-        QJsonValue endTime(QString::fromStdString(it->second.getEndTime()));
-        QJsonValue repeat(QString::fromStdString(it->second.getRepeat()));
-        QJsonValue reminder(QString::fromStdString(it->second.getRem()));
-        QJsonValue color(QString::fromStdString(it->second.getColor()));
+        QJsonValue title(it->second.getTitle());
+        QJsonValue notes(it->second.getNotes());
+        QJsonValue startTime(it->second.getStartTime());
+        QJsonValue endTime(it->second.getEndTime());
+        QJsonValue repeat(it->second.getRepeat());
+        QJsonValue reminder(it->second.getRem());
+        QJsonValue color(it->second.getColor());
         QJsonValue concrete(it->second.getConcrete());
         event.insert("title", title);
         event.insert("notes", notes);
@@ -149,10 +149,10 @@ bool DayEvent::save(std::string path){
     //Create a single JSON object for todays date
     QJsonValue todaysEvents(allEvents);
     QJsonObject today;
-    today.insert(QString::fromStdString(this->getDate()), todaysEvents);
+    today.insert(this->getDate(), todaysEvents);
 
     //Read existing information from the file to allow appending
-    QFile file(QString::fromStdString(path));
+    QFile file(path);
     if( !file.open( QIODevice::ReadOnly ) ){
         return false; //file open failed
     }

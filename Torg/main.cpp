@@ -42,10 +42,10 @@ int main(int argc, char *argv[])
     DayEvent day("TestDate", event1);
     day.addEvent(event2);
     day.addEvent(event3);
-    day.save(QDir::currentPath().toStdString() + "/test.json");
+    day.save(QDir::currentPath() + "/test.json");
 
     DayEvent day2("TestDate2", event1);
-    day2.save(QDir::currentPath().toStdString() + "/test.json");
+    day2.save(QDir::currentPath() + "/test.json");
 
     Torg w;
     w.loadUserData(current_path() / "test.json");

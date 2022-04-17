@@ -5,6 +5,6 @@
 #include <QFile>
 
 //Returns the day of the week given any date
-std::string dayOfWeek(std::string date);
+QString dayOfWeek(QString date);
 
 #endif // HELPER_H
