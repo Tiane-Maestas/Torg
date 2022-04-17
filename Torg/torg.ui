@@ -39,7 +39,7 @@
        <enum>QFrame::NoFrame</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Day_View">
        <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -161,7 +161,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_141">
+                 <widget class="QLabel" name="label_1230AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -212,7 +212,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_145">
+                 <widget class="QLabel" name="label_100AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -263,7 +263,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_117">
+                 <widget class="QLabel" name="label_130AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -314,7 +314,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_137">
+                 <widget class="QLabel" name="label_200AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -365,7 +365,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_105">
+                 <widget class="QLabel" name="label_230AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -416,7 +416,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_147">
+                 <widget class="QLabel" name="label_300AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -467,7 +467,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_107">
+                 <widget class="QLabel" name="label_330AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -518,7 +518,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_109">
+                 <widget class="QLabel" name="label_400AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -569,7 +569,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_121">
+                 <widget class="QLabel" name="label_430AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -620,7 +620,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_123">
+                 <widget class="QLabel" name="label_500AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -671,7 +671,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_119">
+                 <widget class="QLabel" name="label_530AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -722,7 +722,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_143">
+                 <widget class="QLabel" name="label_600AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -773,7 +773,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_127">
+                 <widget class="QLabel" name="label_630AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -824,7 +824,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_125">
+                 <widget class="QLabel" name="label_700AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -875,7 +875,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_57">
+                 <widget class="QLabel" name="label_730AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -926,7 +926,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_59">
+                 <widget class="QLabel" name="label_800AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -977,7 +977,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_3">
+                 <widget class="QLabel" name="label_830AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1028,7 +1028,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_129">
+                 <widget class="QLabel" name="label_900AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1079,7 +1079,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_61">
+                 <widget class="QLabel" name="label_930AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1133,7 +1133,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_63">
+                 <widget class="QLabel" name="label_1000AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1184,7 +1184,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_65">
+                 <widget class="QLabel" name="label_1030AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1235,7 +1235,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_67">
+                 <widget class="QLabel" name="label_1100AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1286,7 +1286,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_69">
+                 <widget class="QLabel" name="label_1130AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1337,7 +1337,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_71">
+                 <widget class="QLabel" name="label_1200PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1388,7 +1388,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_73">
+                 <widget class="QLabel" name="label_1230PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1439,7 +1439,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_75">
+                 <widget class="QLabel" name="label_100PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1490,7 +1490,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_77">
+                 <widget class="QLabel" name="label_130PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1541,7 +1541,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_79">
+                 <widget class="QLabel" name="label_200PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1592,7 +1592,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_81">
+                 <widget class="QLabel" name="label_230PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1643,7 +1643,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_83">
+                 <widget class="QLabel" name="label_300PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1694,7 +1694,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_85">
+                 <widget class="QLabel" name="label_330PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1745,7 +1745,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_87">
+                 <widget class="QLabel" name="label_400PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1796,7 +1796,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_89">
+                 <widget class="QLabel" name="label_430PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1847,7 +1847,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_91">
+                 <widget class="QLabel" name="label_500PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1898,7 +1898,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_93">
+                 <widget class="QLabel" name="label_530PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1949,7 +1949,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_95">
+                 <widget class="QLabel" name="label_600PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -2000,7 +2000,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_97">
+                 <widget class="QLabel" name="label_630PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -2051,7 +2051,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_99">
+                 <widget class="QLabel" name="label_700PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -2102,7 +2102,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_101">
+                 <widget class="QLabel" name="label_730PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -2153,7 +2153,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_103">
+                 <widget class="QLabel" name="label_800PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -2204,7 +2204,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_151">
+                 <widget class="QLabel" name="label_830PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -2255,7 +2255,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_149">
+                 <widget class="QLabel" name="label_900PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -2306,7 +2306,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_135">
+                 <widget class="QLabel" name="label_930PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -2357,7 +2357,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_133">
+                 <widget class="QLabel" name="label_1000PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -2408,7 +2408,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_131">
+                 <widget class="QLabel" name="label_1030PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -2459,7 +2459,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_115">
+                 <widget class="QLabel" name="label_1100PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -2510,7 +2510,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_113">
+                 <widget class="QLabel" name="label_1130PM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -2561,7 +2561,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_111">
+                 <widget class="QLabel" name="label_1200AM">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>

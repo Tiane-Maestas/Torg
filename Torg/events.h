@@ -13,8 +13,6 @@
  * Days = big picture, SignleEvents = little picture.
 */
 
-
-
 class Reminder
 {
  public:

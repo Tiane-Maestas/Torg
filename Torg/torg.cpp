@@ -4,14 +4,20 @@
 Torg::Torg(QWidget *parent): QMainWindow(parent), ui(new Ui::Torg){
 
     ui->setupUi(this);
-    ui->Day_View->findChild<QLabel *>("label_63")->setStyleSheet(colorMap["blue"]);
-    ui->Day_View->findChild<QLabel *>("label_65")->setStyleSheet(colorMap["green"]);
+
+    ui->Day_View->findChild<QLabel *>(nameMap["12:30 AM"])->setStyleSheet(colorMap["blue"]);
+    ui->Day_View->findChild<QLabel *>(nameMap["7:00 AM"])->setStyleSheet(colorMap["green"]);
 
 }
 
 Torg::~Torg(){
 
     delete ui;
+    //Delete events from events map
+
+}
+
+void Torg::loadUserData(const std::filesystem::path){
 
 }
 

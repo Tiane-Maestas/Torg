@@ -5,8 +5,6 @@
 #include <QTranslator>
 #include <QDir>
 
-#include "events.h"
-
 using std::filesystem::current_path;
 
 int main(int argc, char *argv[])
@@ -50,6 +48,7 @@ int main(int argc, char *argv[])
     day2.save(QDir::currentPath().toStdString() + "/test.json");
 
     Torg w;
+    w.loadUserData(current_path() / "test.json");
     w.show();
 
     return a.exec();
