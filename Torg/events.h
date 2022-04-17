@@ -92,6 +92,7 @@ class DayEvent
 {
  public:
     DayEvent(QString date, SingleEvent event);
+    DayEvent(QString date);
     //No data should be allocated
     ~DayEvent(){}
 

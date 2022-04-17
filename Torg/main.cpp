@@ -29,8 +29,8 @@ int main(int argc, char *argv[])
     a.setStyleSheet(styleSheet);
     styleSheetFile.close();
 
-    std::string iconPath = QDir::currentPath().toStdString() + "/TorgLogo.ico";
-    a.setWindowIcon(QIcon(QString::fromStdString(iconPath)));
+    QString iconPath = QDir::currentPath() + "/TorgLogo.ico";
+    a.setWindowIcon(QIcon(iconPath));
 
     //Testing
     SingleEvent event1("title1", "startTime1", "endTime1", "notes1", "repeat1", "TestDate",  "1 2 3 ", "color1", 0);
@@ -49,6 +49,7 @@ int main(int argc, char *argv[])
 
     Torg w;
     w.loadUserData(current_path() / "test.json");
+    w.testData();
     w.show();
 
     return a.exec();

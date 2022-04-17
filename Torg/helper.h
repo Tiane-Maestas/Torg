@@ -3,6 +3,9 @@
 
 #include <string>
 #include <QFile>
+#include <QtCore>
+#include <iostream>
+#include <QIODevice>
 
 //Returns the day of the week given any date
 QString dayOfWeek(QString date);

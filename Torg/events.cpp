@@ -1,8 +1,5 @@
 #include <events.h>
 #include <sstream>
-#include <QtCore>
-#include <iostream>
-#include <QIODevice>
 
 Reminder::Reminder(QString date,  QString reminder){
     this->date = date;
@@ -55,6 +52,11 @@ DayEvent::DayEvent(QString date, SingleEvent event){
     this->date = date;
     this->dayOfTheWeek = dayOfWeek(date);
     this->eventMap[event.getTitle()] = event;
+}
+
+DayEvent::DayEvent(QString date){
+    this->date = date;
+    this->dayOfTheWeek = dayOfWeek(date);
 }
 
 void DayEvent::addEvent(SingleEvent event){

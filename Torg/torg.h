@@ -18,7 +18,15 @@ public:
     Torg(QWidget *parent = nullptr);
     ~Torg();
     //Load user data from json file and populates the dayEvents hash map (unordered_map in std)
-    void loadUserData(const std::filesystem::path path);
+    //Return true if loading was succesful
+    bool loadUserData(const std::filesystem::path path);
+
+    void testData(){
+        qDebug() << dayEvents["testDate"]->getDate();
+        //for(auto it = dayEvents["testDate"]->eventMap.begin(); it != dayEvents["testDate"]->eventMap.end(); it++){
+            //qDebug() << it->second.getTitle();
+        //}
+    }
 
 private slots:
     //Menu actions
@@ -33,7 +41,7 @@ private:
     Ui::Torg *ui;
 
     //A map between dates and all the events in that day as DayEvent pointers. De-allocations needed for DayEvents
-    QHash<QString, DayEvent*> dayEvents();
+    QHash<QString, DayEvent*> dayEvents;
 
     //Label stylesheet color options (I would like for these to be const QStrings but it doesn't like that)
     const QMap<QString, QString> colorMap = {{"red", "QLabel { background-color : red; } QLabel:hover{background-color: #ffaa00;color: black;}"},
