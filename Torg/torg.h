@@ -21,11 +21,12 @@ public:
     //Return true if loading was succesful
     bool loadUserData(const std::filesystem::path path);
 
+    //TEMPORARY
     void testData(){
-        qDebug() << dayEvents["testDate"]->getDate();
-        //for(auto it = dayEvents["testDate"]->eventMap.begin(); it != dayEvents["testDate"]->eventMap.end(); it++){
+        //qDebug() << dayEvents["TestDate"]->getDate();
+        for(auto it = dayEvents["TestDate"]->eventMap.begin(); it != dayEvents["TestDate"]->eventMap.end(); it++){
             //qDebug() << it->second.getTitle();
-        //}
+        }
     }
 
 private slots:
@@ -36,6 +37,8 @@ private slots:
     void on_actionDay_Event_triggered();
     void on_actionWeek_Event_triggered();
     void on_actionSingle_Event_triggered();
+    //Adding a single event
+    void on_pushButton_Add_Single_clicked();
 
 private:
     Ui::Torg *ui;

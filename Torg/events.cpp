@@ -5,9 +5,9 @@ Reminder::Reminder(QString date,  QString reminder){
     this->date = date;
     std::istringstream string_stream(reminder.toStdString());
     std::string num;
-    while(getline(string_stream, num, ' ')){
-        reminderList.push_back(std::stoi(num));
-    }
+    //while(getline(string_stream, num, ' ')){
+        //reminderList.push_back(std::stoi(num)); //Needs formatting for any string passed in.
+    //}
 }
 
 //TO-DO
