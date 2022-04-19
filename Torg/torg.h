@@ -19,13 +19,13 @@ public:
     ~Torg();
     //Load user data from json file and populates the dayEvents hash map (unordered_map in std)
     //Return true if loading was succesful
-    bool loadUserData(const std::filesystem::path path);
+    bool loadUserData();
 
     //TEMPORARY
     void testData(){
         //qDebug() << dayEvents["TestDate"]->getDate();
         for(auto it = dayEvents["TestDate"]->eventMap.begin(); it != dayEvents["TestDate"]->eventMap.end(); it++){
-            //qDebug() << it->second.getTitle();
+            qDebug() << it->second.getTitle();
         }
     }
 
@@ -45,6 +45,9 @@ private:
 
     //A map between dates and all the events in that day as DayEvent pointers. De-allocations needed for DayEvents
     QHash<QString, DayEvent*> dayEvents;
+
+    //Holds the path to user data
+    const QString userDataPath = QDir::currentPath() + "/test.json";
 
     //Label stylesheet color options (I would like for these to be const QStrings but it doesn't like that)
     const QMap<QString, QString> colorMap = {{"red", "QLabel { background-color : red; } QLabel:hover{background-color: #ffaa00;color: black;}"},

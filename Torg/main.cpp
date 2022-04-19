@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     a.setStyleSheet(styleSheet);
     styleSheetFile.close();
 
-    QString iconPath = QDir::currentPath() + "/TorgLogo.ico";
+    QString iconPath = QDir::currentPath() + "/TorgLogo.png";
     a.setWindowIcon(QIcon(iconPath));
 
     //Testing
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     day2.save(QDir::currentPath() + "/test.json");
 
     Torg w;
-    w.loadUserData(current_path() / "test.json");
+    w.loadUserData();
     w.testData();
     w.show();
 

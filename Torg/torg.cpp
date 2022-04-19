@@ -17,9 +17,9 @@ Torg::~Torg(){
 
 }
 
-bool Torg::loadUserData(const std::filesystem::path path){
+bool Torg::loadUserData(){
 
-    QFile file(path);
+    QFile file(this->userDataPath);
     if( !file.open( QIODevice::ReadOnly ) ){
         return false; //file open failed
     }
@@ -93,6 +93,6 @@ void Torg::on_pushButton_Add_Single_clicked()
     }
 
     //Finally save the new info to user file
-    this->dayEvents[date]->save(QDir::currentPath() + "/test.json"); //Path will need updating!!
+    this->dayEvents[date]->save(this->userDataPath);
 }
 
