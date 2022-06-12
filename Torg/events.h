@@ -88,6 +88,8 @@ private:
 
 //This class allows for two day events to be created on the same date.
 //In practice, this should not be allowed but will be handled outside of this class.
+//NOTE: If a method taks a QString 'date' then must be converted to my representation of
+//a date using the helper 'formatDate' function.
 class DayEvent
 {
  public:
@@ -120,11 +122,11 @@ class DayEvent
     bool save(QString path);
 
     //Getters
-    const QString getDate() const{ return this->date; }
+    const QDate getDate() const{ return this->date; }
     const QString getDayOfTheWeek() const{ return this->dayOfTheWeek; }
 
  private:
-    QString date;
+    QDate date;
     QString dayOfTheWeek;
 };
 

@@ -49,14 +49,20 @@ const QString SingleEvent::toString() const{
 }
 
 DayEvent::DayEvent(QString date, SingleEvent event){
-    this->date = date;
-    this->dayOfTheWeek = dayOfWeek(date);
+    int year = date.split("/")[2].toInt();
+    int month = date.split("/")[0].toInt();
+    int day = date.split("/")[1].toInt();
+    this->date = QDate(year, month, day);
+    this->dayOfTheWeek = dayOfWeek(this->date);
     this->eventMap[event.getTitle()] = event;
 }
 
 DayEvent::DayEvent(QString date){
-    this->date = date;
-    this->dayOfTheWeek = dayOfWeek(date);
+    int year = date.split("/")[2].toInt();
+    int month = date.split("/")[0].toInt();
+    int day = date.split("/")[1].toInt();
+    this->date = QDate(year, month, day);
+    this->dayOfTheWeek = dayOfWeek(this->date);
 }
 
 void DayEvent::addEvent(SingleEvent event){
@@ -137,7 +143,7 @@ bool DayEvent::save(QString path){
     if(!needsSave){ return false; }
 
     //delete day save data from file so that it can be re-written
-    this->deleteEvent(this->date, path);
+    this->deleteEvent(formatDate(this->date), path);
 
     //Add all single events to today
     QJsonObject allEvents;
@@ -151,7 +157,7 @@ bool DayEvent::save(QString path){
     //Create a single JSON object for todays date
     QJsonValue todaysEvents(allEvents);
     QJsonObject today;
-    today.insert(this->getDate(), todaysEvents);
+    today.insert(formatDate(this->date), todaysEvents);
 
     //Read existing information from the file to allow appending
     QFile file(path);

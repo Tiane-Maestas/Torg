@@ -24,9 +24,10 @@ public:
     //TEMPORARY
     void testData(){
         //qDebug() << dayEvents["TestDate"]->getDate();
-        for(auto it = dayEvents["TestDate"]->eventMap.begin(); it != dayEvents["TestDate"]->eventMap.end(); it++){
+        for(auto it = dayEvents["03/11/2001"]->eventMap.begin(); it != dayEvents["03/11/2001"]->eventMap.end(); it++){
             qDebug() << it->second.getTitle();
         }
+         qDebug() << dayEvents["03/11/2001"]->getDayOfTheWeek();
     }
 
 private slots:
@@ -39,6 +40,8 @@ private slots:
     void on_actionSingle_Event_triggered();
     //Adding a single event
     void on_pushButton_Add_Single_clicked();
+
+    void on_actionTheme_triggered();
 
 private:
     Ui::Torg *ui;

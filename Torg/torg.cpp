@@ -96,3 +96,13 @@ void Torg::on_pushButton_Add_Single_clicked()
     this->dayEvents[date]->save(this->userDataPath);
 }
 
+//TODO Toggle Stylesheet
+void Torg::on_actionTheme_triggered()
+{
+    QFile styleSheetFile(QDir::currentPath() + "/lightTheme.qss");
+    styleSheetFile.open(QFile::ReadOnly);
+    QString styleSheet = QLatin1String(styleSheetFile.readAll());
+    centralWidget()->setStyleSheet(styleSheet);
+    styleSheetFile.close();
+}
+

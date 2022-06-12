@@ -1,8 +1,9 @@
 #include <helper.h>
 
-QString dayOfWeek(QString date){
+QString dayOfWeek(QDate date){
+    return days[date.dayOfWeek() - 1];
+}
 
-    //TO-DO
-
-    return date;
+QString formatDate(QDate date){
+    return date.toString("MM/dd/yyyy");
 }
