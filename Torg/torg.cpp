@@ -5,9 +5,16 @@ Torg::Torg(QWidget *parent): QMainWindow(parent), ui(new Ui::Torg){
 
     ui->setupUi(this);
 
+    //Launch app in Day View
+    ui->stackedWidget->setCurrentWidget(ui->Day_View);
+
+    this->todaysDate = QDate::currentDate();
+    this->workingDate = this->todaysDate;
+    this->setWorkingDateLabel();
+
+    //Testing
     ui->Day_View->findChild<QLabel *>(nameMap["12:30 AM"])->setStyleSheet(colorMap["blue"]);
     ui->Day_View->findChild<QLabel *>(nameMap["7:00 AM"])->setStyleSheet(colorMap["green"]);
-
 }
 
 Torg::~Torg(){
@@ -16,6 +23,39 @@ Torg::~Torg(){
     //Delete events from events map
 
 }
+
+void Torg::setWorkingDateLabel(){
+    //Set custom labels to differentiate today, tomorrow, yesturday, and a random day
+    if(this->todaysDate == this->workingDate){
+        //Today
+        ui->Day_View->findChild<QLabel *>("workingDayLabel")->setText("Today: " + formatDate(this->workingDate));
+
+    }else if(this->todaysDate.addDays(1) == this->workingDate){
+        //Tomorrow
+        ui->Day_View->findChild<QLabel *>("workingDayLabel")->setText("Tomorrow: " + formatDate(this->workingDate));
+
+    }else if(this->todaysDate.addDays(-1) == this->workingDate){
+        //Yesturday
+        ui->Day_View->findChild<QLabel *>("workingDayLabel")->setText("Yesturday: " + formatDate(this->workingDate));
+
+    }else{
+        //Random Day
+        ui->Day_View->findChild<QLabel *>("workingDayLabel")->setText(dayOfWeek(this->workingDate) + ": " + formatDate(this->workingDate));
+    }
+}
+
+void Torg::setEventLabels(){
+
+    if(this->dayEvents.contains(formatDate(this->workingDate))){
+        return;
+    }
+
+    for(auto it = dayEvents[formatDate(this->workingDate)]->eventMap.begin(); it != dayEvents[formatDate(this->workingDate)]->eventMap.end(); it++){
+
+    }
+}
+
+
 
 bool Torg::loadUserData(){
 
@@ -104,5 +144,19 @@ void Torg::on_actionTheme_triggered()
     QString styleSheet = QLatin1String(styleSheetFile.readAll());
     centralWidget()->setStyleSheet(styleSheet);
     styleSheetFile.close();
+}
+
+
+void Torg::on_incButton_clicked()
+{
+    this->workingDate = this->workingDate.addDays(1);
+    this->setWorkingDateLabel();
+}
+
+
+void Torg::on_decButton_clicked()
+{
+    this->workingDate = this->workingDate.addDays(-1);
+    this->setWorkingDateLabel();
 }
 

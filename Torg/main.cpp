@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     }
 
     //Configure app and show main window.
-    QFile styleSheetFile(current_path() / "darkTheme.qss"); //qDebug() << QString::fromStdString(QDir::currentPath().toStdString()); orange-blackStyleSheet.qss
+    QFile styleSheetFile(current_path() / "orange-blackStyleSheet.qss"); //qDebug() << QString::fromStdString(QDir::currentPath().toStdString()); darkTheme.qss
     styleSheetFile.open(QFile::ReadOnly);
     QString styleSheet = QLatin1String(styleSheetFile.readAll());
     a.setStyleSheet(styleSheet);

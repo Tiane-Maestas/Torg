@@ -40,14 +40,24 @@ private slots:
     void on_actionSingle_Event_triggered();
     //Adding a single event
     void on_pushButton_Add_Single_clicked();
-
+    //Cycling through the themes
     void on_actionTheme_triggered();
+    //Changing the working date from day view
+    void on_incButton_clicked();
+    void on_decButton_clicked();
 
 private:
     Ui::Torg *ui;
 
+    //Helpers for setting the labels on all pages
+    void setWorkingDateLabel();
+    void setEventLabels();
+
     //A map between dates and all the events in that day as DayEvent pointers. De-allocations needed for DayEvents
     QHash<QString, DayEvent*> dayEvents;
+
+    QDate todaysDate;
+    QDate workingDate; //The date that the user is currently interacting with
 
     //Holds the path to user data
     const QString userDataPath = QDir::currentPath() + "/test.json";
