@@ -65,6 +65,8 @@ public:
     Reminder getReminder() const{ return this->reminder; }
     bool getUpdatedStatus() const{ return this->updated; }
     bool getDuplicateStatus() const{ return this->duplicate; }
+    //Return a list of the time blocks between the start and end time of the event
+    QStringList getTimeBlocks();
 
     //Setters
     void editTime(QString startTime, QString endTime){ this->startTime = startTime; this->endTime = endTime; this->updated = true; }

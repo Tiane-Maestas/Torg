@@ -17,4 +17,7 @@ QString dayOfWeek(QDate date);
 //formats a QDate to the string representation I want
 QString formatDate(QDate date);
 
+//Finds the closest top or bottom time to given time
+QString findClosestTime(QString time);
+
 #endif // HELPER_H

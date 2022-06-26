@@ -44,6 +44,27 @@ SingleEvent::SingleEvent(const SingleEvent& event,  bool isDuplicate){
     this->updated = false;
 }
 
+QStringList SingleEvent::getTimeBlocks(){
+    //Add the start time
+    QStringList list(this->startTime);
+
+    //Get the current time and end time
+    QString closestStartBlock = findClosestTime(this->startTime);
+    QTime currTime(0, 0);
+    currTime = currTime.fromString(closestStartBlock, "h:mm AP");
+    QString closestEndBlock = findClosestTime(this->endTime);
+    QTime endTime(0, 0);
+    endTime = endTime.fromString(closestEndBlock, "h:mm AP");
+
+    //While the currTime is less than the end time add 30 min and add to the list
+    while(currTime < endTime){
+        currTime = currTime.addSecs(1800); //Add 30 min in seconds
+        list.append(currTime.toString("h:mm AP"));
+    }
+
+    return list;
+}
+
 const QString SingleEvent::toString() const{
     return this->title + ": " + this->notes;
 }

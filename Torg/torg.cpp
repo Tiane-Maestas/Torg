@@ -10,11 +10,13 @@ Torg::Torg(QWidget *parent): QMainWindow(parent), ui(new Ui::Torg){
 
     this->todaysDate = QDate::currentDate();
     this->workingDate = this->todaysDate;
-    this->setWorkingDateLabel();
+    this->setWorkingDateLabels();
+
+    //Set defaultColorFromTheme TODO
 
     //Testing
-    ui->Day_View->findChild<QLabel *>(nameMap["12:30 AM"])->setStyleSheet(colorMap["blue"]);
-    ui->Day_View->findChild<QLabel *>(nameMap["7:00 AM"])->setStyleSheet(colorMap["green"]);
+    //ui->Day_View->findChild<QLabel *>(nameMap["12:30 AM"])->setStyleSheet(colorMap["Blue"]);
+    //ui->Day_View->findChild<QLabel *>(nameMap["7:00 AM"])->setStyleSheet(colorMap["Green"]);
 }
 
 Torg::~Torg(){
@@ -24,7 +26,7 @@ Torg::~Torg(){
 
 }
 
-void Torg::setWorkingDateLabel(){
+void Torg::setWorkingDateLabels(){
     //Set custom labels to differentiate today, tomorrow, yesturday, and a random day
     if(this->todaysDate == this->workingDate){
         //Today
@@ -45,17 +47,43 @@ void Torg::setWorkingDateLabel(){
 }
 
 void Torg::setEventLabels(){
-
-    if(this->dayEvents.contains(formatDate(this->workingDate))){
+    //Clear the event labels so they can be reset
+    if(!labelsRecentlyCleared) this->clearEventLabels();
+    labelsRecentlyCleared = true;
+    if(!this->dayEvents.contains(formatDate(this->workingDate))){
+        //Do nothing if there are no events that day
         return;
     }
 
+    //For all single events in the current day set the labels for each scene
     for(auto it = dayEvents[formatDate(this->workingDate)]->eventMap.begin(); it != dayEvents[formatDate(this->workingDate)]->eventMap.end(); it++){
+        //Setting the Dat View
+        setDayViewTimePeriod(it->second);
+    }
 
+    //Labels need to be cleared next time
+    labelsRecentlyCleared = false;
+}
+
+void Torg::clearEventLabels(){
+    //Clearing Day View
+    for(auto it : nameMap.keys()){
+        //Clearing the Color
+        ui->Day_View->findChild<QLabel *>(nameMap.value(it))->setStyleSheet(defaultColorFromTheme);
+        //Text TODO
     }
 }
 
-
+void Torg::setDayViewTimePeriod(SingleEvent event){
+    //For all time blocks between startTime and endTime set those labels the color of the event
+    QStringList allTimeBlocks = event.getTimeBlocks();
+    qDebug() << allTimeBlocks;
+    for(auto timeBlock : allTimeBlocks){
+        //Set the labels for each time block of the event
+        ui->Day_View->findChild<QLabel *>(nameMap[timeBlock])->setStyleSheet(colorMap[event.getColor()]); //Color
+        //Text TODO
+    }
+}
 
 bool Torg::loadUserData(){
 
@@ -150,13 +178,15 @@ void Torg::on_actionTheme_triggered()
 void Torg::on_incButton_clicked()
 {
     this->workingDate = this->workingDate.addDays(1);
-    this->setWorkingDateLabel();
+    this->setWorkingDateLabels();
+    this->setEventLabels();
 }
 
 
 void Torg::on_decButton_clicked()
 {
     this->workingDate = this->workingDate.addDays(-1);
-    this->setWorkingDateLabel();
+    this->setWorkingDateLabels();
+    this->setEventLabels();
 }
 

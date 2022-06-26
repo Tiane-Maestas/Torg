@@ -21,15 +21,6 @@ public:
     //Return true if loading was succesful
     bool loadUserData();
 
-    //TEMPORARY
-    void testData(){
-        //qDebug() << dayEvents["TestDate"]->getDate();
-        for(auto it = dayEvents["03/11/2001"]->eventMap.begin(); it != dayEvents["03/11/2001"]->eventMap.end(); it++){
-            qDebug() << it->second.getTitle();
-        }
-         qDebug() << dayEvents["03/11/2001"]->getDayOfTheWeek();
-    }
-
 private slots:
     //Menu actions
     void on_actionDay_View_triggered();
@@ -50,8 +41,13 @@ private:
     Ui::Torg *ui;
 
     //Helpers for setting the labels on all pages
-    void setWorkingDateLabel();
+    void setWorkingDateLabels();
     void setEventLabels();
+    void clearEventLabels();
+    void setDayViewTimePeriod(SingleEvent event);
+
+    //To minimize the updates of labels I keep track if the labels have been recently cleared.
+    bool labelsRecentlyCleared = false;
 
     //A map between dates and all the events in that day as DayEvent pointers. De-allocations needed for DayEvents
     QHash<QString, DayEvent*> dayEvents;
@@ -60,14 +56,16 @@ private:
     QDate workingDate; //The date that the user is currently interacting with
 
     //Holds the path to user data
-    const QString userDataPath = QDir::currentPath() + "/test.json";
+    const QString userDataPath = QDir::currentPath() + "/Events.json";
 
     //Label stylesheet color options (I would like for these to be const QStrings but it doesn't like that)
-    const QMap<QString, QString> colorMap = {{"red", "QLabel { background-color : red; } QLabel:hover{background-color: #ffaa00;color: black;}"},
-                                            {"blue", "QLabel { background-color : blue; } QLabel:hover{background-color: #ffaa00;color: black;}"},
-                                            {"green", "QLabel { background-color : green; } QLabel:hover{background-color: #ffaa00;color: black;}"},
-                                            {"yellow", "QLabel { background-color : yellow; } QLabel:hover{background-color: #ffaa00;color: black;}"},
-                                            {"pink", "QLabel { background-color : pink; } QLabel:hover{background-color: #ffaa00;color: black;}"}};
+    const QMap<QString, QString> colorMap = {{"Red", "QLabel { background-color : red; } QLabel:hover{background-color: #ffaa00; color: black;}"},
+                                            {"Blue", "QLabel { background-color : blue; } QLabel:hover{background-color: #ffaa00; color: black;}"},
+                                            {"Green", "QLabel { background-color : green; } QLabel:hover{background-color: #ffaa00; color: black;}"},
+                                            {"Yellow", "QLabel { background-color : yellow; } QLabel:hover{background-color: #ffaa00; color: black;}"},
+                                            {"Pink", "QLabel { background-color : pink; } QLabel:hover{background-color: #ffaa00; color: black;}"}};
+    //To be able to revert label color back to normal
+    QString defaultColorFromTheme = "QLabel { background-color : #323232; } QLabel:hover{background-color: #ffaa00; color: black;}";
     //Label name map (I would like for these to be const QStrings but it doesn't like that)
     const QMap<QString, QString> nameMap = {{"12:00 AM", "label_1200AM"}, {"12:30 AM", "label_1230AM"}, {"12:00 PM", "label_1200PM"}, {"12:30 PM", "label_1230PM"},
                                             {"11:00 AM", "label_1100AM"}, {"11:30 AM", "label_1130AM"}, {"11:00 PM", "label_1100PM"}, {"11:30 PM", "label_1130PM"},
