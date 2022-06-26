@@ -5,12 +5,20 @@ Torg::Torg(QWidget *parent): QMainWindow(parent), ui(new Ui::Torg){
 
     ui->setupUi(this);
 
+    //Get User Data
+    this->loadUserData();
+
     //Launch app in Day View
     ui->stackedWidget->setCurrentWidget(ui->Day_View);
 
+    //Get the date and setup display
     this->todaysDate = QDate::currentDate();
     this->workingDate = this->todaysDate;
     this->setWorkingDateLabels();
+    this->setEventLabels();
+
+    //Gonna need a configure startup method
+    ui->progressBar_Single->setValue(0);
 
     //Set defaultColorFromTheme TODO
 
@@ -77,7 +85,7 @@ void Torg::clearEventLabels(){
 void Torg::setDayViewTimePeriod(SingleEvent event){
     //For all time blocks between startTime and endTime set those labels the color of the event
     QStringList allTimeBlocks = event.getTimeBlocks();
-    qDebug() << allTimeBlocks;
+
     for(auto timeBlock : allTimeBlocks){
         //Set the labels for each time block of the event
         ui->Day_View->findChild<QLabel *>(nameMap[timeBlock])->setStyleSheet(colorMap[event.getColor()]); //Color
@@ -136,9 +144,50 @@ void Torg::on_actionDay_Event_triggered(){ ui->stackedWidget->setCurrentWidget(u
 void Torg::on_actionWeek_Event_triggered(){ ui->stackedWidget->setCurrentWidget(ui->Create_Week); }
 void Torg::on_actionSingle_Event_triggered(){ ui->stackedWidget->setCurrentWidget(ui->Create_Single); }
 
+//Methods for getting the create single event status
+void Torg::on_lineEdit_Title_Single_textEdited(const QString &arg1){ sTitleChanged = true; this->updateSingleProgressBar(); }
+void Torg::on_dateEdit_Single_dateChanged(const QDate &date){ sDateChanged = true; this->updateSingleProgressBar(); }
+void Torg::on_timeEditStart_Single_timeChanged(const QTime &time){ sStartChanged = true; this->updateSingleProgressBar(); }
+void Torg::on_timeEditEnd_Single_timeChanged(const QTime &time){ sEndChanged = true; this->updateSingleProgressBar(); }
+
+//Handling Progress Bars
+void Torg::updateSingleProgressBar(){
+    int percentageDone = 0;
+    if(sTitleChanged){ percentageDone += 25; }
+    if(sDateChanged){ percentageDone += 25; }
+    if(sStartChanged){ percentageDone += 25; }
+    if(sEndChanged){ percentageDone += 25; }
+    ui->progressBar_Single->setValue(percentageDone);
+}
+
+
 //Adding a single event
 void Torg::on_pushButton_Add_Single_clicked()
 {
+    //User Error Handling
+    {
+        //They haven't changed the title
+        if(!sTitleChanged){
+            alertUser("Input a new Title for your Event.");
+            return;
+        }
+        //They haven't changed the date
+        if(!sDateChanged){
+            alertUser("Input a new Date for your Event.");
+            return;
+        }
+        //They haven't changed the start time
+        if(!sStartChanged){
+            alertUser("Input a new Start Time for your Event.");
+            return;
+        }
+        //They haven't changed the end time
+        if(!sEndChanged){
+            alertUser("Input a new End Time for your Event.");
+            return;
+        }
+    }
+
     //Grab input variables
     QString title = ui->Create_Single->findChild<QLineEdit *>("lineEdit_Title_Single")->text();
     QString notes = ui->Create_Single->findChild<QTextEdit *>("textEdit_Notes_Single")->toPlainText();
@@ -151,7 +200,7 @@ void Torg::on_pushButton_Add_Single_clicked()
     bool concrete = ui->Create_Single->findChild<QRadioButton *>("radioButton_Concrete_Single")->isChecked();
 
     SingleEvent eventToAdd(title, startTime, endTime, notes, repeat, date, reminder, color, concrete);
-    eventToAdd.needsSave(); //Need to manually call needs save because we are creating this event dynamically.
+    eventToAdd.needsSave(); //Need to manually call needs save because we are creating this event dynamically and not from a file.
 
     //Add to day event map if it exists or create a new one if it doesn't
     if(this->dayEvents.contains(date)){
@@ -160,8 +209,15 @@ void Torg::on_pushButton_Add_Single_clicked()
         this->dayEvents[date] = new DayEvent(date, eventToAdd);
     }
 
+    //Revert Creation Boolean Statuses
+
     //Finally save the new info to user file
     this->dayEvents[date]->save(this->userDataPath);
+    //Change to Day View with the working day on the date that was just created
+    this->workingDate = toDate(date);
+    this->setWorkingDateLabels();
+    this->setEventLabels();
+    ui->stackedWidget->setCurrentWidget(ui->Day_View);
 }
 
 //TODO Toggle Stylesheet
@@ -189,4 +245,3 @@ void Torg::on_decButton_clicked()
     this->setWorkingDateLabels();
     this->setEventLabels();
 }
-

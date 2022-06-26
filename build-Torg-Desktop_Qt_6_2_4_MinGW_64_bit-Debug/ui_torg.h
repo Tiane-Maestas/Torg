@@ -233,6 +233,7 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer_8;
     QRadioButton *radioButton_Concrete_Single;
+    QRadioButton *radioButton;
     QSpacerItem *horizontalSpacer_9;
     QHBoxLayout *horizontalLayout_6;
     QSpacerItem *horizontalSpacer_12;
@@ -1813,6 +1814,11 @@ public:
 
         horizontalLayout_4->addWidget(radioButton_Concrete_Single);
 
+        radioButton = new QRadioButton(Create_Single);
+        radioButton->setObjectName(QString::fromUtf8("radioButton"));
+
+        horizontalLayout_4->addWidget(radioButton);
+
         horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_4->addItem(horizontalSpacer_9);
@@ -3278,7 +3284,7 @@ public:
 
         retranslateUi(Torg);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Torg);
@@ -3441,6 +3447,7 @@ public:
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Notes</p></body></html>", nullptr));
         radioButton_Concrete_Single->setText(QCoreApplication::translate("Torg", "Concrete", nullptr));
+        radioButton->setText(QCoreApplication::translate("Torg", "All Day", nullptr));
         pushButton_Add_Single->setText(QCoreApplication::translate("Torg", "Add", nullptr));
         comboBox_Repeat_Day->setItemText(0, QCoreApplication::translate("Torg", "Repeat", nullptr));
         comboBox_Repeat_Day->setItemText(1, QCoreApplication::translate("Torg", "None", nullptr));

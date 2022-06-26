@@ -70,19 +70,13 @@ const QString SingleEvent::toString() const{
 }
 
 DayEvent::DayEvent(QString date, SingleEvent event){
-    int year = date.split("/")[2].toInt();
-    int month = date.split("/")[0].toInt();
-    int day = date.split("/")[1].toInt();
-    this->date = QDate(year, month, day);
+    this->date = toDate(date);
     this->dayOfTheWeek = dayOfWeek(this->date);
     this->eventMap[event.getTitle()] = event;
 }
 
 DayEvent::DayEvent(QString date){
-    int year = date.split("/")[2].toInt();
-    int month = date.split("/")[0].toInt();
-    int day = date.split("/")[1].toInt();
-    this->date = QDate(year, month, day);
+    this->date = toDate(date);
     this->dayOfTheWeek = dayOfWeek(this->date);
 }
 

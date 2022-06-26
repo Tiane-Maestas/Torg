@@ -34,7 +34,6 @@ int main(int argc, char *argv[])
     a.setWindowIcon(QIcon(iconPath));
 
     Torg w;
-    w.loadUserData();
     w.show();
 
     return a.exec();

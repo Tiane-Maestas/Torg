@@ -39,7 +39,7 @@
        <enum>QFrame::NoFrame</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Day_View">
        <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -3031,6 +3031,13 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="text">
              <string>Concrete</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton">
+            <property name="text">
+             <string>All Day</string>
             </property>
            </widget>
           </item>

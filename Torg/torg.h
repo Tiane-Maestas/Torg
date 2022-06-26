@@ -17,9 +17,6 @@ class Torg : public QMainWindow
 public:
     Torg(QWidget *parent = nullptr);
     ~Torg();
-    //Load user data from json file and populates the dayEvents hash map (unordered_map in std)
-    //Return true if loading was succesful
-    bool loadUserData();
 
 private slots:
     //Menu actions
@@ -37,14 +34,33 @@ private slots:
     void on_incButton_clicked();
     void on_decButton_clicked();
 
+    //For making sure proper input is selected on creation
+    void on_lineEdit_Title_Single_textEdited(const QString &arg1);
+    void on_dateEdit_Single_dateChanged(const QDate &date);
+    void on_timeEditStart_Single_timeChanged(const QTime &time);
+    void on_timeEditEnd_Single_timeChanged(const QTime &time);
+
 private:
     Ui::Torg *ui;
+
+    //Load user data from json file and populates the dayEvents hash map (unordered_map in std)
+    //Return true if loading was succesful
+    bool loadUserData();
 
     //Helpers for setting the labels on all pages
     void setWorkingDateLabels();
     void setEventLabels();
     void clearEventLabels();
     void setDayViewTimePeriod(SingleEvent event);
+
+    //Progress Bar Updates
+    void updateSingleProgressBar();
+
+    //For making sure user has inputed information
+    bool sTitleChanged = false;
+    bool sDateChanged = false;
+    bool sStartChanged = false;
+    bool sEndChanged = false;
 
     //To minimize the updates of labels I keep track if the labels have been recently cleared.
     bool labelsRecentlyCleared = false;
@@ -69,7 +85,7 @@ private:
     //Label name map (I would like for these to be const QStrings but it doesn't like that)
     const QMap<QString, QString> nameMap = {{"12:00 AM", "label_1200AM"}, {"12:30 AM", "label_1230AM"}, {"12:00 PM", "label_1200PM"}, {"12:30 PM", "label_1230PM"},
                                             {"11:00 AM", "label_1100AM"}, {"11:30 AM", "label_1130AM"}, {"11:00 PM", "label_1100PM"}, {"11:30 PM", "label_1130PM"},
-                                            {"10:00 AM", "label_1200AM"}, {"10:30 AM", "label_1030AM"}, {"10:00 PM", "label_1000PM"}, {"10:30 PM", "label_1030PM"},
+                                            {"10:00 AM", "label_1000AM"}, {"10:30 AM", "label_1030AM"}, {"10:00 PM", "label_1000PM"}, {"10:30 PM", "label_1030PM"},
                                             {"9:00 AM", "label_900AM"}, {"9:30 AM", "label_930AM"}, {"9:00 PM", "label_900PM"}, {"9:30 PM", "label_930PM"},
                                             {"8:00 AM", "label_800AM"}, {"8:30 AM", "label_830AM"}, {"8:00 PM", "label_800PM"}, {"8:30 PM", "label_830PM"},
                                             {"7:00 AM", "label_700AM"}, {"7:30 AM", "label_730AM"}, {"7:00 PM", "label_700PM"}, {"7:30 PM", "label_730PM"},
