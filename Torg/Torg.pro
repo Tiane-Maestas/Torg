@@ -12,11 +12,13 @@ SOURCES += \
     events.cpp \
     helper.cpp \
     main.cpp \
+    thread.cpp \
     torg.cpp
 
 HEADERS += \
     events.h \
     helper.h \
+    thread.h \
     torg.h
 
 FORMS += \

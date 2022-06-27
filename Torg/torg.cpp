@@ -144,22 +144,52 @@ void Torg::on_actionDay_Event_triggered(){ ui->stackedWidget->setCurrentWidget(u
 void Torg::on_actionWeek_Event_triggered(){ ui->stackedWidget->setCurrentWidget(ui->Create_Week); }
 void Torg::on_actionSingle_Event_triggered(){ ui->stackedWidget->setCurrentWidget(ui->Create_Single); }
 
-//Methods for getting the create single event status
-void Torg::on_lineEdit_Title_Single_textEdited(const QString &arg1){ sTitleChanged = true; this->updateSingleProgressBar(); }
-void Torg::on_dateEdit_Single_dateChanged(const QDate &date){ sDateChanged = true; this->updateSingleProgressBar(); }
-void Torg::on_timeEditStart_Single_timeChanged(const QTime &time){ sStartChanged = true; this->updateSingleProgressBar(); }
-void Torg::on_timeEditEnd_Single_timeChanged(const QTime &time){ sEndChanged = true; this->updateSingleProgressBar(); }
-
-//Handling Progress Bars
-void Torg::updateSingleProgressBar(){
-    int percentageDone = 0;
-    if(sTitleChanged){ percentageDone += 25; }
-    if(sDateChanged){ percentageDone += 25; }
-    if(sStartChanged){ percentageDone += 25; }
-    if(sEndChanged){ percentageDone += 25; }
-    ui->progressBar_Single->setValue(percentageDone);
+//Methods for getting the create single event status to change progress bar
+void Torg::on_lineEdit_Title_Single_textEdited(const QString &arg1)
+{
+    if(!sTitleChanged){
+        sTitleChanged = true;
+        singlePercentageDone += 25;
+        this->updateSingleProgressBarStatus(); //Only add percentage if this is the first time the title has been changed
+    }
+}
+void Torg::on_dateEdit_Single_dateChanged(const QDate &date)
+{
+    if(!sDateChanged){
+        sDateChanged = true;
+        singlePercentageDone += 25;
+        this->updateSingleProgressBarStatus(); //Only add percentage if this is the first time the date has been changed
+    }
+}
+void Torg::on_timeEditStart_Single_timeChanged(const QTime &time)
+{
+    if(!sStartChanged){
+        sStartChanged = true;
+        singlePercentageDone += 25;
+        this->updateSingleProgressBarStatus(); //Only add percentage if this is the first time the start time has been changed
+    }
+}
+void Torg::on_timeEditEnd_Single_timeChanged(const QTime &time)
+{
+    if(!sEndChanged){
+        sEndChanged = true;
+        singlePercentageDone += 25;
+        this->updateSingleProgressBarStatus(); //Only add percentage if this is the first time the end time has been changed
+    }
 }
 
+//Handling Progress Bars Status
+void Torg::updateSingleProgressBarStatus(){
+    //Create a queued connection (across threads) between the threads update bar method and the animate method. Only do this once so that only one message is sent at a time.
+    if(!singleBarLinked){ singleBarLinked = true; connect(&sProgressBarThread, SIGNAL(updateBar(int)), this, SLOT(animateSingleProgressBar(int)), Qt::QueuedConnection); }
+    sProgressBarThread.setTargetPercentage(singlePercentageDone);
+    if(!sProgressBarThread.isRunning()){ sProgressBarThread.run(); } //Only run the thread if it isn't running
+}
+
+//Recieves Messages from the thread to increment the progress
+void Torg::animateSingleProgressBar(int inc){
+    ui->progressBar_Single->setValue(ui->progressBar_Single->value() + inc);
+}
 
 //Adding a single event
 void Torg::on_pushButton_Add_Single_clicked()

@@ -36,7 +36,7 @@ void alertUser(QString msg){
 
 void delay(int n)
 {
-    QTime dieTime= QTime::currentTime().addSecs(n);
+    QTime dieTime= QTime::currentTime().addMSecs(n);
     while (QTime::currentTime() < dieTime)
         QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
 }

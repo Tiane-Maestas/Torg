@@ -27,7 +27,7 @@ QString findClosestTime(QString time);
 //Creates an alert box to prompt the user
 void alertUser(QString msg);
 
-//Allows for delay when necessary.
+//Allows for delay when necessary in ms.
 void delay(int n);
 
 #endif // HELPER_H

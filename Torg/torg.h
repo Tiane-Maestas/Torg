@@ -3,8 +3,10 @@
 
 #include <QMainWindow>
 #include <QMap>
+#include <QObject>
 
 #include "events.h"
+#include "thread.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Torg; }
@@ -40,6 +42,9 @@ private slots:
     void on_timeEditStart_Single_timeChanged(const QTime &time);
     void on_timeEditEnd_Single_timeChanged(const QTime &time);
 
+    //Slot for incrementing a progress bar from a seprate thread
+    void animateSingleProgressBar(int inc);
+
 private:
     Ui::Torg *ui;
 
@@ -54,7 +59,10 @@ private:
     void setDayViewTimePeriod(SingleEvent event);
 
     //Progress Bar Updates
-    void updateSingleProgressBar();
+    void updateSingleProgressBarStatus();
+    ProgressBarAnimator sProgressBarThread; //For anmiation signals froma seprate thread
+    bool singleBarLinked = false;
+    int singlePercentageDone = 0;
 
     //For making sure user has inputed information
     bool sTitleChanged = false;
