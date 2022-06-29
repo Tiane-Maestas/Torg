@@ -223,28 +223,28 @@ void Torg::on_pushButton_Add_Single_clicked()
     QString notes = ui->Create_Single->findChild<QTextEdit *>("textEdit_Notes_Single")->toPlainText();
     QString startTime = ui->Create_Single->findChild<QTimeEdit *>("timeEditStart_Single")->text();
     QString endTime = ui->Create_Single->findChild<QTimeEdit *>("timeEditEnd_Single")->text();
-    QString date = ui->Create_Single->findChild<QDateEdit *>("dateEdit_Single")->text();
+    QDate date = ui->Create_Single->findChild<QDateEdit *>("dateEdit_Single")->date();
     QString repeat = ui->Create_Single->findChild<QComboBox *>("comboBox_Repeat_Single")->currentText();
     QString reminder = ui->Create_Single->findChild<QComboBox *>("comboBox_Reminder_Single")->currentText(); //Need to process at somepoint
     QString color = ui->Create_Single->findChild<QComboBox *>("comboBox_Color_Single")->currentText();
     bool concrete = ui->Create_Single->findChild<QRadioButton *>("radioButton_Concrete_Single")->isChecked();
 
-    SingleEvent eventToAdd(title, startTime, endTime, notes, repeat, date, reminder, color, concrete);
+    SingleEvent eventToAdd(title, startTime, endTime, notes, repeat, formatDate(date), reminder, color, concrete);
     eventToAdd.needsSave(); //Need to manually call needs save because we are creating this event dynamically and not from a file.
 
     //Add to day event map if it exists or create a new one if it doesn't
-    if(this->dayEvents.contains(date)){
-        this->dayEvents[date]->addEvent(eventToAdd);
+    if(this->dayEvents.contains(formatDate(date))){
+        this->dayEvents[formatDate(date)]->addEvent(eventToAdd);
     }else{
-        this->dayEvents[date] = new DayEvent(date, eventToAdd);
+        this->dayEvents[formatDate(date)] = new DayEvent(formatDate(date), eventToAdd);
     }
 
     //Revert Creation Boolean Statuses
 
     //Finally save the new info to user file
-    this->dayEvents[date]->save(this->userDataPath);
+    this->dayEvents[formatDate(date)]->save(this->userDataPath);
     //Change to Day View with the working day on the date that was just created
-    this->workingDate = toDate(date);
+    this->workingDate = date;
     this->setWorkingDateLabels();
     this->setEventLabels();
     ui->stackedWidget->setCurrentWidget(ui->Day_View);

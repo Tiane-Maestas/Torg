@@ -498,6 +498,9 @@ public:
         sizePolicy1.setHeightForWidth(workingDayLabel->sizePolicy().hasHeightForWidth());
         workingDayLabel->setSizePolicy(sizePolicy1);
         workingDayLabel->setMinimumSize(QSize(0, 30));
+        QFont font;
+        font.setPointSize(12);
+        workingDayLabel->setFont(font);
         workingDayLabel->setAlignment(Qt::AlignCenter);
 
         dayControlLayout->addWidget(workingDayLabel);
@@ -1877,9 +1880,9 @@ public:
         comboBox_Repeat_Day->addItem(QString());
         comboBox_Repeat_Day->setObjectName(QString::fromUtf8("comboBox_Repeat_Day"));
         comboBox_Repeat_Day->setMinimumSize(QSize(84, 30));
-        QFont font;
-        font.setUnderline(false);
-        comboBox_Repeat_Day->setFont(font);
+        QFont font1;
+        font1.setUnderline(false);
+        comboBox_Repeat_Day->setFont(font1);
         comboBox_Repeat_Day->setLayoutDirection(Qt::LeftToRight);
         comboBox_Repeat_Day->setFrame(true);
 
@@ -2106,7 +2109,7 @@ public:
         scrollArea_3->setWidgetResizable(true);
         scrollAreaWidgetContents_3 = new QWidget();
         scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 464, 1836));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 136, 1836));
         verticalLayout_14 = new QVBoxLayout(scrollAreaWidgetContents_3);
         verticalLayout_14->setObjectName(QString::fromUtf8("verticalLayout_14"));
         horizontalLayout_1230AM_3 = new QHBoxLayout();
@@ -3238,9 +3241,9 @@ public:
         gridLayout->setContentsMargins(0, 0, 0, 0);
         calendarWidget = new QCalendarWidget(Month_View);
         calendarWidget->setObjectName(QString::fromUtf8("calendarWidget"));
-        QFont font1;
-        font1.setPointSize(16);
-        calendarWidget->setFont(font1);
+        QFont font2;
+        font2.setPointSize(16);
+        calendarWidget->setFont(font2);
         calendarWidget->setMouseTracking(false);
         calendarWidget->setAutoFillBackground(true);
         calendarWidget->setStyleSheet(QString::fromUtf8(""));
@@ -3284,7 +3287,7 @@ public:
 
         retranslateUi(Torg);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Torg);

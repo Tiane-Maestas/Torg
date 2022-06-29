@@ -39,7 +39,7 @@
        <enum>QFrame::NoFrame</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Day_View">
        <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -71,6 +71,11 @@
               <width>0</width>
               <height>30</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>Today: (Date)</string>
@@ -3727,7 +3732,7 @@ p, li { white-space: pre-wrap; }
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>464</width>
+                 <width>136</width>
                  <height>1836</height>
                 </rect>
                </property>
