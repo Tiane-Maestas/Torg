@@ -15,6 +15,7 @@
 #include <QtWidgets/QCalendarWidget>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDateEdit>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -47,7 +48,7 @@ public:
     QAction *actionAbout;
     QAction *actionTheme;
     QWidget *centralwidget;
-    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout_11;
     QStackedWidget *stackedWidget;
     QWidget *Day_View;
     QVBoxLayout *verticalLayout_4;
@@ -436,6 +437,9 @@ public:
     QWidget *Month_View;
     QGridLayout *gridLayout;
     QCalendarWidget *calendarWidget;
+    QFrame *frame;
+    QVBoxLayout *verticalLayout;
+    QPushButton *pushButton;
     QMenuBar *menubar;
     QMenu *menuCreate;
     QMenu *menuView;
@@ -471,17 +475,22 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setMouseTracking(false);
         centralwidget->setTabletTracking(false);
-        verticalLayout = new QVBoxLayout(centralwidget);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        horizontalLayout_11 = new QHBoxLayout(centralwidget);
+        horizontalLayout_11->setSpacing(0);
+        horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
+        horizontalLayout_11->setContentsMargins(0, 0, 0, 0);
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
         sizePolicy.setHeightForWidth(stackedWidget->sizePolicy().hasHeightForWidth());
         stackedWidget->setSizePolicy(sizePolicy);
         stackedWidget->setFrameShape(QFrame::NoFrame);
+        stackedWidget->setLineWidth(0);
         Day_View = new QWidget();
         Day_View->setObjectName(QString::fromUtf8("Day_View"));
         verticalLayout_4 = new QVBoxLayout(Day_View);
+        verticalLayout_4->setSpacing(0);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        verticalLayout_4->setContentsMargins(0, 0, 0, 0);
         dayControlLayout = new QHBoxLayout();
         dayControlLayout->setObjectName(QString::fromUtf8("dayControlLayout"));
         decButton = new QPushButton(Day_View);
@@ -524,7 +533,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 954, 1536));
+        scrollAreaWidgetContents->setGeometry(QRect(0, -556, 908, 1536));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_2->setSpacing(0);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
@@ -1648,7 +1657,9 @@ public:
         Create_Single = new QWidget();
         Create_Single->setObjectName(QString::fromUtf8("Create_Single"));
         verticalLayout_6 = new QVBoxLayout(Create_Single);
+        verticalLayout_6->setSpacing(0);
         verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
+        verticalLayout_6->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_Progress = new QHBoxLayout();
         horizontalLayout_Progress->setObjectName(QString::fromUtf8("horizontalLayout_Progress"));
         progressBar_Single = new QProgressBar(Create_Single);
@@ -1856,7 +1867,9 @@ public:
         Create_Day = new QWidget();
         Create_Day->setObjectName(QString::fromUtf8("Create_Day"));
         horizontalLayout_21 = new QHBoxLayout(Create_Day);
+        horizontalLayout_21->setSpacing(0);
         horizontalLayout_21->setObjectName(QString::fromUtf8("horizontalLayout_21"));
+        horizontalLayout_21->setContentsMargins(0, 0, 0, 0);
         verticalLayout_EventAdd = new QVBoxLayout();
         verticalLayout_EventAdd->setObjectName(QString::fromUtf8("verticalLayout_EventAdd"));
         horizontalLayout_Progress_2 = new QHBoxLayout();
@@ -2109,7 +2122,7 @@ public:
         scrollArea_3->setWidgetResizable(true);
         scrollAreaWidgetContents_3 = new QWidget();
         scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 136, 1836));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 444, 1836));
         verticalLayout_14 = new QVBoxLayout(scrollAreaWidgetContents_3);
         verticalLayout_14->setObjectName(QString::fromUtf8("verticalLayout_14"));
         horizontalLayout_1230AM_3 = new QHBoxLayout();
@@ -3258,7 +3271,30 @@ public:
 
         stackedWidget->addWidget(Month_View);
 
-        verticalLayout->addWidget(stackedWidget);
+        horizontalLayout_11->addWidget(stackedWidget);
+
+        frame = new QFrame(centralwidget);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy3);
+        frame->setMinimumSize(QSize(50, 0));
+        frame->setBaseSize(QSize(0, 0));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        verticalLayout = new QVBoxLayout(frame);
+        verticalLayout->setSpacing(0);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        pushButton = new QPushButton(frame);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        verticalLayout->addWidget(pushButton);
+
+
+        horizontalLayout_11->addWidget(frame, 0, Qt::AlignHCenter);
 
         Torg->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Torg);
@@ -3287,7 +3323,7 @@ public:
 
         retranslateUi(Torg);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(Torg);
@@ -3588,6 +3624,7 @@ public:
         label_335->setText(QString());
         label_336->setText(QCoreApplication::translate("Torg", "12:00 AM -", nullptr));
         label_337->setText(QString());
+        pushButton->setText(QCoreApplication::translate("Torg", "PushButton", nullptr));
         menuCreate->setTitle(QCoreApplication::translate("Torg", "Create", nullptr));
         menuView->setTitle(QCoreApplication::translate("Torg", "View", nullptr));
         menuOptions->setTitle(QCoreApplication::translate("Torg", "Options", nullptr));
