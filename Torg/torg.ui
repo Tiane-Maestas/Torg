@@ -153,8 +153,8 @@
              <property name="geometry">
               <rect>
                <x>0</x>
-               <y>-556</y>
-               <width>908</width>
+               <y>0</y>
+               <width>118</width>
                <height>1536</height>
               </rect>
              </property>
@@ -3795,7 +3795,7 @@ p, li { white-space: pre-wrap; }
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>444</width>
+                 <width>136</width>
                  <height>1836</height>
                 </rect>
                </property>
@@ -6317,17 +6317,17 @@ p, li { white-space: pre-wrap; }
       </widget>
      </widget>
     </item>
-    <item alignment="Qt::AlignHCenter">
-     <widget class="QFrame" name="frame">
+    <item>
+     <widget class="QFrame" name="SideMenuFrame">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
       <property name="minimumSize">
        <size>
-        <width>50</width>
+        <width>51</width>
         <height>0</height>
        </size>
       </property>
@@ -6338,7 +6338,7 @@ p, li { white-space: pre-wrap; }
        </size>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Box</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
@@ -6360,11 +6360,30 @@ p, li { white-space: pre-wrap; }
         <number>0</number>
        </property>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="sideMenuToggleButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="text">
-          <string>PushButton</string>
+          <string>=</string>
          </property>
         </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>

@@ -437,9 +437,10 @@ public:
     QWidget *Month_View;
     QGridLayout *gridLayout;
     QCalendarWidget *calendarWidget;
-    QFrame *frame;
+    QFrame *SideMenuFrame;
     QVBoxLayout *verticalLayout;
-    QPushButton *pushButton;
+    QPushButton *sideMenuToggleButton;
+    QSpacerItem *verticalSpacer_5;
     QMenuBar *menubar;
     QMenu *menuCreate;
     QMenu *menuView;
@@ -533,7 +534,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, -556, 908, 1536));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 118, 1536));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_2->setSpacing(0);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
@@ -2122,7 +2123,7 @@ public:
         scrollArea_3->setWidgetResizable(true);
         scrollAreaWidgetContents_3 = new QWidget();
         scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 444, 1836));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 136, 1836));
         verticalLayout_14 = new QVBoxLayout(scrollAreaWidgetContents_3);
         verticalLayout_14->setObjectName(QString::fromUtf8("verticalLayout_14"));
         horizontalLayout_1230AM_3 = new QHBoxLayout();
@@ -3273,28 +3274,34 @@ public:
 
         horizontalLayout_11->addWidget(stackedWidget);
 
-        frame = new QFrame(centralwidget);
-        frame->setObjectName(QString::fromUtf8("frame"));
-        QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        SideMenuFrame = new QFrame(centralwidget);
+        SideMenuFrame->setObjectName(QString::fromUtf8("SideMenuFrame"));
+        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Expanding);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
-        frame->setSizePolicy(sizePolicy3);
-        frame->setMinimumSize(QSize(50, 0));
-        frame->setBaseSize(QSize(0, 0));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
-        verticalLayout = new QVBoxLayout(frame);
+        sizePolicy3.setHeightForWidth(SideMenuFrame->sizePolicy().hasHeightForWidth());
+        SideMenuFrame->setSizePolicy(sizePolicy3);
+        SideMenuFrame->setMinimumSize(QSize(51, 0));
+        SideMenuFrame->setBaseSize(QSize(0, 0));
+        SideMenuFrame->setFrameShape(QFrame::Box);
+        SideMenuFrame->setFrameShadow(QFrame::Raised);
+        verticalLayout = new QVBoxLayout(SideMenuFrame);
         verticalLayout->setSpacing(0);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton = new QPushButton(frame);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        sideMenuToggleButton = new QPushButton(SideMenuFrame);
+        sideMenuToggleButton->setObjectName(QString::fromUtf8("sideMenuToggleButton"));
+        sizePolicy1.setHeightForWidth(sideMenuToggleButton->sizePolicy().hasHeightForWidth());
+        sideMenuToggleButton->setSizePolicy(sizePolicy1);
 
-        verticalLayout->addWidget(pushButton);
+        verticalLayout->addWidget(sideMenuToggleButton);
+
+        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_5);
 
 
-        horizontalLayout_11->addWidget(frame, 0, Qt::AlignHCenter);
+        horizontalLayout_11->addWidget(SideMenuFrame);
 
         Torg->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Torg);
@@ -3624,7 +3631,7 @@ public:
         label_335->setText(QString());
         label_336->setText(QCoreApplication::translate("Torg", "12:00 AM -", nullptr));
         label_337->setText(QString());
-        pushButton->setText(QCoreApplication::translate("Torg", "PushButton", nullptr));
+        sideMenuToggleButton->setText(QCoreApplication::translate("Torg", "=", nullptr));
         menuCreate->setTitle(QCoreApplication::translate("Torg", "Create", nullptr));
         menuView->setTitle(QCoreApplication::translate("Torg", "View", nullptr));
         menuOptions->setTitle(QCoreApplication::translate("Torg", "Options", nullptr));

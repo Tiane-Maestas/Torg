@@ -19,6 +19,8 @@ Torg::Torg(QWidget *parent): QMainWindow(parent), ui(new Ui::Torg){
 
     //Gonna need a configure startup method
     ui->progressBar_Single->setValue(0);
+    sideMenuAnimator = new QPropertyAnimation(this->ui->SideMenuFrame, "geometry");
+    stackedWidgetAnimator = new QPropertyAnimation(this->ui->stackedWidget, "geometry");
 
     //Set defaultColorFromTheme TODO
 
@@ -260,6 +262,58 @@ void Torg::on_actionTheme_triggered()
     styleSheetFile.close();
 }
 
+//Side Menu Animation
+void Torg::on_sideMenuToggleButton_clicked()
+{
+    //Stacked Widget Init
+    stackedWidgetAnimator->setDuration(animationSpeed);
+    stackedWidgetAnimator->setStartValue(this->ui->stackedWidget->geometry());
+
+    //Side Menu Init
+    sideMenuAnimator->setDuration(animationSpeed);
+    sideMenuAnimator->setStartValue(this->ui->SideMenuFrame->geometry());
+
+    //CLose if opened, open if closed
+    if(sideMenuOpened){
+        //Set End Value to Current Values
+        QRect stackedWidgetEndValue(this->ui->stackedWidget->geometry());
+        QRect sideMenuEndValue(this->ui->SideMenuFrame->geometry());
+
+        //Calcaulate the change in size needed
+        int deltaX = sideMenuEndValue.width() - ((stackedWidgetEndValue.width() + sideMenuEndValue.width()) * sideMenuPercentOfScreenClosed);
+
+        // Y-Values and Heights don't need to change
+        stackedWidgetEndValue.setWidth(stackedWidgetEndValue.width() + deltaX); //Only Width is changing, not postion
+        sideMenuEndValue.setX(sideMenuEndValue.x() + deltaX); //Position Changes (Width automatically changes)
+
+        //Apply the new End Values
+        stackedWidgetAnimator->setEndValue(stackedWidgetEndValue);
+        sideMenuAnimator->setEndValue(sideMenuEndValue);
+
+        sideMenuOpened = false;
+    } else {
+        //Set End Value to Current Values
+        QRect stackedWidgetEndValue(this->ui->stackedWidget->geometry());
+        QRect sideMenuEndValue(this->ui->SideMenuFrame->geometry());
+
+        //Calcaulate the change in size needed
+        int deltaX = ((stackedWidgetEndValue.width() + sideMenuEndValue.width()) * sideMenuPercentOfScreenOpened) - sideMenuEndValue.width();
+
+        // Y-Values and Heights don't need to change
+        stackedWidgetEndValue.setWidth(stackedWidgetEndValue.width() - deltaX); //Only Width is changing, not postion
+        sideMenuEndValue.setX(sideMenuEndValue.x() - deltaX); //Position Changes (Width automatically changes)
+
+        //Apply the new End Values
+        stackedWidgetAnimator->setEndValue(stackedWidgetEndValue);
+        sideMenuAnimator->setEndValue(sideMenuEndValue);
+
+        sideMenuOpened = true;
+    }
+
+    //Start the animations
+    stackedWidgetAnimator->start();
+    sideMenuAnimator->start();
+}
 
 void Torg::on_incButton_clicked()
 {

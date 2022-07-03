@@ -7,6 +7,7 @@
 
 #include "events.h"
 #include "thread.h"
+#include "sidemenu.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Torg; }
@@ -45,6 +46,8 @@ private slots:
     //Slot for incrementing a progress bar from a seprate thread
     void animateSingleProgressBar(int inc);
 
+    void on_sideMenuToggleButton_clicked();
+
 private:
     Ui::Torg *ui;
 
@@ -60,7 +63,7 @@ private:
 
     //Progress Bar Updates
     void updateSingleProgressBarStatus();
-    ProgressBarAnimator sProgressBarThread; //For anmiation signals froma seprate thread
+    ProgressBarAnimator sProgressBarThread; //For anmiation signals from a seprate thread
     bool singleBarLinked = false;
     int singlePercentageDone = 0;
 
@@ -72,6 +75,14 @@ private:
 
     //To minimize the updates of labels I keep track if the labels have been recently cleared.
     bool labelsRecentlyCleared = false;
+
+    //For animating the opening and closing of the side menu
+    QPropertyAnimation* sideMenuAnimator;
+    QPropertyAnimation* stackedWidgetAnimator;
+    int animationSpeed = 100;
+    bool sideMenuOpened = false;
+    float sideMenuPercentOfScreenOpened = 0.30;
+    float sideMenuPercentOfScreenClosed = 0.05;
 
     //A map between dates and all the events in that day as DayEvent pointers. De-allocations needed for DayEvents
     QHash<QString, DayEvent*> dayEvents;
