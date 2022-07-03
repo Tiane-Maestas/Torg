@@ -7,7 +7,6 @@
 
 #include "events.h"
 #include "thread.h"
-#include "sidemenu.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Torg; }
@@ -46,6 +45,7 @@ private slots:
     //Slot for incrementing a progress bar from a seprate thread
     void animateSingleProgressBar(int inc);
 
+    //For use when opening and closing the side menu
     void on_sideMenuToggleButton_clicked();
 
 private:
