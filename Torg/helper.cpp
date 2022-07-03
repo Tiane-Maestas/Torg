@@ -1,21 +1,25 @@
 #include <helper.h>
 
-QString dayOfWeek(QDate date){
+QString dayOfWeek(QDate date)
+{
     return days[date.dayOfWeek() - 1];
 }
 
-QString formatDate(QDate date){
+QString formatDate(QDate date)
+{
     return date.toString("MM/dd/yyyy");
 }
 
-QDate toDate(QString date){
+QDate toDate(QString date)
+{
     int year = date.split("/")[2].toInt();
     int month = date.split("/")[0].toInt();
     int day = date.split("/")[1].toInt();
     return QDate(year, month, day);
 }
 
-QString findClosestTime(QString time){
+QString findClosestTime(QString time)
+{
     //Keep Hour
     QString first = time.split(":")[0];
     QString toReturn = first + ":";
@@ -28,7 +32,8 @@ QString findClosestTime(QString time){
     return toReturn;
 }
 
-void alertUser(QString msg){
+void alertUser(QString msg)
+{
     QMessageBox msgBox;
     msgBox.setText(msg);
     msgBox.exec();

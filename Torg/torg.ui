@@ -57,7 +57,7 @@
        <number>0</number>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Day_View">
        <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -107,7 +107,10 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>12</pointsize>
+              <pointsize>16</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+              <underline>false</underline>
              </font>
             </property>
             <property name="text">
@@ -153,8 +156,8 @@
              <property name="geometry">
               <rect>
                <x>0</x>
-               <y>0</y>
-               <width>118</width>
+               <y>-938</y>
+               <width>906</width>
                <height>1536</height>
               </rect>
              </property>
@@ -190,6 +193,11 @@
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>12:30 AM -</string>
                   </property>
@@ -218,6 +226,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -240,6 +253,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>1:00 AM -</string>
@@ -269,6 +287,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -291,6 +314,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>1:30 AM -</string>
@@ -320,6 +348,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -342,6 +375,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>2:00 AM -</string>
@@ -371,6 +409,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -393,6 +436,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>2:30 AM -</string>
@@ -422,6 +470,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -444,6 +497,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>3:00 AM -</string>
@@ -473,6 +531,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -495,6 +558,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>3:30 AM -</string>
@@ -524,6 +592,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -546,6 +619,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>4:00 AM -</string>
@@ -575,6 +653,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -597,6 +680,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>4:30 AM -</string>
@@ -626,6 +714,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -648,6 +741,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>5:00 AM -</string>
@@ -677,6 +775,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -699,6 +802,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>5:30 AM -</string>
@@ -728,6 +836,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -750,6 +863,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>6:00 AM -</string>
@@ -779,6 +897,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -801,6 +924,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>6:30 AM -</string>
@@ -830,6 +958,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -852,6 +985,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>7:00 AM -</string>
@@ -881,6 +1019,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -903,6 +1046,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>7:30 AM -</string>
@@ -932,6 +1080,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -954,6 +1107,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>8:00 AM -</string>
@@ -983,6 +1141,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1005,6 +1168,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>8:30 AM -</string>
@@ -1034,6 +1202,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1056,6 +1229,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>9:00 AM -</string>
@@ -1085,6 +1263,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1107,6 +1290,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>9:30 AM -</string>
@@ -1136,6 +1324,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1161,6 +1354,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>10:00 AM -</string>
@@ -1190,6 +1388,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1212,6 +1415,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>10:30 AM -</string>
@@ -1241,6 +1449,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1263,6 +1476,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>11:00 AM -</string>
@@ -1315,6 +1533,11 @@
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>11:30 AM -</string>
                   </property>
@@ -1343,6 +1566,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1365,6 +1593,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>12:00 PM -</string>
@@ -1394,6 +1627,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1416,6 +1654,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>12:30 PM -</string>
@@ -1445,6 +1688,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1467,6 +1715,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>1:00 PM -</string>
@@ -1496,6 +1749,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1518,6 +1776,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>1:30 PM -</string>
@@ -1547,6 +1810,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1569,6 +1837,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>2:00 PM -</string>
@@ -1598,6 +1871,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1620,6 +1898,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>2:30 PM -</string>
@@ -1649,6 +1932,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1671,6 +1959,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>3:00 PM -</string>
@@ -1700,6 +1993,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1722,6 +2020,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>3:30 PM -</string>
@@ -1751,6 +2054,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1773,6 +2081,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>4:00 PM -</string>
@@ -1802,6 +2115,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1824,6 +2142,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>4:30 PM -</string>
@@ -1853,6 +2176,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1875,6 +2203,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>5:00 PM -</string>
@@ -1904,6 +2237,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1926,6 +2264,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>5:30 PM -</string>
@@ -1955,6 +2298,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1977,6 +2325,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>6:00 PM -</string>
@@ -2006,6 +2359,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2028,6 +2386,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>6:30 PM -</string>
@@ -2057,6 +2420,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2079,6 +2447,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>7:00 PM -</string>
@@ -2108,6 +2481,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2130,6 +2508,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>7:30 PM -</string>
@@ -2159,6 +2542,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2181,6 +2569,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>8:00 PM -</string>
@@ -2210,6 +2603,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2232,6 +2630,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>8:30 PM -</string>
@@ -2261,6 +2664,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2283,6 +2691,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>9:00 PM -</string>
@@ -2312,6 +2725,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2334,6 +2752,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>9:30 PM -</string>
@@ -2363,6 +2786,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2385,6 +2813,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>10:00 PM -</string>
@@ -2414,6 +2847,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2436,6 +2874,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>10:30 PM -</string>
@@ -2465,6 +2908,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2487,6 +2935,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>11:00 PM -</string>
@@ -2516,6 +2969,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2538,6 +2996,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>11:30 PM -</string>
@@ -2567,6 +3030,11 @@
                     <height>25</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2589,6 +3057,11 @@
                     <width>60</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string>12:00 AM -</string>
@@ -2617,6 +3090,11 @@
                     <width>50</width>
                     <height>25</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
                   </property>
                   <property name="text">
                    <string/>
@@ -2775,6 +3253,15 @@
           </item>
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_5">
+            <property name="leftMargin">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <property name="bottomMargin">
+             <number>5</number>
+            </property>
             <item>
              <widget class="QTimeEdit" name="timeEditStart_Single">
               <property name="minimumSize">
@@ -2894,10 +3381,16 @@
             <property name="currentText">
              <string/>
             </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::AdjustToContents</enum>
+            </property>
             <property name="placeholderText">
              <string>Reminder</string>
             </property>
             <property name="duplicatesEnabled">
+             <bool>true</bool>
+            </property>
+            <property name="frame">
              <bool>true</bool>
             </property>
             <item>
@@ -3008,6 +3501,12 @@
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <property name="topMargin">
+           <number>5</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
           <item>
            <spacer name="horizontalSpacer_11">
             <property name="orientation">
@@ -3076,6 +3575,12 @@ p, li { white-space: pre-wrap; }
           </item>
           <item>
            <widget class="QRadioButton" name="radioButton_Concrete_Single">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -3088,7 +3593,29 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item>
+           <spacer name="horizontalSpacer_27">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <widget class="QRadioButton" name="radioButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>All Day</string>
             </property>
@@ -3111,6 +3638,9 @@ p, li { white-space: pre-wrap; }
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <property name="topMargin">
+           <number>5</number>
+          </property>
           <item>
            <spacer name="horizontalSpacer_12">
             <property name="orientation">
@@ -3795,7 +4325,7 @@ p, li { white-space: pre-wrap; }
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>136</width>
+                 <width>443</width>
                  <height>1836</height>
                 </rect>
                </property>

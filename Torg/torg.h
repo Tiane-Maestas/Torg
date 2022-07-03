@@ -63,9 +63,9 @@ private:
 
     //Progress Bar Updates
     void updateSingleProgressBarStatus();
-    ProgressBarAnimator sProgressBarThread; //For anmiation signals from a seprate thread
-    bool singleBarLinked = false;
+    ProgressBarAnimator* sProgressBarThread; //For anmiation signals from a seprate thread
     int singlePercentageDone = 0;
+    void resetSingleProgressBar();
 
     //For making sure user has inputed information
     bool sTitleChanged = false;
@@ -84,6 +84,10 @@ private:
     float sideMenuPercentOfScreenOpened = 0.30;
     float sideMenuPercentOfScreenClosed = 0.05;
 
+    //Helpers for setting event creation input fields without changing the progress bars (Start time and End Time fields can be added if needed here!)
+    void setDateInputFields(QDate date);
+    bool dateInputFieldsBeingSetDynamically = false;
+
     //A map between dates and all the events in that day as DayEvent pointers. De-allocations needed for DayEvents
     QHash<QString, DayEvent*> dayEvents;
 
@@ -101,8 +105,9 @@ private:
                                             {"Pink", "QLabel { background-color : pink; } QLabel:hover{background-color: #ffaa00; color: black;}"}};
     //To be able to revert label color back to normal
     QString defaultColorFromTheme = "QLabel { background-color : #323232; } QLabel:hover{background-color: #ffaa00; color: black;}";
+
     //Label name map (I would like for these to be const QStrings but it doesn't like that)
-    const QMap<QString, QString> nameMap = {{"12:00 AM", "label_1200AM"}, {"12:30 AM", "label_1230AM"}, {"12:00 PM", "label_1200PM"}, {"12:30 PM", "label_1230PM"},
+    const QMap<QString, QString> dayNameMap = {{"12:00 AM", "label_1200AM"}, {"12:30 AM", "label_1230AM"}, {"12:00 PM", "label_1200PM"}, {"12:30 PM", "label_1230PM"},
                                             {"11:00 AM", "label_1100AM"}, {"11:30 AM", "label_1130AM"}, {"11:00 PM", "label_1100PM"}, {"11:30 PM", "label_1130PM"},
                                             {"10:00 AM", "label_1000AM"}, {"10:30 AM", "label_1030AM"}, {"10:00 PM", "label_1000PM"}, {"10:30 PM", "label_1030PM"},
                                             {"9:00 AM", "label_900AM"}, {"9:30 AM", "label_930AM"}, {"9:00 PM", "label_900PM"}, {"9:30 PM", "label_930PM"},

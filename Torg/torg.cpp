@@ -21,12 +21,16 @@ Torg::Torg(QWidget *parent): QMainWindow(parent), ui(new Ui::Torg){
     ui->progressBar_Single->setValue(0);
     sideMenuAnimator = new QPropertyAnimation(this->ui->SideMenuFrame, "geometry");
     stackedWidgetAnimator = new QPropertyAnimation(this->ui->stackedWidget, "geometry");
+    setDateInputFields(this->todaysDate);
+    sProgressBarThread = new ProgressBarAnimator();
+    //Create a queued connection (across threads) between the threads update bar method and the animate method. Only do this once so that only one message is sent at a time.
+    connect(sProgressBarThread, SIGNAL(updateBar(int)), this, SLOT(animateSingleProgressBar(int)), Qt::QueuedConnection);
 
     //Set defaultColorFromTheme TODO
 
     //Testing
-    //ui->Day_View->findChild<QLabel *>(nameMap["12:30 AM"])->setStyleSheet(colorMap["Blue"]);
-    //ui->Day_View->findChild<QLabel *>(nameMap["7:00 AM"])->setStyleSheet(colorMap["Green"]);
+    //ui->Day_View->findChild<QLabel *>(dayNameMap["12:30 AM"])->setStyleSheet(colorMap["Blue"]);
+    //ui->Day_View->findChild<QLabel *>(dayNameMap["7:00 AM"])->setStyleSheet(colorMap["Green"]);
 }
 
 Torg::~Torg(){
@@ -37,18 +41,20 @@ Torg::~Torg(){
 }
 
 void Torg::setWorkingDateLabels(){
+    QString dayOfTheWeekAbriviation = dayOfWeek(this->workingDate).mid(0, 3);
+
     //Set custom labels to differentiate today, tomorrow, yesturday, and a random day
     if(this->todaysDate == this->workingDate){
         //Today
-        ui->Day_View->findChild<QLabel *>("workingDayLabel")->setText("Today: " + formatDate(this->workingDate));
+        ui->Day_View->findChild<QLabel *>("workingDayLabel")->setText("Today(" + dayOfTheWeekAbriviation + "): " + formatDate(this->workingDate));
 
     }else if(this->todaysDate.addDays(1) == this->workingDate){
         //Tomorrow
-        ui->Day_View->findChild<QLabel *>("workingDayLabel")->setText("Tomorrow: " + formatDate(this->workingDate));
+        ui->Day_View->findChild<QLabel *>("workingDayLabel")->setText("Tomorrow(" + dayOfTheWeekAbriviation + "): " + formatDate(this->workingDate));
 
     }else if(this->todaysDate.addDays(-1) == this->workingDate){
         //Yesturday
-        ui->Day_View->findChild<QLabel *>("workingDayLabel")->setText("Yesturday: " + formatDate(this->workingDate));
+        ui->Day_View->findChild<QLabel *>("workingDayLabel")->setText("Yesturday(" + dayOfTheWeekAbriviation + "): " + formatDate(this->workingDate));
 
     }else{
         //Random Day
@@ -60,6 +66,7 @@ void Torg::setEventLabels(){
     //Clear the event labels so they can be reset
     if(!labelsRecentlyCleared) this->clearEventLabels();
     labelsRecentlyCleared = true;
+
     if(!this->dayEvents.contains(formatDate(this->workingDate))){
         //Do nothing if there are no events that day
         return;
@@ -77,21 +84,24 @@ void Torg::setEventLabels(){
 
 void Torg::clearEventLabels(){
     //Clearing Day View
-    for(auto it : nameMap.keys()){
+    for(auto it : dayNameMap.keys()){
         //Clearing the Color
-        ui->Day_View->findChild<QLabel *>(nameMap.value(it))->setStyleSheet(defaultColorFromTheme);
-        //Text TODO
+        ui->Day_View->findChild<QLabel *>(dayNameMap.value(it))->setStyleSheet(defaultColorFromTheme);
+        ui->Day_View->findChild<QLabel *>(dayNameMap.value(it))->setText("");
     }
 }
 
+//This method should only be called with a populated single event
 void Torg::setDayViewTimePeriod(SingleEvent event){
     //For all time blocks between startTime and endTime set those labels the color of the event
     QStringList allTimeBlocks = event.getTimeBlocks();
 
+    //Only puts text into the first timeblock
+    ui->Day_View->findChild<QLabel *>(dayNameMap[allTimeBlocks[0]])->setText(event.toString());
+
     for(auto timeBlock : allTimeBlocks){
         //Set the labels for each time block of the event
-        ui->Day_View->findChild<QLabel *>(nameMap[timeBlock])->setStyleSheet(colorMap[event.getColor()]); //Color
-        //Text TODO
+        ui->Day_View->findChild<QLabel *>(dayNameMap[timeBlock])->setStyleSheet(colorMap[event.getColor()]); //Color
     }
 }
 
@@ -157,6 +167,10 @@ void Torg::on_lineEdit_Title_Single_textEdited(const QString &arg1)
 }
 void Torg::on_dateEdit_Single_dateChanged(const QDate &date)
 {
+    if(dateInputFieldsBeingSetDynamically){
+        dateInputFieldsBeingSetDynamically = false;
+        return;
+    }
     if(!sDateChanged){
         sDateChanged = true;
         singlePercentageDone += 25;
@@ -182,10 +196,20 @@ void Torg::on_timeEditEnd_Single_timeChanged(const QTime &time)
 
 //Handling Progress Bars Status
 void Torg::updateSingleProgressBarStatus(){
-    //Create a queued connection (across threads) between the threads update bar method and the animate method. Only do this once so that only one message is sent at a time.
-    if(!singleBarLinked){ singleBarLinked = true; connect(&sProgressBarThread, SIGNAL(updateBar(int)), this, SLOT(animateSingleProgressBar(int)), Qt::QueuedConnection); }
-    sProgressBarThread.setTargetPercentage(singlePercentageDone);
-    if(!sProgressBarThread.isRunning()){ sProgressBarThread.run(); } //Only run the thread if it isn't running
+    sProgressBarThread->setTargetPercentage(singlePercentageDone);
+    if(!sProgressBarThread->isRunning()){ sProgressBarThread->run(); } //Only run the thread if it isn't running
+}
+
+void Torg::resetSingleProgressBar(){
+     singlePercentageDone = 0;
+     sEndChanged = false;
+     sStartChanged = false;
+     sDateChanged = false;
+     sTitleChanged = false;
+     ui->progressBar_Single->setValue(singlePercentageDone);
+     //Reset the thread completley becuase it would get stuck otherwise
+     sProgressBarThread = new ProgressBarAnimator();
+     connect(sProgressBarThread, SIGNAL(updateBar(int)), this, SLOT(animateSingleProgressBar(int)), Qt::QueuedConnection);
 }
 
 //Recieves Messages from the thread to increment the progress
@@ -216,6 +240,13 @@ void Torg::on_pushButton_Add_Single_clicked()
         //They haven't changed the end time
         if(!sEndChanged){
             alertUser("Input a new End Time for your Event.");
+            return;
+        }
+
+        QTime checkStart = ui->Create_Single->findChild<QTimeEdit *>("timeEditStart_Single")->time();
+        QTime checkEnd = ui->Create_Single->findChild<QTimeEdit *>("timeEditEnd_Single")->time();
+        if(checkStart >= checkEnd){
+            alertUser("Start and End Times Conflict.");
             return;
         }
     }
@@ -250,6 +281,15 @@ void Torg::on_pushButton_Add_Single_clicked()
     this->setWorkingDateLabels();
     this->setEventLabels();
     ui->stackedWidget->setCurrentWidget(ui->Day_View);
+
+    //Reset progress bar to allow for new event to be created
+    resetSingleProgressBar();
+}
+
+void Torg::setDateInputFields(QDate date){
+    dateInputFieldsBeingSetDynamically = true;
+    ui->dateEdit_Single->setDate(date);
+    ui->dateEdit_Day->setDate(date);
 }
 
 //TODO Toggle Stylesheet

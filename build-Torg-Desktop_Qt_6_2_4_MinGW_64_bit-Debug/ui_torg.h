@@ -234,6 +234,7 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer_8;
     QRadioButton *radioButton_Concrete_Single;
+    QSpacerItem *horizontalSpacer_27;
     QRadioButton *radioButton;
     QSpacerItem *horizontalSpacer_9;
     QHBoxLayout *horizontalLayout_6;
@@ -509,7 +510,10 @@ public:
         workingDayLabel->setSizePolicy(sizePolicy1);
         workingDayLabel->setMinimumSize(QSize(0, 30));
         QFont font;
-        font.setPointSize(12);
+        font.setPointSize(16);
+        font.setBold(true);
+        font.setItalic(false);
+        font.setUnderline(false);
         workingDayLabel->setFont(font);
         workingDayLabel->setAlignment(Qt::AlignCenter);
 
@@ -534,7 +538,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 118, 1536));
+        scrollAreaWidgetContents->setGeometry(QRect(0, -938, 906, 1536));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_2->setSpacing(0);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
@@ -546,6 +550,9 @@ public:
         sizePolicy.setHeightForWidth(label_140->sizePolicy().hasHeightForWidth());
         label_140->setSizePolicy(sizePolicy);
         label_140->setMinimumSize(QSize(60, 30));
+        QFont font1;
+        font1.setPointSize(12);
+        label_140->setFont(font1);
         label_140->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_1230AM->addWidget(label_140);
@@ -559,6 +566,7 @@ public:
         label_1230AM->setSizePolicy(sizePolicy2);
         label_1230AM->setMinimumSize(QSize(50, 30));
         label_1230AM->setBaseSize(QSize(50, 25));
+        label_1230AM->setFont(font1);
 
         horizontalLayout_1230AM->addWidget(label_1230AM);
 
@@ -572,6 +580,7 @@ public:
         sizePolicy.setHeightForWidth(label_144->sizePolicy().hasHeightForWidth());
         label_144->setSizePolicy(sizePolicy);
         label_144->setMinimumSize(QSize(60, 30));
+        label_144->setFont(font1);
         label_144->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_100AM->addWidget(label_144);
@@ -582,6 +591,7 @@ public:
         label_100AM->setSizePolicy(sizePolicy2);
         label_100AM->setMinimumSize(QSize(50, 30));
         label_100AM->setBaseSize(QSize(50, 25));
+        label_100AM->setFont(font1);
 
         horizontalLayout_100AM->addWidget(label_100AM);
 
@@ -595,6 +605,7 @@ public:
         sizePolicy.setHeightForWidth(label_116->sizePolicy().hasHeightForWidth());
         label_116->setSizePolicy(sizePolicy);
         label_116->setMinimumSize(QSize(60, 30));
+        label_116->setFont(font1);
         label_116->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_130AM->addWidget(label_116);
@@ -605,6 +616,7 @@ public:
         label_130AM->setSizePolicy(sizePolicy2);
         label_130AM->setMinimumSize(QSize(50, 30));
         label_130AM->setBaseSize(QSize(50, 25));
+        label_130AM->setFont(font1);
 
         horizontalLayout_130AM->addWidget(label_130AM);
 
@@ -618,6 +630,7 @@ public:
         sizePolicy.setHeightForWidth(label_136->sizePolicy().hasHeightForWidth());
         label_136->setSizePolicy(sizePolicy);
         label_136->setMinimumSize(QSize(60, 30));
+        label_136->setFont(font1);
         label_136->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_200AM->addWidget(label_136);
@@ -628,6 +641,7 @@ public:
         label_200AM->setSizePolicy(sizePolicy2);
         label_200AM->setMinimumSize(QSize(50, 30));
         label_200AM->setBaseSize(QSize(50, 25));
+        label_200AM->setFont(font1);
 
         horizontalLayout_200AM->addWidget(label_200AM);
 
@@ -641,6 +655,7 @@ public:
         sizePolicy.setHeightForWidth(label_104->sizePolicy().hasHeightForWidth());
         label_104->setSizePolicy(sizePolicy);
         label_104->setMinimumSize(QSize(60, 30));
+        label_104->setFont(font1);
         label_104->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_230AM->addWidget(label_104);
@@ -651,6 +666,7 @@ public:
         label_230AM->setSizePolicy(sizePolicy2);
         label_230AM->setMinimumSize(QSize(50, 30));
         label_230AM->setBaseSize(QSize(50, 25));
+        label_230AM->setFont(font1);
 
         horizontalLayout_230AM->addWidget(label_230AM);
 
@@ -664,6 +680,7 @@ public:
         sizePolicy.setHeightForWidth(label_146->sizePolicy().hasHeightForWidth());
         label_146->setSizePolicy(sizePolicy);
         label_146->setMinimumSize(QSize(60, 30));
+        label_146->setFont(font1);
         label_146->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_300AM->addWidget(label_146);
@@ -674,6 +691,7 @@ public:
         label_300AM->setSizePolicy(sizePolicy2);
         label_300AM->setMinimumSize(QSize(50, 30));
         label_300AM->setBaseSize(QSize(50, 25));
+        label_300AM->setFont(font1);
 
         horizontalLayout_300AM->addWidget(label_300AM);
 
@@ -687,6 +705,7 @@ public:
         sizePolicy.setHeightForWidth(label_106->sizePolicy().hasHeightForWidth());
         label_106->setSizePolicy(sizePolicy);
         label_106->setMinimumSize(QSize(60, 30));
+        label_106->setFont(font1);
         label_106->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_330AM->addWidget(label_106);
@@ -697,6 +716,7 @@ public:
         label_330AM->setSizePolicy(sizePolicy2);
         label_330AM->setMinimumSize(QSize(50, 30));
         label_330AM->setBaseSize(QSize(50, 25));
+        label_330AM->setFont(font1);
 
         horizontalLayout_330AM->addWidget(label_330AM);
 
@@ -710,6 +730,7 @@ public:
         sizePolicy.setHeightForWidth(label_108->sizePolicy().hasHeightForWidth());
         label_108->setSizePolicy(sizePolicy);
         label_108->setMinimumSize(QSize(60, 30));
+        label_108->setFont(font1);
         label_108->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_400AM->addWidget(label_108);
@@ -720,6 +741,7 @@ public:
         label_400AM->setSizePolicy(sizePolicy2);
         label_400AM->setMinimumSize(QSize(50, 30));
         label_400AM->setBaseSize(QSize(50, 25));
+        label_400AM->setFont(font1);
 
         horizontalLayout_400AM->addWidget(label_400AM);
 
@@ -733,6 +755,7 @@ public:
         sizePolicy.setHeightForWidth(label_120->sizePolicy().hasHeightForWidth());
         label_120->setSizePolicy(sizePolicy);
         label_120->setMinimumSize(QSize(60, 30));
+        label_120->setFont(font1);
         label_120->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_430AM->addWidget(label_120);
@@ -743,6 +766,7 @@ public:
         label_430AM->setSizePolicy(sizePolicy2);
         label_430AM->setMinimumSize(QSize(50, 30));
         label_430AM->setBaseSize(QSize(50, 25));
+        label_430AM->setFont(font1);
 
         horizontalLayout_430AM->addWidget(label_430AM);
 
@@ -756,6 +780,7 @@ public:
         sizePolicy.setHeightForWidth(label_122->sizePolicy().hasHeightForWidth());
         label_122->setSizePolicy(sizePolicy);
         label_122->setMinimumSize(QSize(60, 30));
+        label_122->setFont(font1);
         label_122->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_500AM->addWidget(label_122);
@@ -766,6 +791,7 @@ public:
         label_500AM->setSizePolicy(sizePolicy2);
         label_500AM->setMinimumSize(QSize(50, 30));
         label_500AM->setBaseSize(QSize(50, 25));
+        label_500AM->setFont(font1);
 
         horizontalLayout_500AM->addWidget(label_500AM);
 
@@ -779,6 +805,7 @@ public:
         sizePolicy.setHeightForWidth(label_118->sizePolicy().hasHeightForWidth());
         label_118->setSizePolicy(sizePolicy);
         label_118->setMinimumSize(QSize(60, 30));
+        label_118->setFont(font1);
         label_118->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_530AM->addWidget(label_118);
@@ -789,6 +816,7 @@ public:
         label_530AM->setSizePolicy(sizePolicy2);
         label_530AM->setMinimumSize(QSize(50, 30));
         label_530AM->setBaseSize(QSize(50, 25));
+        label_530AM->setFont(font1);
 
         horizontalLayout_530AM->addWidget(label_530AM);
 
@@ -802,6 +830,7 @@ public:
         sizePolicy.setHeightForWidth(label_142->sizePolicy().hasHeightForWidth());
         label_142->setSizePolicy(sizePolicy);
         label_142->setMinimumSize(QSize(60, 30));
+        label_142->setFont(font1);
         label_142->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_600AM->addWidget(label_142);
@@ -812,6 +841,7 @@ public:
         label_600AM->setSizePolicy(sizePolicy2);
         label_600AM->setMinimumSize(QSize(50, 30));
         label_600AM->setBaseSize(QSize(50, 25));
+        label_600AM->setFont(font1);
 
         horizontalLayout_600AM->addWidget(label_600AM);
 
@@ -825,6 +855,7 @@ public:
         sizePolicy.setHeightForWidth(label_126->sizePolicy().hasHeightForWidth());
         label_126->setSizePolicy(sizePolicy);
         label_126->setMinimumSize(QSize(60, 30));
+        label_126->setFont(font1);
         label_126->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_630AM->addWidget(label_126);
@@ -835,6 +866,7 @@ public:
         label_630AM->setSizePolicy(sizePolicy2);
         label_630AM->setMinimumSize(QSize(50, 30));
         label_630AM->setBaseSize(QSize(50, 25));
+        label_630AM->setFont(font1);
 
         horizontalLayout_630AM->addWidget(label_630AM);
 
@@ -848,6 +880,7 @@ public:
         sizePolicy.setHeightForWidth(label_124->sizePolicy().hasHeightForWidth());
         label_124->setSizePolicy(sizePolicy);
         label_124->setMinimumSize(QSize(60, 30));
+        label_124->setFont(font1);
         label_124->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_700AM->addWidget(label_124);
@@ -858,6 +891,7 @@ public:
         label_700AM->setSizePolicy(sizePolicy2);
         label_700AM->setMinimumSize(QSize(50, 30));
         label_700AM->setBaseSize(QSize(50, 25));
+        label_700AM->setFont(font1);
 
         horizontalLayout_700AM->addWidget(label_700AM);
 
@@ -871,6 +905,7 @@ public:
         sizePolicy.setHeightForWidth(label_56->sizePolicy().hasHeightForWidth());
         label_56->setSizePolicy(sizePolicy);
         label_56->setMinimumSize(QSize(60, 30));
+        label_56->setFont(font1);
         label_56->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_730AM->addWidget(label_56);
@@ -881,6 +916,7 @@ public:
         label_730AM->setSizePolicy(sizePolicy2);
         label_730AM->setMinimumSize(QSize(50, 30));
         label_730AM->setBaseSize(QSize(50, 25));
+        label_730AM->setFont(font1);
 
         horizontalLayout_730AM->addWidget(label_730AM);
 
@@ -894,6 +930,7 @@ public:
         sizePolicy.setHeightForWidth(label_58->sizePolicy().hasHeightForWidth());
         label_58->setSizePolicy(sizePolicy);
         label_58->setMinimumSize(QSize(60, 30));
+        label_58->setFont(font1);
         label_58->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_800AM->addWidget(label_58);
@@ -904,6 +941,7 @@ public:
         label_800AM->setSizePolicy(sizePolicy2);
         label_800AM->setMinimumSize(QSize(50, 30));
         label_800AM->setBaseSize(QSize(50, 25));
+        label_800AM->setFont(font1);
 
         horizontalLayout_800AM->addWidget(label_800AM);
 
@@ -917,6 +955,7 @@ public:
         sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
         label_2->setSizePolicy(sizePolicy);
         label_2->setMinimumSize(QSize(60, 30));
+        label_2->setFont(font1);
         label_2->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_830AM->addWidget(label_2);
@@ -927,6 +966,7 @@ public:
         label_830AM->setSizePolicy(sizePolicy2);
         label_830AM->setMinimumSize(QSize(50, 30));
         label_830AM->setBaseSize(QSize(50, 25));
+        label_830AM->setFont(font1);
 
         horizontalLayout_830AM->addWidget(label_830AM);
 
@@ -940,6 +980,7 @@ public:
         sizePolicy.setHeightForWidth(label_128->sizePolicy().hasHeightForWidth());
         label_128->setSizePolicy(sizePolicy);
         label_128->setMinimumSize(QSize(60, 30));
+        label_128->setFont(font1);
         label_128->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_900AM->addWidget(label_128);
@@ -950,6 +991,7 @@ public:
         label_900AM->setSizePolicy(sizePolicy2);
         label_900AM->setMinimumSize(QSize(50, 30));
         label_900AM->setBaseSize(QSize(50, 25));
+        label_900AM->setFont(font1);
 
         horizontalLayout_900AM->addWidget(label_900AM);
 
@@ -963,6 +1005,7 @@ public:
         sizePolicy.setHeightForWidth(label_60->sizePolicy().hasHeightForWidth());
         label_60->setSizePolicy(sizePolicy);
         label_60->setMinimumSize(QSize(60, 30));
+        label_60->setFont(font1);
         label_60->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_930AM->addWidget(label_60);
@@ -973,6 +1016,7 @@ public:
         label_930AM->setSizePolicy(sizePolicy2);
         label_930AM->setMinimumSize(QSize(50, 30));
         label_930AM->setBaseSize(QSize(50, 25));
+        label_930AM->setFont(font1);
 
         horizontalLayout_930AM->addWidget(label_930AM);
 
@@ -987,6 +1031,7 @@ public:
         sizePolicy.setHeightForWidth(label_62->sizePolicy().hasHeightForWidth());
         label_62->setSizePolicy(sizePolicy);
         label_62->setMinimumSize(QSize(60, 30));
+        label_62->setFont(font1);
         label_62->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_1000AM->addWidget(label_62);
@@ -997,6 +1042,7 @@ public:
         label_1000AM->setSizePolicy(sizePolicy2);
         label_1000AM->setMinimumSize(QSize(50, 30));
         label_1000AM->setBaseSize(QSize(50, 25));
+        label_1000AM->setFont(font1);
 
         horizontalLayout_1000AM->addWidget(label_1000AM);
 
@@ -1010,6 +1056,7 @@ public:
         sizePolicy.setHeightForWidth(label_64->sizePolicy().hasHeightForWidth());
         label_64->setSizePolicy(sizePolicy);
         label_64->setMinimumSize(QSize(60, 30));
+        label_64->setFont(font1);
         label_64->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_1030AM->addWidget(label_64);
@@ -1020,6 +1067,7 @@ public:
         label_1030AM->setSizePolicy(sizePolicy2);
         label_1030AM->setMinimumSize(QSize(50, 30));
         label_1030AM->setBaseSize(QSize(50, 25));
+        label_1030AM->setFont(font1);
 
         horizontalLayout_1030AM->addWidget(label_1030AM);
 
@@ -1033,6 +1081,7 @@ public:
         sizePolicy.setHeightForWidth(label_66->sizePolicy().hasHeightForWidth());
         label_66->setSizePolicy(sizePolicy);
         label_66->setMinimumSize(QSize(60, 30));
+        label_66->setFont(font1);
         label_66->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_1100AM->addWidget(label_66);
@@ -1056,6 +1105,7 @@ public:
         sizePolicy.setHeightForWidth(label_68->sizePolicy().hasHeightForWidth());
         label_68->setSizePolicy(sizePolicy);
         label_68->setMinimumSize(QSize(60, 30));
+        label_68->setFont(font1);
         label_68->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_1130AM->addWidget(label_68);
@@ -1066,6 +1116,7 @@ public:
         label_1130AM->setSizePolicy(sizePolicy2);
         label_1130AM->setMinimumSize(QSize(50, 30));
         label_1130AM->setBaseSize(QSize(50, 25));
+        label_1130AM->setFont(font1);
 
         horizontalLayout_1130AM->addWidget(label_1130AM);
 
@@ -1079,6 +1130,7 @@ public:
         sizePolicy.setHeightForWidth(label_70->sizePolicy().hasHeightForWidth());
         label_70->setSizePolicy(sizePolicy);
         label_70->setMinimumSize(QSize(60, 30));
+        label_70->setFont(font1);
         label_70->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_1200PM->addWidget(label_70);
@@ -1089,6 +1141,7 @@ public:
         label_1200PM->setSizePolicy(sizePolicy2);
         label_1200PM->setMinimumSize(QSize(50, 30));
         label_1200PM->setBaseSize(QSize(50, 25));
+        label_1200PM->setFont(font1);
 
         horizontalLayout_1200PM->addWidget(label_1200PM);
 
@@ -1102,6 +1155,7 @@ public:
         sizePolicy.setHeightForWidth(label_72->sizePolicy().hasHeightForWidth());
         label_72->setSizePolicy(sizePolicy);
         label_72->setMinimumSize(QSize(60, 30));
+        label_72->setFont(font1);
         label_72->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_1230PM->addWidget(label_72);
@@ -1112,6 +1166,7 @@ public:
         label_1230PM->setSizePolicy(sizePolicy2);
         label_1230PM->setMinimumSize(QSize(50, 30));
         label_1230PM->setBaseSize(QSize(50, 25));
+        label_1230PM->setFont(font1);
 
         horizontalLayout_1230PM->addWidget(label_1230PM);
 
@@ -1125,6 +1180,7 @@ public:
         sizePolicy.setHeightForWidth(label_74->sizePolicy().hasHeightForWidth());
         label_74->setSizePolicy(sizePolicy);
         label_74->setMinimumSize(QSize(60, 30));
+        label_74->setFont(font1);
         label_74->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_100PM->addWidget(label_74);
@@ -1135,6 +1191,7 @@ public:
         label_100PM->setSizePolicy(sizePolicy2);
         label_100PM->setMinimumSize(QSize(50, 30));
         label_100PM->setBaseSize(QSize(50, 25));
+        label_100PM->setFont(font1);
 
         horizontalLayout_100PM->addWidget(label_100PM);
 
@@ -1148,6 +1205,7 @@ public:
         sizePolicy.setHeightForWidth(label_76->sizePolicy().hasHeightForWidth());
         label_76->setSizePolicy(sizePolicy);
         label_76->setMinimumSize(QSize(60, 30));
+        label_76->setFont(font1);
         label_76->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_130PM->addWidget(label_76);
@@ -1158,6 +1216,7 @@ public:
         label_130PM->setSizePolicy(sizePolicy2);
         label_130PM->setMinimumSize(QSize(50, 30));
         label_130PM->setBaseSize(QSize(50, 25));
+        label_130PM->setFont(font1);
 
         horizontalLayout_130PM->addWidget(label_130PM);
 
@@ -1171,6 +1230,7 @@ public:
         sizePolicy.setHeightForWidth(label_78->sizePolicy().hasHeightForWidth());
         label_78->setSizePolicy(sizePolicy);
         label_78->setMinimumSize(QSize(60, 30));
+        label_78->setFont(font1);
         label_78->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_200PM->addWidget(label_78);
@@ -1181,6 +1241,7 @@ public:
         label_200PM->setSizePolicy(sizePolicy2);
         label_200PM->setMinimumSize(QSize(50, 30));
         label_200PM->setBaseSize(QSize(50, 25));
+        label_200PM->setFont(font1);
 
         horizontalLayout_200PM->addWidget(label_200PM);
 
@@ -1194,6 +1255,7 @@ public:
         sizePolicy.setHeightForWidth(label_80->sizePolicy().hasHeightForWidth());
         label_80->setSizePolicy(sizePolicy);
         label_80->setMinimumSize(QSize(60, 30));
+        label_80->setFont(font1);
         label_80->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_230PM->addWidget(label_80);
@@ -1204,6 +1266,7 @@ public:
         label_230PM->setSizePolicy(sizePolicy2);
         label_230PM->setMinimumSize(QSize(50, 30));
         label_230PM->setBaseSize(QSize(50, 25));
+        label_230PM->setFont(font1);
 
         horizontalLayout_230PM->addWidget(label_230PM);
 
@@ -1217,6 +1280,7 @@ public:
         sizePolicy.setHeightForWidth(label_82->sizePolicy().hasHeightForWidth());
         label_82->setSizePolicy(sizePolicy);
         label_82->setMinimumSize(QSize(60, 30));
+        label_82->setFont(font1);
         label_82->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_300PM->addWidget(label_82);
@@ -1227,6 +1291,7 @@ public:
         label_300PM->setSizePolicy(sizePolicy2);
         label_300PM->setMinimumSize(QSize(50, 30));
         label_300PM->setBaseSize(QSize(50, 25));
+        label_300PM->setFont(font1);
 
         horizontalLayout_300PM->addWidget(label_300PM);
 
@@ -1240,6 +1305,7 @@ public:
         sizePolicy.setHeightForWidth(label_84->sizePolicy().hasHeightForWidth());
         label_84->setSizePolicy(sizePolicy);
         label_84->setMinimumSize(QSize(60, 30));
+        label_84->setFont(font1);
         label_84->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_330PM->addWidget(label_84);
@@ -1250,6 +1316,7 @@ public:
         label_330PM->setSizePolicy(sizePolicy2);
         label_330PM->setMinimumSize(QSize(50, 30));
         label_330PM->setBaseSize(QSize(50, 25));
+        label_330PM->setFont(font1);
 
         horizontalLayout_330PM->addWidget(label_330PM);
 
@@ -1263,6 +1330,7 @@ public:
         sizePolicy.setHeightForWidth(label_86->sizePolicy().hasHeightForWidth());
         label_86->setSizePolicy(sizePolicy);
         label_86->setMinimumSize(QSize(60, 30));
+        label_86->setFont(font1);
         label_86->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_400PM->addWidget(label_86);
@@ -1273,6 +1341,7 @@ public:
         label_400PM->setSizePolicy(sizePolicy2);
         label_400PM->setMinimumSize(QSize(50, 30));
         label_400PM->setBaseSize(QSize(50, 25));
+        label_400PM->setFont(font1);
 
         horizontalLayout_400PM->addWidget(label_400PM);
 
@@ -1286,6 +1355,7 @@ public:
         sizePolicy.setHeightForWidth(label_88->sizePolicy().hasHeightForWidth());
         label_88->setSizePolicy(sizePolicy);
         label_88->setMinimumSize(QSize(60, 30));
+        label_88->setFont(font1);
         label_88->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_430PM->addWidget(label_88);
@@ -1296,6 +1366,7 @@ public:
         label_430PM->setSizePolicy(sizePolicy2);
         label_430PM->setMinimumSize(QSize(50, 30));
         label_430PM->setBaseSize(QSize(50, 25));
+        label_430PM->setFont(font1);
 
         horizontalLayout_430PM->addWidget(label_430PM);
 
@@ -1309,6 +1380,7 @@ public:
         sizePolicy.setHeightForWidth(label_90->sizePolicy().hasHeightForWidth());
         label_90->setSizePolicy(sizePolicy);
         label_90->setMinimumSize(QSize(60, 30));
+        label_90->setFont(font1);
         label_90->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_500PM->addWidget(label_90);
@@ -1319,6 +1391,7 @@ public:
         label_500PM->setSizePolicy(sizePolicy2);
         label_500PM->setMinimumSize(QSize(50, 30));
         label_500PM->setBaseSize(QSize(50, 25));
+        label_500PM->setFont(font1);
 
         horizontalLayout_500PM->addWidget(label_500PM);
 
@@ -1332,6 +1405,7 @@ public:
         sizePolicy.setHeightForWidth(label_92->sizePolicy().hasHeightForWidth());
         label_92->setSizePolicy(sizePolicy);
         label_92->setMinimumSize(QSize(60, 30));
+        label_92->setFont(font1);
         label_92->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_530PM->addWidget(label_92);
@@ -1342,6 +1416,7 @@ public:
         label_530PM->setSizePolicy(sizePolicy2);
         label_530PM->setMinimumSize(QSize(50, 30));
         label_530PM->setBaseSize(QSize(50, 25));
+        label_530PM->setFont(font1);
 
         horizontalLayout_530PM->addWidget(label_530PM);
 
@@ -1355,6 +1430,7 @@ public:
         sizePolicy.setHeightForWidth(label_94->sizePolicy().hasHeightForWidth());
         label_94->setSizePolicy(sizePolicy);
         label_94->setMinimumSize(QSize(60, 30));
+        label_94->setFont(font1);
         label_94->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_600PM->addWidget(label_94);
@@ -1365,6 +1441,7 @@ public:
         label_600PM->setSizePolicy(sizePolicy2);
         label_600PM->setMinimumSize(QSize(50, 30));
         label_600PM->setBaseSize(QSize(50, 25));
+        label_600PM->setFont(font1);
 
         horizontalLayout_600PM->addWidget(label_600PM);
 
@@ -1378,6 +1455,7 @@ public:
         sizePolicy.setHeightForWidth(label_96->sizePolicy().hasHeightForWidth());
         label_96->setSizePolicy(sizePolicy);
         label_96->setMinimumSize(QSize(60, 30));
+        label_96->setFont(font1);
         label_96->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_630PM->addWidget(label_96);
@@ -1388,6 +1466,7 @@ public:
         label_630PM->setSizePolicy(sizePolicy2);
         label_630PM->setMinimumSize(QSize(50, 30));
         label_630PM->setBaseSize(QSize(50, 25));
+        label_630PM->setFont(font1);
 
         horizontalLayout_630PM->addWidget(label_630PM);
 
@@ -1401,6 +1480,7 @@ public:
         sizePolicy.setHeightForWidth(label_98->sizePolicy().hasHeightForWidth());
         label_98->setSizePolicy(sizePolicy);
         label_98->setMinimumSize(QSize(60, 30));
+        label_98->setFont(font1);
         label_98->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_700PM->addWidget(label_98);
@@ -1411,6 +1491,7 @@ public:
         label_700PM->setSizePolicy(sizePolicy2);
         label_700PM->setMinimumSize(QSize(50, 30));
         label_700PM->setBaseSize(QSize(50, 25));
+        label_700PM->setFont(font1);
 
         horizontalLayout_700PM->addWidget(label_700PM);
 
@@ -1424,6 +1505,7 @@ public:
         sizePolicy.setHeightForWidth(label_100->sizePolicy().hasHeightForWidth());
         label_100->setSizePolicy(sizePolicy);
         label_100->setMinimumSize(QSize(60, 30));
+        label_100->setFont(font1);
         label_100->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_730PM->addWidget(label_100);
@@ -1434,6 +1516,7 @@ public:
         label_730PM->setSizePolicy(sizePolicy2);
         label_730PM->setMinimumSize(QSize(50, 30));
         label_730PM->setBaseSize(QSize(50, 25));
+        label_730PM->setFont(font1);
 
         horizontalLayout_730PM->addWidget(label_730PM);
 
@@ -1447,6 +1530,7 @@ public:
         sizePolicy.setHeightForWidth(label_102->sizePolicy().hasHeightForWidth());
         label_102->setSizePolicy(sizePolicy);
         label_102->setMinimumSize(QSize(60, 30));
+        label_102->setFont(font1);
         label_102->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_800PM->addWidget(label_102);
@@ -1457,6 +1541,7 @@ public:
         label_800PM->setSizePolicy(sizePolicy2);
         label_800PM->setMinimumSize(QSize(50, 30));
         label_800PM->setBaseSize(QSize(50, 25));
+        label_800PM->setFont(font1);
 
         horizontalLayout_800PM->addWidget(label_800PM);
 
@@ -1470,6 +1555,7 @@ public:
         sizePolicy.setHeightForWidth(label_150->sizePolicy().hasHeightForWidth());
         label_150->setSizePolicy(sizePolicy);
         label_150->setMinimumSize(QSize(60, 30));
+        label_150->setFont(font1);
         label_150->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_830PM->addWidget(label_150);
@@ -1480,6 +1566,7 @@ public:
         label_830PM->setSizePolicy(sizePolicy2);
         label_830PM->setMinimumSize(QSize(50, 30));
         label_830PM->setBaseSize(QSize(50, 25));
+        label_830PM->setFont(font1);
 
         horizontalLayout_830PM->addWidget(label_830PM);
 
@@ -1493,6 +1580,7 @@ public:
         sizePolicy.setHeightForWidth(label_148->sizePolicy().hasHeightForWidth());
         label_148->setSizePolicy(sizePolicy);
         label_148->setMinimumSize(QSize(60, 30));
+        label_148->setFont(font1);
         label_148->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_900PM->addWidget(label_148);
@@ -1503,6 +1591,7 @@ public:
         label_900PM->setSizePolicy(sizePolicy2);
         label_900PM->setMinimumSize(QSize(50, 30));
         label_900PM->setBaseSize(QSize(50, 25));
+        label_900PM->setFont(font1);
 
         horizontalLayout_900PM->addWidget(label_900PM);
 
@@ -1516,6 +1605,7 @@ public:
         sizePolicy.setHeightForWidth(label_134->sizePolicy().hasHeightForWidth());
         label_134->setSizePolicy(sizePolicy);
         label_134->setMinimumSize(QSize(60, 30));
+        label_134->setFont(font1);
         label_134->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_930PM->addWidget(label_134);
@@ -1526,6 +1616,7 @@ public:
         label_930PM->setSizePolicy(sizePolicy2);
         label_930PM->setMinimumSize(QSize(50, 30));
         label_930PM->setBaseSize(QSize(50, 25));
+        label_930PM->setFont(font1);
 
         horizontalLayout_930PM->addWidget(label_930PM);
 
@@ -1539,6 +1630,7 @@ public:
         sizePolicy.setHeightForWidth(label_132->sizePolicy().hasHeightForWidth());
         label_132->setSizePolicy(sizePolicy);
         label_132->setMinimumSize(QSize(60, 30));
+        label_132->setFont(font1);
         label_132->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_1000PM->addWidget(label_132);
@@ -1549,6 +1641,7 @@ public:
         label_1000PM->setSizePolicy(sizePolicy2);
         label_1000PM->setMinimumSize(QSize(50, 30));
         label_1000PM->setBaseSize(QSize(50, 25));
+        label_1000PM->setFont(font1);
 
         horizontalLayout_1000PM->addWidget(label_1000PM);
 
@@ -1562,6 +1655,7 @@ public:
         sizePolicy.setHeightForWidth(label_130->sizePolicy().hasHeightForWidth());
         label_130->setSizePolicy(sizePolicy);
         label_130->setMinimumSize(QSize(60, 30));
+        label_130->setFont(font1);
         label_130->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_1030PM->addWidget(label_130);
@@ -1572,6 +1666,7 @@ public:
         label_1030PM->setSizePolicy(sizePolicy2);
         label_1030PM->setMinimumSize(QSize(50, 30));
         label_1030PM->setBaseSize(QSize(50, 25));
+        label_1030PM->setFont(font1);
 
         horizontalLayout_1030PM->addWidget(label_1030PM);
 
@@ -1585,6 +1680,7 @@ public:
         sizePolicy.setHeightForWidth(label_114->sizePolicy().hasHeightForWidth());
         label_114->setSizePolicy(sizePolicy);
         label_114->setMinimumSize(QSize(60, 30));
+        label_114->setFont(font1);
         label_114->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_1100PM->addWidget(label_114);
@@ -1595,6 +1691,7 @@ public:
         label_1100PM->setSizePolicy(sizePolicy2);
         label_1100PM->setMinimumSize(QSize(50, 30));
         label_1100PM->setBaseSize(QSize(50, 25));
+        label_1100PM->setFont(font1);
 
         horizontalLayout_1100PM->addWidget(label_1100PM);
 
@@ -1608,6 +1705,7 @@ public:
         sizePolicy.setHeightForWidth(label_112->sizePolicy().hasHeightForWidth());
         label_112->setSizePolicy(sizePolicy);
         label_112->setMinimumSize(QSize(60, 30));
+        label_112->setFont(font1);
         label_112->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_1130PM->addWidget(label_112);
@@ -1618,6 +1716,7 @@ public:
         label_1130PM->setSizePolicy(sizePolicy2);
         label_1130PM->setMinimumSize(QSize(50, 30));
         label_1130PM->setBaseSize(QSize(50, 25));
+        label_1130PM->setFont(font1);
 
         horizontalLayout_1130PM->addWidget(label_1130PM);
 
@@ -1631,6 +1730,7 @@ public:
         sizePolicy.setHeightForWidth(label_110->sizePolicy().hasHeightForWidth());
         label_110->setSizePolicy(sizePolicy);
         label_110->setMinimumSize(QSize(60, 30));
+        label_110->setFont(font1);
         label_110->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_1200AM->addWidget(label_110);
@@ -1641,6 +1741,7 @@ public:
         label_1200AM->setSizePolicy(sizePolicy2);
         label_1200AM->setMinimumSize(QSize(50, 30));
         label_1200AM->setBaseSize(QSize(50, 25));
+        label_1200AM->setFont(font1);
 
         horizontalLayout_1200AM->addWidget(label_1200AM);
 
@@ -1717,6 +1818,7 @@ public:
 
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        verticalLayout_5->setContentsMargins(5, 5, -1, 5);
         timeEditStart_Single = new QTimeEdit(Create_Single);
         timeEditStart_Single->setObjectName(QString::fromUtf8("timeEditStart_Single"));
         timeEditStart_Single->setMinimumSize(QSize(128, 30));
@@ -1771,7 +1873,9 @@ public:
         comboBox_Reminder_Single->setObjectName(QString::fromUtf8("comboBox_Reminder_Single"));
         comboBox_Reminder_Single->setMinimumSize(QSize(84, 30));
         comboBox_Reminder_Single->setEditable(false);
+        comboBox_Reminder_Single->setSizeAdjustPolicy(QComboBox::AdjustToContents);
         comboBox_Reminder_Single->setDuplicatesEnabled(true);
+        comboBox_Reminder_Single->setFrame(true);
 
         horizontalLayout_2->addWidget(comboBox_Reminder_Single);
 
@@ -1799,6 +1903,7 @@ public:
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        horizontalLayout_5->setContentsMargins(-1, 5, -1, 5);
         horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_5->addItem(horizontalSpacer_11);
@@ -1825,12 +1930,23 @@ public:
 
         radioButton_Concrete_Single = new QRadioButton(Create_Single);
         radioButton_Concrete_Single->setObjectName(QString::fromUtf8("radioButton_Concrete_Single"));
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(radioButton_Concrete_Single->sizePolicy().hasHeightForWidth());
+        radioButton_Concrete_Single->setSizePolicy(sizePolicy3);
         radioButton_Concrete_Single->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_4->addWidget(radioButton_Concrete_Single);
 
+        horizontalSpacer_27 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_27);
+
         radioButton = new QRadioButton(Create_Single);
         radioButton->setObjectName(QString::fromUtf8("radioButton"));
+        sizePolicy3.setHeightForWidth(radioButton->sizePolicy().hasHeightForWidth());
+        radioButton->setSizePolicy(sizePolicy3);
 
         horizontalLayout_4->addWidget(radioButton);
 
@@ -1843,6 +1959,7 @@ public:
 
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        horizontalLayout_6->setContentsMargins(-1, 5, -1, -1);
         horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_6->addItem(horizontalSpacer_12);
@@ -1894,9 +2011,9 @@ public:
         comboBox_Repeat_Day->addItem(QString());
         comboBox_Repeat_Day->setObjectName(QString::fromUtf8("comboBox_Repeat_Day"));
         comboBox_Repeat_Day->setMinimumSize(QSize(84, 30));
-        QFont font1;
-        font1.setUnderline(false);
-        comboBox_Repeat_Day->setFont(font1);
+        QFont font2;
+        font2.setUnderline(false);
+        comboBox_Repeat_Day->setFont(font2);
         comboBox_Repeat_Day->setLayoutDirection(Qt::LeftToRight);
         comboBox_Repeat_Day->setFrame(true);
 
@@ -2123,7 +2240,7 @@ public:
         scrollArea_3->setWidgetResizable(true);
         scrollAreaWidgetContents_3 = new QWidget();
         scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 136, 1836));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 443, 1836));
         verticalLayout_14 = new QVBoxLayout(scrollAreaWidgetContents_3);
         verticalLayout_14->setObjectName(QString::fromUtf8("verticalLayout_14"));
         horizontalLayout_1230AM_3 = new QHBoxLayout();
@@ -3255,9 +3372,9 @@ public:
         gridLayout->setContentsMargins(0, 0, 0, 0);
         calendarWidget = new QCalendarWidget(Month_View);
         calendarWidget->setObjectName(QString::fromUtf8("calendarWidget"));
-        QFont font2;
-        font2.setPointSize(16);
-        calendarWidget->setFont(font2);
+        QFont font3;
+        font3.setPointSize(16);
+        calendarWidget->setFont(font3);
         calendarWidget->setMouseTracking(false);
         calendarWidget->setAutoFillBackground(true);
         calendarWidget->setStyleSheet(QString::fromUtf8(""));
@@ -3276,11 +3393,11 @@ public:
 
         SideMenuFrame = new QFrame(centralwidget);
         SideMenuFrame->setObjectName(QString::fromUtf8("SideMenuFrame"));
-        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Expanding);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(SideMenuFrame->sizePolicy().hasHeightForWidth());
-        SideMenuFrame->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Expanding);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(SideMenuFrame->sizePolicy().hasHeightForWidth());
+        SideMenuFrame->setSizePolicy(sizePolicy4);
         SideMenuFrame->setMinimumSize(QSize(51, 0));
         SideMenuFrame->setBaseSize(QSize(0, 0));
         SideMenuFrame->setFrameShape(QFrame::Box);
@@ -3330,7 +3447,7 @@ public:
 
         retranslateUi(Torg);
 
-        stackedWidget->setCurrentIndex(5);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Torg);
