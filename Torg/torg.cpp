@@ -87,21 +87,22 @@ void Torg::clearEventLabels(){
     for(auto it : dayNameMap.keys()){
         //Clearing the Color
         ui->Day_View->findChild<QLabel *>(dayNameMap.value(it))->setStyleSheet(defaultColorFromTheme);
+        //Clearing the text
         ui->Day_View->findChild<QLabel *>(dayNameMap.value(it))->setText("");
     }
 }
 
 //This method should only be called with a populated single event
-void Torg::setDayViewTimePeriod(SingleEvent event){
+void Torg::setDayViewTimePeriod(SingleEvent* event){
     //For all time blocks between startTime and endTime set those labels the color of the event
-    QStringList allTimeBlocks = event.getTimeBlocks();
+    QStringList allTimeBlocks = event->getTimeBlocks();
 
     //Only puts text into the first timeblock
-    ui->Day_View->findChild<QLabel *>(dayNameMap[allTimeBlocks[0]])->setText(event.toString());
+    ui->Day_View->findChild<QLabel *>(dayNameMap[allTimeBlocks[0]])->setText(event->toString());
 
     for(auto timeBlock : allTimeBlocks){
         //Set the labels for each time block of the event
-        ui->Day_View->findChild<QLabel *>(dayNameMap[timeBlock])->setStyleSheet(colorMap[event.getColor()]); //Color
+        ui->Day_View->findChild<QLabel *>(dayNameMap[timeBlock])->setStyleSheet(colorMap[event->getColor()]); //Color
     }
 }
 
@@ -134,9 +135,15 @@ bool Torg::loadUserData(){
             QString repeat = currentEvent.take("repeat").toString();        //}
             QString color = currentEvent.take("color").toString();
             bool concrete = currentEvent.take("concrete").toBool();
+            bool allDay = currentEvent.take("all-day").toBool();
 
             //Since these events are being loaded from a file we don't call needSave().
-            SingleEvent eventToAdd(title, startTime, endTime, notes, repeat, date, reminder, color, concrete); //Maybe want to create this on the heap at somepoint
+            SingleEvent* eventToAdd = new SingleEvent(title, startTime, endTime, notes, repeat, date, reminder, color, concrete, allDay);
+            //Important! -> When loading data from a file we need to make sure the events defualt values are overridden.
+            //Don't need to save if it's already saved.
+            //Would probably be better if I had an event manager class that would load data so that Torg wouldn't
+            //need to know about this nuance but this is smaller scale so it's fine.
+            eventToAdd->isSavedToFile();
             today->addEvent(eventToAdd);
         }
         //Finally add our day event to the apps event map
@@ -208,6 +215,7 @@ void Torg::resetSingleProgressBar(){
      sTitleChanged = false;
      ui->progressBar_Single->setValue(singlePercentageDone);
      //Reset the thread completley becuase it would get stuck otherwise
+     delete sProgressBarThread;
      sProgressBarThread = new ProgressBarAnimator();
      connect(sProgressBarThread, SIGNAL(updateBar(int)), this, SLOT(animateSingleProgressBar(int)), Qt::QueuedConnection);
 }
@@ -243,9 +251,12 @@ void Torg::on_pushButton_Add_Single_clicked()
             return;
         }
 
+        //Don't need properly formated start and end time
+        bool allDay = ui->Create_Single->findChild<QRadioButton *>("radioButton_AllDay_Single")->isChecked();
+
         QTime checkStart = ui->Create_Single->findChild<QTimeEdit *>("timeEditStart_Single")->time();
         QTime checkEnd = ui->Create_Single->findChild<QTimeEdit *>("timeEditEnd_Single")->time();
-        if(checkStart >= checkEnd){
+        if(!allDay && checkStart >= checkEnd){
             alertUser("Start and End Times Conflict.");
             return;
         }
@@ -261,9 +272,15 @@ void Torg::on_pushButton_Add_Single_clicked()
     QString reminder = ui->Create_Single->findChild<QComboBox *>("comboBox_Reminder_Single")->currentText(); //Need to process at somepoint
     QString color = ui->Create_Single->findChild<QComboBox *>("comboBox_Color_Single")->currentText();
     bool concrete = ui->Create_Single->findChild<QRadioButton *>("radioButton_Concrete_Single")->isChecked();
+    bool allDay = ui->Create_Single->findChild<QRadioButton *>("radioButton_AllDay_Single")->isChecked();
 
-    SingleEvent eventToAdd(title, startTime, endTime, notes, repeat, formatDate(date), reminder, color, concrete);
-    eventToAdd.needsSave(); //Need to manually call needs save because we are creating this event dynamically and not from a file.
+    //Process the all day bool and reminder input.
+    if(allDay){
+        startTime = "12:00 AM";
+        endTime = "11:59 PM";
+    }
+
+    SingleEvent* eventToAdd = new SingleEvent(title, startTime, endTime, notes, repeat, formatDate(date), reminder, color, concrete, allDay);
 
     //Add to day event map if it exists or create a new one if it doesn't
     if(this->dayEvents.contains(formatDate(date))){
@@ -271,8 +288,6 @@ void Torg::on_pushButton_Add_Single_clicked()
     }else{
         this->dayEvents[formatDate(date)] = new DayEvent(formatDate(date), eventToAdd);
     }
-
-    //Revert Creation Boolean Statuses
 
     //Finally save the new info to user file
     this->dayEvents[formatDate(date)]->save(this->userDataPath);

@@ -16,7 +16,7 @@ bool Reminder::check(){
 }
 
 SingleEvent::SingleEvent(QString title, QString startTime, QString endTime, QString notes,
-                    QString repeat, QString date,  QString reminder, QString color, bool concrete){
+                    QString repeat, QString date,  QString reminder, QString color, bool concrete, bool allDay){
     this->title = title;
     this->startTime = startTime;
     this->endTime = endTime;
@@ -26,11 +26,12 @@ SingleEvent::SingleEvent(QString title, QString startTime, QString endTime, QStr
     this->rem = reminder;
     this->color = color;
     this->concrete = concrete;
+    this->allDay = allDay;
     this->duplicate = false;
-    this->updated = false;
+    this->savedToFile = false;
 }
 
-SingleEvent::SingleEvent(const SingleEvent& event,  bool isDuplicate){
+SingleEvent::SingleEvent(const SingleEvent& event){
     this->title = event.getTitle();
     this->startTime = event.getStartTime();
     this->endTime = event.getEndTime();
@@ -40,8 +41,9 @@ SingleEvent::SingleEvent(const SingleEvent& event,  bool isDuplicate){
     this->rem = event.getRem();
     this->color = event.getColor();
     this->concrete = event.getConcrete();
-    this->duplicate = isDuplicate;
-    this->updated = false;
+    this->allDay = event.isAllDay();
+    this->duplicate = true;
+    this->savedToFile = true; //Doesn't matter becuase it's a duplicate. Just in case we don't want to save these though.
 }
 
 QStringList SingleEvent::getTimeBlocks(){
@@ -66,13 +68,27 @@ QStringList SingleEvent::getTimeBlocks(){
 }
 
 const QString SingleEvent::toString() const{
-    return this->title + ": " + this->notes;
+    //The final string will always have the title of the event and some notes
+    QString toReturn = " " + this->title + ": ";
+
+    //Replace new line characters so that the output is one line
+    QString singleLinedNotes = this->notes;
+    singleLinedNotes.replace(QRegularExpression("\n"), " ");
+    //Strip out the words
+    QStringList wordsInNotes = singleLinedNotes.split(" ");
+    if(wordsInNotes.size() > 10){
+        for(int i = 0; i < 10; i++){
+            toReturn.append(wordsInNotes[i] + " ");
+        }
+        return toReturn + "...";
+    }
+    return this->title + ": " + singleLinedNotes;
 }
 
-DayEvent::DayEvent(QString date, SingleEvent event){
+DayEvent::DayEvent(QString date, SingleEvent* event){
     this->date = toDate(date);
     this->dayOfTheWeek = dayOfWeek(this->date);
-    this->eventMap[event.getTitle()] = event;
+    this->eventMap[event->getTitle()] = event;
 }
 
 DayEvent::DayEvent(QString date){
@@ -80,8 +96,8 @@ DayEvent::DayEvent(QString date){
     this->dayOfTheWeek = dayOfWeek(this->date);
 }
 
-void DayEvent::addEvent(SingleEvent event){
-    this->eventMap[event.getTitle()] = event;
+void DayEvent::addEvent(SingleEvent* event){
+    this->eventMap[event->getTitle()] = event;
 }
 
 bool DayEvent::deleteEvent(QString date, QString path){
@@ -125,18 +141,19 @@ bool DayEvent::save(QString path){
     for (auto it = this->eventMap.begin(); it != this->eventMap.end(); it++){
 
         //Don't add duplicate events
-        if( it->second.getDuplicateStatus() ) continue;
+        if( it->second->getDuplicateStatus() ) continue;
 
         QJsonObject event;
 
-        QJsonValue title(it->second.getTitle());
-        QJsonValue notes(it->second.getNotes());
-        QJsonValue startTime(it->second.getStartTime());
-        QJsonValue endTime(it->second.getEndTime());
-        QJsonValue repeat(it->second.getRepeat());
-        QJsonValue reminder(it->second.getRem());
-        QJsonValue color(it->second.getColor());
-        QJsonValue concrete(it->second.getConcrete());
+        QJsonValue title(it->second->getTitle());
+        QJsonValue notes(it->second->getNotes());
+        QJsonValue startTime(it->second->getStartTime());
+        QJsonValue endTime(it->second->getEndTime());
+        QJsonValue repeat(it->second->getRepeat());
+        QJsonValue reminder(it->second->getRem());
+        QJsonValue color(it->second->getColor());
+        QJsonValue concrete(it->second->getConcrete());
+        QJsonValue allDay(it->second->isAllDay());
         event.insert("title", title);
         event.insert("notes", notes);
         event.insert("start-time", startTime);
@@ -145,13 +162,16 @@ bool DayEvent::save(QString path){
         event.insert("reminder", reminder);
         event.insert("color", color);
         event.insert("concrete", concrete);
+        event.insert("all-day", allDay);
 
         events.push_back(event);
 
-        //If the event needs saving re-write all the events for this day.
-        if( it->second.getUpdatedStatus() ){
+        //If one of the events needs saving re-write all the events for this day.
+        if( !it->second->wasSavedToFile() ){
             needsSave = true;
         }
+
+        it->second->isSavedToFile();
     }
 
     //Breaks out of function if no save is needed

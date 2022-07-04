@@ -43,10 +43,12 @@ class SingleEvent
 public:
     //Assign member varibles. Construct reminder object. @param - "reminder" should be a string of ints separated by ' '.
     SingleEvent(QString title, QString startTime, QString endTime, QString notes,
-                QString repeat, QString date,  QString reminder, QString color, bool concrete);
-    SingleEvent(const SingleEvent& event, bool isDuplicate);
+                QString repeat, QString date,  QString reminder, QString color, bool concrete, bool allDay);
+    //This constructor is specifically for repeated events. All repeated events are duplicates and just happen on a different date.
+    SingleEvent(const SingleEvent& event);
+    //Place holder. Shouldn't be saved to a file.
     SingleEvent(){ this->title = "none"; this->startTime = "none"; this->endTime = "none"; this->notes = "none"; this->repeat = "none"; this->rem = "none";
-                   this->reminder = Reminder(); this->color = "none"; this->concrete = 1; this->duplicate = false; this->updated = false; }
+                   this->reminder = Reminder(); this->color = "none"; this->concrete = 1; this->duplicate = true; this->savedToFile = true; this->allDay = false; }
     //No data should be allocated
     ~SingleEvent(){}
 
@@ -62,26 +64,27 @@ public:
     const QString getRem() const{ return this->rem; }
     const QString getRepeat() const{ return this->repeat; }
     bool getConcrete() const{ return this->concrete; }
+    bool isAllDay() const{ return this->allDay; }
     Reminder getReminder() const{ return this->reminder; }
-    bool getUpdatedStatus() const{ return this->updated; }
+    bool wasSavedToFile() const{ return this->savedToFile; }
     bool getDuplicateStatus() const{ return this->duplicate; }
     //Return a list of the time blocks between the start and end time of the event
     QStringList getTimeBlocks();
 
     //Setters
-    void editTime(QString startTime, QString endTime){ this->startTime = startTime; this->endTime = endTime; this->updated = true; }
-    void editColor(QString color){ this->color = color; this->updated = true; }
-    void editNotes(QString notes){ this->notes = notes; this->updated = true; }
-    void editTitle(QString title){ this->title = title; this->updated = true; }
-    //Must call if event is created from code and not from a file load.
-    void needsSave(){ this->updated = true; }
+    void editTime(QString startTime, QString endTime){ this->startTime = startTime; this->endTime = endTime; this->savedToFile = false; }
+    void editColor(QString color){ this->color = color; this->savedToFile = false; }
+    void editNotes(QString notes){ this->notes = notes; this->savedToFile = false; }
+    void editTitle(QString title){ this->title = title; this->savedToFile = false; }
+    void editAllDay(bool allDay){ this->allDay = allDay; }
+    void isSavedToFile(){ this->savedToFile = true; }
 
 private:
     //Initialization/Save variables
     QString title; QString startTime; QString endTime; QString notes;
-    QString rem; QString repeat; Reminder reminder; QString color; bool concrete;
+    QString rem; QString repeat; Reminder reminder; QString color; bool concrete; bool allDay;
     //Save functionality members
-    bool updated; //Default: false -> if true then save to file. (assumes event was loaded from an existing file)
+    bool savedToFile; //Default: false -> if false then save to file. When Loading from file set this to true.
     bool duplicate; //Default: false -> if true then don't save. (base events are kept. any repitions of an
                     //event are calculated on creation based off of a base events repetition)
 };
@@ -95,7 +98,7 @@ private:
 class DayEvent
 {
  public:
-    DayEvent(QString date, SingleEvent event);
+    DayEvent(QString date, SingleEvent* event);
     DayEvent(QString date);
     //No data should be allocated
     ~DayEvent(){}
@@ -103,10 +106,10 @@ class DayEvent
     //All single events in this day.
     //Held as a map between title and event to allow for
     //deleting of single events and use of the map iterator.
-    std::map<QString, SingleEvent> eventMap;
+    std::map<QString, SingleEvent*> eventMap;
 
     //adds a SingleEvent to event map.
-    void addEvent(SingleEvent event);
+    void addEvent(SingleEvent* event);
 
     //erases all data of the day in save file. returns true if delete was succesful.
     bool deleteEvent(QString date, QString path);

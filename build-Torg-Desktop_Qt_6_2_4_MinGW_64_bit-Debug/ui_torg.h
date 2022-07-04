@@ -235,7 +235,7 @@ public:
     QSpacerItem *horizontalSpacer_8;
     QRadioButton *radioButton_Concrete_Single;
     QSpacerItem *horizontalSpacer_27;
-    QRadioButton *radioButton;
+    QRadioButton *radioButton_AllDay_Single;
     QSpacerItem *horizontalSpacer_9;
     QHBoxLayout *horizontalLayout_6;
     QSpacerItem *horizontalSpacer_12;
@@ -538,7 +538,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, -938, 906, 1536));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 118, 1536));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_2->setSpacing(0);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
@@ -1943,12 +1943,12 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer_27);
 
-        radioButton = new QRadioButton(Create_Single);
-        radioButton->setObjectName(QString::fromUtf8("radioButton"));
-        sizePolicy3.setHeightForWidth(radioButton->sizePolicy().hasHeightForWidth());
-        radioButton->setSizePolicy(sizePolicy3);
+        radioButton_AllDay_Single = new QRadioButton(Create_Single);
+        radioButton_AllDay_Single->setObjectName(QString::fromUtf8("radioButton_AllDay_Single"));
+        sizePolicy3.setHeightForWidth(radioButton_AllDay_Single->sizePolicy().hasHeightForWidth());
+        radioButton_AllDay_Single->setSizePolicy(sizePolicy3);
 
-        horizontalLayout_4->addWidget(radioButton);
+        horizontalLayout_4->addWidget(radioButton_AllDay_Single);
 
         horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -2240,7 +2240,7 @@ public:
         scrollArea_3->setWidgetResizable(true);
         scrollAreaWidgetContents_3 = new QWidget();
         scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 443, 1836));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 136, 1836));
         verticalLayout_14 = new QVBoxLayout(scrollAreaWidgetContents_3);
         verticalLayout_14->setObjectName(QString::fromUtf8("verticalLayout_14"));
         horizontalLayout_1230AM_3 = new QHBoxLayout();
@@ -3610,7 +3610,7 @@ public:
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Notes</p></body></html>", nullptr));
         radioButton_Concrete_Single->setText(QCoreApplication::translate("Torg", "Concrete", nullptr));
-        radioButton->setText(QCoreApplication::translate("Torg", "All Day", nullptr));
+        radioButton_AllDay_Single->setText(QCoreApplication::translate("Torg", "All Day", nullptr));
         pushButton_Add_Single->setText(QCoreApplication::translate("Torg", "Add", nullptr));
         comboBox_Repeat_Day->setItemText(0, QCoreApplication::translate("Torg", "Repeat", nullptr));
         comboBox_Repeat_Day->setItemText(1, QCoreApplication::translate("Torg", "None", nullptr));

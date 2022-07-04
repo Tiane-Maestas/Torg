@@ -59,7 +59,7 @@ private:
     void setWorkingDateLabels();
     void setEventLabels();
     void clearEventLabels();
-    void setDayViewTimePeriod(SingleEvent event);
+    void setDayViewTimePeriod(SingleEvent* event);
 
     //Progress Bar Updates
     void updateSingleProgressBarStatus();
