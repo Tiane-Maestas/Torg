@@ -49,6 +49,9 @@ private slots:
     //For use when opening and closing the side menu
     void on_sideMenuToggleButton_clicked();
 
+    //Brings you to single event creation with that working day (Right Click Event)
+    void on_workingDayLabel_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::Torg *ui;
 
@@ -87,11 +90,11 @@ private:
     float sideMenuPercentOfScreenClosed = 0.05;
 
     //Helpers for setting event creation input fields without changing the progress bars
-    void setDateInputFields(QDate date);
+    void setDateInputFields(QDate date, bool changeDynamically);
     bool dateInputFieldsBeingSetDynamically = false; //So that the progress bar isn't updated by changes not made by a user.
-    void setStartTimeInputFields(QTime time);
+    void setStartTimeInputFields(QTime time, bool changeDynamically);
     bool startTimeInputFieldsBeingSetDynamically = false;
-    void setEndTimeInputFields(QTime time);
+    void setEndTimeInputFields(QTime time, bool changeDynamically);
     bool endTimeInputFieldsBeingSetDynamically = false;
     void resetSingleInputFields();
 
@@ -105,11 +108,12 @@ private:
     const QString userDataPath = QDir::currentPath() + "/Events.json";
 
     //Label stylesheet color options (I would like for these to be const QStrings but it doesn't like that)
-    const QMap<QString, QString> colorMap = {{"Red", "QLabel { background-color : red; } QLabel:hover{background-color: #ffaa00; color: black;}"},
-                                            {"Blue", "QLabel { background-color : blue; } QLabel:hover{background-color: #ffaa00; color: black;}"},
-                                            {"Green", "QLabel { background-color : green; } QLabel:hover{background-color: #ffaa00; color: black;}"},
-                                            {"Yellow", "QLabel { background-color : yellow; } QLabel:hover{background-color: #ffaa00; color: black;}"},
-                                            {"Pink", "QLabel { background-color : pink; } QLabel:hover{background-color: #ffaa00; color: black;}"}};
+    const QMap<QString, QString> colorMap = {{"Red", "QLabel { background-color : #910d14; color: white;} QLabel:hover{background-color: #ffaa00; color: black;}"},
+                                            {"Blue", "QLabel { background-color : #131875; color: white;} QLabel:hover{background-color: #ffaa00; color: black;}"},
+                                            {"Green", "QLabel { background-color : #14450e; color: white;} QLabel:hover{background-color: #ffaa00; color: black;}"},
+                                            {"Yellow", "QLabel { background-color : #d4d139; color: white;} QLabel:hover{background-color: #ffaa00; color: black;}"},
+                                            {"Pink", "QLabel { background-color : #ce39d4; color: white;} QLabel:hover{background-color: #ffaa00; color: black;}"},
+                                            {"Black", "QLabel { background-color : #0f101f; color: white;} QLabel:hover{background-color: #ffaa00; color: black;}"}};
     //To be able to revert label color back to normal
     QString defaultColorFromTheme = "QLabel { background-color : #323232; } QLabel:hover{background-color: #ffaa00; color: black;}";
 

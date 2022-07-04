@@ -21,7 +21,7 @@ Torg::Torg(QWidget *parent): QMainWindow(parent), ui(new Ui::Torg){
     ui->progressBar_Single->setValue(0);
     sideMenuAnimator = new QPropertyAnimation(this->ui->SideMenuFrame, "geometry");
     stackedWidgetAnimator = new QPropertyAnimation(this->ui->stackedWidget, "geometry");
-    setDateInputFields(this->todaysDate);
+    setDateInputFields(this->todaysDate, true);
     sProgressBarThread = new ProgressBarAnimator();
     //Create a queued connection (across threads) between the threads update bar method and the animate method. Only do this once so that only one message is sent at a time.
     connect(sProgressBarThread, SIGNAL(updateBar(int)), this, SLOT(animateSingleProgressBar(int)), Qt::QueuedConnection);
@@ -277,7 +277,7 @@ void Torg::on_pushButton_Add_Single_clicked()
 
         QTime checkStart = ui->Create_Single->findChild<QTimeEdit *>("timeEditStart_Single")->time();
         QTime checkEnd = ui->Create_Single->findChild<QTimeEdit *>("timeEditEnd_Single")->time();
-        if(!allDay && checkStart >= checkEnd){
+        if(!allDay && checkStart > checkEnd){
             alertUser("Start and End Times Conflict.");
             return;
         }
@@ -298,7 +298,7 @@ void Torg::on_pushButton_Add_Single_clicked()
     //Process the all day bool and reminder input.
     if(allDay){
         startTime = "12:00 AM";
-        endTime = "12:30 AM";
+        endTime = "12:00 AM";
     }
 
     SingleEvent* eventToAdd = new SingleEvent(title, startTime, endTime, notes, repeat, formatDate(date), reminder, color, concrete, allDay);
@@ -326,9 +326,9 @@ void Torg::on_pushButton_Add_Single_clicked()
 void Torg::resetSingleInputFields(){
     ui->Create_Single->findChild<QLineEdit *>("lineEdit_Title_Single")->setText(""); //Title
     ui->Create_Single->findChild<QTextEdit *>("textEdit_Notes_Single")->setText(""); //Notes
-    setStartTimeInputFields(QTime(12, 0)); //Start time
-    setEndTimeInputFields(QTime(12, 0)); //End time
-    setDateInputFields(this->todaysDate); //Date
+    setStartTimeInputFields(QTime(12, 0), true); //Start time
+    setEndTimeInputFields(QTime(12, 0), true); //End time
+    setDateInputFields(this->todaysDate, true); //Date
     ui->Create_Single->findChild<QComboBox *>("comboBox_Repeat_Single")->setCurrentIndex(0); //Repeat
     ui->Create_Single->findChild<QComboBox *>("comboBox_Reminder_Single")->setCurrentIndex(0); //Reminder
     ui->Create_Single->findChild<QComboBox *>("comboBox_Color_Single")->setCurrentIndex(0); //Color
@@ -336,21 +336,21 @@ void Torg::resetSingleInputFields(){
     ui->Create_Single->findChild<QRadioButton *>("radioButton_AllDay_Single")->setChecked(false); //All day
 }
 
-void Torg::setDateInputFields(QDate date){
-    dateInputFieldsBeingSetDynamically = true;
+void Torg::setDateInputFields(QDate date, bool changeDynamically){
+    dateInputFieldsBeingSetDynamically = changeDynamically;
     ui->dateEdit_Single->setDate(date);
     ui->dateEdit_Day->setDate(date);
     dateInputFieldsBeingSetDynamically = false;
 }
 
-void Torg::setStartTimeInputFields(QTime time){
-    startTimeInputFieldsBeingSetDynamically = true;
+void Torg::setStartTimeInputFields(QTime time, bool changeDynamically){
+    startTimeInputFieldsBeingSetDynamically = changeDynamically;
     ui->Create_Single->findChild<QTimeEdit *>("timeEditStart_Single")->setTime(time);
     startTimeInputFieldsBeingSetDynamically = false;
 }
 
-void Torg::setEndTimeInputFields(QTime time){
-    endTimeInputFieldsBeingSetDynamically = true;
+void Torg::setEndTimeInputFields(QTime time, bool changeDynamically){
+    endTimeInputFieldsBeingSetDynamically = changeDynamically;
     ui->Create_Single->findChild<QTimeEdit *>("timeEditEnd_Single")->setTime(time);
     endTimeInputFieldsBeingSetDynamically = false;
 }
@@ -432,3 +432,10 @@ void Torg::on_decButton_clicked()
     this->setWorkingDateLabels();
     this->setEventLabels();
 }
+
+void Torg::on_workingDayLabel_customContextMenuRequested(const QPoint &pos)
+{
+    ui->stackedWidget->setCurrentWidget(ui->Create_Single);
+    setDateInputFields(this->workingDate, false);
+}
+

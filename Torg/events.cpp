@@ -69,7 +69,7 @@ QStringList SingleEvent::getTimeBlocks(){
 
 const QString SingleEvent::toString() const{
     //The final string will always have the title of the event and some notes
-    QString toReturn = " " + this->title + ": ";
+    QString toReturn = this->title + ": ";
 
     //Replace new line characters so that the output is one line
     QString singleLinedNotes = this->notes;
@@ -80,9 +80,9 @@ const QString SingleEvent::toString() const{
         for(int i = 0; i < 10; i++){
             toReturn.append(wordsInNotes[i] + " ");
         }
-        return toReturn + "...";
+        return " " + toReturn + "...";
     }
-    return this->title + ": " + singleLinedNotes;
+    return " " + this->title + ": " + singleLinedNotes;
 }
 
 DayEvent::DayEvent(QString date, SingleEvent* event){

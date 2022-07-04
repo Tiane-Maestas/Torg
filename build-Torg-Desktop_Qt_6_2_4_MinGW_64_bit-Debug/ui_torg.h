@@ -515,6 +515,7 @@ public:
         font.setItalic(false);
         font.setUnderline(false);
         workingDayLabel->setFont(font);
+        workingDayLabel->setContextMenuPolicy(Qt::CustomContextMenu);
         workingDayLabel->setAlignment(Qt::AlignCenter);
 
         dayControlLayout->addWidget(workingDayLabel);
@@ -3451,7 +3452,7 @@ public:
 
         retranslateUi(Torg);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Torg);

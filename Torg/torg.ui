@@ -57,7 +57,7 @@
        <number>0</number>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Day_View">
        <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -112,6 +112,9 @@
               <bold>true</bold>
               <underline>false</underline>
              </font>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
             </property>
             <property name="text">
              <string>Today: (Date)</string>
