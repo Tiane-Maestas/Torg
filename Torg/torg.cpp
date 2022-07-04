@@ -175,7 +175,6 @@ void Torg::on_lineEdit_Title_Single_textEdited(const QString &arg1)
 void Torg::on_dateEdit_Single_dateChanged(const QDate &date)
 {
     if(dateInputFieldsBeingSetDynamically){
-        dateInputFieldsBeingSetDynamically = false;
         return;
     }
     if(!sDateChanged){
@@ -186,6 +185,9 @@ void Torg::on_dateEdit_Single_dateChanged(const QDate &date)
 }
 void Torg::on_timeEditStart_Single_timeChanged(const QTime &time)
 {
+    if(startTimeInputFieldsBeingSetDynamically){
+        return;
+    }
     if(!sStartChanged){
         sStartChanged = true;
         singlePercentageDone += 25;
@@ -194,9 +196,27 @@ void Torg::on_timeEditStart_Single_timeChanged(const QTime &time)
 }
 void Torg::on_timeEditEnd_Single_timeChanged(const QTime &time)
 {
+    if(endTimeInputFieldsBeingSetDynamically){
+        return;
+    }
     if(!sEndChanged){
         sEndChanged = true;
         singlePercentageDone += 25;
+        this->updateSingleProgressBarStatus(); //Only add percentage if this is the first time the end time has been changed
+    }
+}
+void Torg::on_radioButton_AllDay_Single_clicked()
+{
+    if(!allDayChanged){
+        allDayChanged = true;
+        if(!sEndChanged){
+            sEndChanged = true;
+            singlePercentageDone += 25;
+        }
+        if(!sStartChanged){
+            sStartChanged = true;
+            singlePercentageDone += 25;
+        }
         this->updateSingleProgressBarStatus(); //Only add percentage if this is the first time the end time has been changed
     }
 }
@@ -213,6 +233,7 @@ void Torg::resetSingleProgressBar(){
      sStartChanged = false;
      sDateChanged = false;
      sTitleChanged = false;
+     allDayChanged = false;
      ui->progressBar_Single->setValue(singlePercentageDone);
      //Reset the thread completley becuase it would get stuck otherwise
      delete sProgressBarThread;
@@ -277,7 +298,7 @@ void Torg::on_pushButton_Add_Single_clicked()
     //Process the all day bool and reminder input.
     if(allDay){
         startTime = "12:00 AM";
-        endTime = "11:59 PM";
+        endTime = "12:30 AM";
     }
 
     SingleEvent* eventToAdd = new SingleEvent(title, startTime, endTime, notes, repeat, formatDate(date), reminder, color, concrete, allDay);
@@ -297,14 +318,41 @@ void Torg::on_pushButton_Add_Single_clicked()
     this->setEventLabels();
     ui->stackedWidget->setCurrentWidget(ui->Day_View);
 
-    //Reset progress bar to allow for new event to be created
+    //Reset progress bar and input fields to allow for new event to be created
     resetSingleProgressBar();
+    resetSingleInputFields();
+}
+
+void Torg::resetSingleInputFields(){
+    ui->Create_Single->findChild<QLineEdit *>("lineEdit_Title_Single")->setText(""); //Title
+    ui->Create_Single->findChild<QTextEdit *>("textEdit_Notes_Single")->setText(""); //Notes
+    setStartTimeInputFields(QTime(12, 0)); //Start time
+    setEndTimeInputFields(QTime(12, 0)); //End time
+    setDateInputFields(this->todaysDate); //Date
+    ui->Create_Single->findChild<QComboBox *>("comboBox_Repeat_Single")->setCurrentIndex(0); //Repeat
+    ui->Create_Single->findChild<QComboBox *>("comboBox_Reminder_Single")->setCurrentIndex(0); //Reminder
+    ui->Create_Single->findChild<QComboBox *>("comboBox_Color_Single")->setCurrentIndex(0); //Color
+    ui->Create_Single->findChild<QRadioButton *>("radioButton_Concrete_Single")->setChecked(false); //Concrete
+    ui->Create_Single->findChild<QRadioButton *>("radioButton_AllDay_Single")->setChecked(false); //All day
 }
 
 void Torg::setDateInputFields(QDate date){
     dateInputFieldsBeingSetDynamically = true;
     ui->dateEdit_Single->setDate(date);
     ui->dateEdit_Day->setDate(date);
+    dateInputFieldsBeingSetDynamically = false;
+}
+
+void Torg::setStartTimeInputFields(QTime time){
+    startTimeInputFieldsBeingSetDynamically = true;
+    ui->Create_Single->findChild<QTimeEdit *>("timeEditStart_Single")->setTime(time);
+    startTimeInputFieldsBeingSetDynamically = false;
+}
+
+void Torg::setEndTimeInputFields(QTime time){
+    endTimeInputFieldsBeingSetDynamically = true;
+    ui->Create_Single->findChild<QTimeEdit *>("timeEditEnd_Single")->setTime(time);
+    endTimeInputFieldsBeingSetDynamically = false;
 }
 
 //TODO Toggle Stylesheet

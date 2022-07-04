@@ -41,6 +41,7 @@ private slots:
     void on_dateEdit_Single_dateChanged(const QDate &date);
     void on_timeEditStart_Single_timeChanged(const QTime &time);
     void on_timeEditEnd_Single_timeChanged(const QTime &time);
+    void on_radioButton_AllDay_Single_clicked();
 
     //Slot for incrementing a progress bar from a seprate thread
     void animateSingleProgressBar(int inc);
@@ -72,6 +73,7 @@ private:
     bool sDateChanged = false;
     bool sStartChanged = false;
     bool sEndChanged = false;
+    bool allDayChanged = false;
 
     //To minimize the updates of labels I keep track if the labels have been recently cleared.
     bool labelsRecentlyCleared = false;
@@ -84,9 +86,14 @@ private:
     float sideMenuPercentOfScreenOpened = 0.30;
     float sideMenuPercentOfScreenClosed = 0.05;
 
-    //Helpers for setting event creation input fields without changing the progress bars (Start time and End Time fields can be added if needed here!)
+    //Helpers for setting event creation input fields without changing the progress bars
     void setDateInputFields(QDate date);
-    bool dateInputFieldsBeingSetDynamically = false;
+    bool dateInputFieldsBeingSetDynamically = false; //So that the progress bar isn't updated by changes not made by a user.
+    void setStartTimeInputFields(QTime time);
+    bool startTimeInputFieldsBeingSetDynamically = false;
+    void setEndTimeInputFields(QTime time);
+    bool endTimeInputFieldsBeingSetDynamically = false;
+    void resetSingleInputFields();
 
     //A map between dates and all the events in that day as DayEvent pointers. De-allocations needed for DayEvents
     QHash<QString, DayEvent*> dayEvents;
