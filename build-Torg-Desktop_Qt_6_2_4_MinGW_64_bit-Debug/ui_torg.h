@@ -209,6 +209,7 @@ public:
     QHBoxLayout *horizontalLayout_Progress;
     QProgressBar *progressBar_Single;
     QSpacerItem *horizontalSpacer_3;
+    QPushButton *reset_Single;
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_Title;
     QSpacerItem *horizontalSpacer;
@@ -539,7 +540,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 794, 1536));
+        scrollAreaWidgetContents->setGeometry(QRect(0, -893, 794, 1536));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_2->setSpacing(0);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
@@ -553,7 +554,7 @@ public:
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(label_110->sizePolicy().hasHeightForWidth());
         label_110->setSizePolicy(sizePolicy2);
-        label_110->setMinimumSize(QSize(60, 30));
+        label_110->setMinimumSize(QSize(100, 30));
         QFont font1;
         font1.setPointSize(12);
         label_110->setFont(font1);
@@ -581,7 +582,7 @@ public:
         label_140->setObjectName(QString::fromUtf8("label_140"));
         sizePolicy2.setHeightForWidth(label_140->sizePolicy().hasHeightForWidth());
         label_140->setSizePolicy(sizePolicy2);
-        label_140->setMinimumSize(QSize(60, 30));
+        label_140->setMinimumSize(QSize(100, 30));
         label_140->setFont(font1);
         label_140->setAlignment(Qt::AlignCenter);
 
@@ -606,7 +607,7 @@ public:
         label_144->setObjectName(QString::fromUtf8("label_144"));
         sizePolicy2.setHeightForWidth(label_144->sizePolicy().hasHeightForWidth());
         label_144->setSizePolicy(sizePolicy2);
-        label_144->setMinimumSize(QSize(60, 30));
+        label_144->setMinimumSize(QSize(100, 30));
         label_144->setFont(font1);
         label_144->setAlignment(Qt::AlignCenter);
 
@@ -629,9 +630,9 @@ public:
         horizontalLayout_130AM->setObjectName(QString::fromUtf8("horizontalLayout_130AM"));
         label_116 = new QLabel(scrollAreaWidgetContents);
         label_116->setObjectName(QString::fromUtf8("label_116"));
-        sizePolicy.setHeightForWidth(label_116->sizePolicy().hasHeightForWidth());
-        label_116->setSizePolicy(sizePolicy);
-        label_116->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_116->sizePolicy().hasHeightForWidth());
+        label_116->setSizePolicy(sizePolicy2);
+        label_116->setMinimumSize(QSize(100, 30));
         label_116->setFont(font1);
         label_116->setAlignment(Qt::AlignCenter);
 
@@ -639,11 +640,8 @@ public:
 
         label_130AM = new QLabel(scrollAreaWidgetContents);
         label_130AM->setObjectName(QString::fromUtf8("label_130AM"));
-        QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Minimum);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(label_130AM->sizePolicy().hasHeightForWidth());
-        label_130AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_130AM->sizePolicy().hasHeightForWidth());
+        label_130AM->setSizePolicy(sizePolicy1);
         label_130AM->setMinimumSize(QSize(50, 30));
         label_130AM->setBaseSize(QSize(50, 25));
         label_130AM->setFont(font1);
@@ -657,9 +655,9 @@ public:
         horizontalLayout_200AM->setObjectName(QString::fromUtf8("horizontalLayout_200AM"));
         label_136 = new QLabel(scrollAreaWidgetContents);
         label_136->setObjectName(QString::fromUtf8("label_136"));
-        sizePolicy.setHeightForWidth(label_136->sizePolicy().hasHeightForWidth());
-        label_136->setSizePolicy(sizePolicy);
-        label_136->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_136->sizePolicy().hasHeightForWidth());
+        label_136->setSizePolicy(sizePolicy2);
+        label_136->setMinimumSize(QSize(100, 30));
         label_136->setFont(font1);
         label_136->setAlignment(Qt::AlignCenter);
 
@@ -667,8 +665,8 @@ public:
 
         label_200AM = new QLabel(scrollAreaWidgetContents);
         label_200AM->setObjectName(QString::fromUtf8("label_200AM"));
-        sizePolicy3.setHeightForWidth(label_200AM->sizePolicy().hasHeightForWidth());
-        label_200AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_200AM->sizePolicy().hasHeightForWidth());
+        label_200AM->setSizePolicy(sizePolicy1);
         label_200AM->setMinimumSize(QSize(50, 30));
         label_200AM->setBaseSize(QSize(50, 25));
         label_200AM->setFont(font1);
@@ -682,9 +680,9 @@ public:
         horizontalLayout_230AM->setObjectName(QString::fromUtf8("horizontalLayout_230AM"));
         label_104 = new QLabel(scrollAreaWidgetContents);
         label_104->setObjectName(QString::fromUtf8("label_104"));
-        sizePolicy.setHeightForWidth(label_104->sizePolicy().hasHeightForWidth());
-        label_104->setSizePolicy(sizePolicy);
-        label_104->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_104->sizePolicy().hasHeightForWidth());
+        label_104->setSizePolicy(sizePolicy2);
+        label_104->setMinimumSize(QSize(100, 30));
         label_104->setFont(font1);
         label_104->setAlignment(Qt::AlignCenter);
 
@@ -692,8 +690,8 @@ public:
 
         label_230AM = new QLabel(scrollAreaWidgetContents);
         label_230AM->setObjectName(QString::fromUtf8("label_230AM"));
-        sizePolicy3.setHeightForWidth(label_230AM->sizePolicy().hasHeightForWidth());
-        label_230AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_230AM->sizePolicy().hasHeightForWidth());
+        label_230AM->setSizePolicy(sizePolicy1);
         label_230AM->setMinimumSize(QSize(50, 30));
         label_230AM->setBaseSize(QSize(50, 25));
         label_230AM->setFont(font1);
@@ -707,9 +705,9 @@ public:
         horizontalLayout_300AM->setObjectName(QString::fromUtf8("horizontalLayout_300AM"));
         label_146 = new QLabel(scrollAreaWidgetContents);
         label_146->setObjectName(QString::fromUtf8("label_146"));
-        sizePolicy.setHeightForWidth(label_146->sizePolicy().hasHeightForWidth());
-        label_146->setSizePolicy(sizePolicy);
-        label_146->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_146->sizePolicy().hasHeightForWidth());
+        label_146->setSizePolicy(sizePolicy2);
+        label_146->setMinimumSize(QSize(100, 30));
         label_146->setFont(font1);
         label_146->setAlignment(Qt::AlignCenter);
 
@@ -717,8 +715,8 @@ public:
 
         label_300AM = new QLabel(scrollAreaWidgetContents);
         label_300AM->setObjectName(QString::fromUtf8("label_300AM"));
-        sizePolicy3.setHeightForWidth(label_300AM->sizePolicy().hasHeightForWidth());
-        label_300AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_300AM->sizePolicy().hasHeightForWidth());
+        label_300AM->setSizePolicy(sizePolicy1);
         label_300AM->setMinimumSize(QSize(50, 30));
         label_300AM->setBaseSize(QSize(50, 25));
         label_300AM->setFont(font1);
@@ -732,9 +730,9 @@ public:
         horizontalLayout_330AM->setObjectName(QString::fromUtf8("horizontalLayout_330AM"));
         label_106 = new QLabel(scrollAreaWidgetContents);
         label_106->setObjectName(QString::fromUtf8("label_106"));
-        sizePolicy.setHeightForWidth(label_106->sizePolicy().hasHeightForWidth());
-        label_106->setSizePolicy(sizePolicy);
-        label_106->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_106->sizePolicy().hasHeightForWidth());
+        label_106->setSizePolicy(sizePolicy2);
+        label_106->setMinimumSize(QSize(100, 30));
         label_106->setFont(font1);
         label_106->setAlignment(Qt::AlignCenter);
 
@@ -742,8 +740,8 @@ public:
 
         label_330AM = new QLabel(scrollAreaWidgetContents);
         label_330AM->setObjectName(QString::fromUtf8("label_330AM"));
-        sizePolicy3.setHeightForWidth(label_330AM->sizePolicy().hasHeightForWidth());
-        label_330AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_330AM->sizePolicy().hasHeightForWidth());
+        label_330AM->setSizePolicy(sizePolicy1);
         label_330AM->setMinimumSize(QSize(50, 30));
         label_330AM->setBaseSize(QSize(50, 25));
         label_330AM->setFont(font1);
@@ -757,9 +755,9 @@ public:
         horizontalLayout_400AM->setObjectName(QString::fromUtf8("horizontalLayout_400AM"));
         label_108 = new QLabel(scrollAreaWidgetContents);
         label_108->setObjectName(QString::fromUtf8("label_108"));
-        sizePolicy.setHeightForWidth(label_108->sizePolicy().hasHeightForWidth());
-        label_108->setSizePolicy(sizePolicy);
-        label_108->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_108->sizePolicy().hasHeightForWidth());
+        label_108->setSizePolicy(sizePolicy2);
+        label_108->setMinimumSize(QSize(100, 30));
         label_108->setFont(font1);
         label_108->setAlignment(Qt::AlignCenter);
 
@@ -767,8 +765,8 @@ public:
 
         label_400AM = new QLabel(scrollAreaWidgetContents);
         label_400AM->setObjectName(QString::fromUtf8("label_400AM"));
-        sizePolicy3.setHeightForWidth(label_400AM->sizePolicy().hasHeightForWidth());
-        label_400AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_400AM->sizePolicy().hasHeightForWidth());
+        label_400AM->setSizePolicy(sizePolicy1);
         label_400AM->setMinimumSize(QSize(50, 30));
         label_400AM->setBaseSize(QSize(50, 25));
         label_400AM->setFont(font1);
@@ -782,9 +780,9 @@ public:
         horizontalLayout_430AM->setObjectName(QString::fromUtf8("horizontalLayout_430AM"));
         label_120 = new QLabel(scrollAreaWidgetContents);
         label_120->setObjectName(QString::fromUtf8("label_120"));
-        sizePolicy.setHeightForWidth(label_120->sizePolicy().hasHeightForWidth());
-        label_120->setSizePolicy(sizePolicy);
-        label_120->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_120->sizePolicy().hasHeightForWidth());
+        label_120->setSizePolicy(sizePolicy2);
+        label_120->setMinimumSize(QSize(100, 30));
         label_120->setFont(font1);
         label_120->setAlignment(Qt::AlignCenter);
 
@@ -792,8 +790,8 @@ public:
 
         label_430AM = new QLabel(scrollAreaWidgetContents);
         label_430AM->setObjectName(QString::fromUtf8("label_430AM"));
-        sizePolicy3.setHeightForWidth(label_430AM->sizePolicy().hasHeightForWidth());
-        label_430AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_430AM->sizePolicy().hasHeightForWidth());
+        label_430AM->setSizePolicy(sizePolicy1);
         label_430AM->setMinimumSize(QSize(50, 30));
         label_430AM->setBaseSize(QSize(50, 25));
         label_430AM->setFont(font1);
@@ -807,9 +805,9 @@ public:
         horizontalLayout_500AM->setObjectName(QString::fromUtf8("horizontalLayout_500AM"));
         label_122 = new QLabel(scrollAreaWidgetContents);
         label_122->setObjectName(QString::fromUtf8("label_122"));
-        sizePolicy.setHeightForWidth(label_122->sizePolicy().hasHeightForWidth());
-        label_122->setSizePolicy(sizePolicy);
-        label_122->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_122->sizePolicy().hasHeightForWidth());
+        label_122->setSizePolicy(sizePolicy2);
+        label_122->setMinimumSize(QSize(100, 30));
         label_122->setFont(font1);
         label_122->setAlignment(Qt::AlignCenter);
 
@@ -817,8 +815,8 @@ public:
 
         label_500AM = new QLabel(scrollAreaWidgetContents);
         label_500AM->setObjectName(QString::fromUtf8("label_500AM"));
-        sizePolicy3.setHeightForWidth(label_500AM->sizePolicy().hasHeightForWidth());
-        label_500AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_500AM->sizePolicy().hasHeightForWidth());
+        label_500AM->setSizePolicy(sizePolicy1);
         label_500AM->setMinimumSize(QSize(50, 30));
         label_500AM->setBaseSize(QSize(50, 25));
         label_500AM->setFont(font1);
@@ -832,9 +830,9 @@ public:
         horizontalLayout_530AM->setObjectName(QString::fromUtf8("horizontalLayout_530AM"));
         label_118 = new QLabel(scrollAreaWidgetContents);
         label_118->setObjectName(QString::fromUtf8("label_118"));
-        sizePolicy.setHeightForWidth(label_118->sizePolicy().hasHeightForWidth());
-        label_118->setSizePolicy(sizePolicy);
-        label_118->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_118->sizePolicy().hasHeightForWidth());
+        label_118->setSizePolicy(sizePolicy2);
+        label_118->setMinimumSize(QSize(100, 30));
         label_118->setFont(font1);
         label_118->setAlignment(Qt::AlignCenter);
 
@@ -842,8 +840,8 @@ public:
 
         label_530AM = new QLabel(scrollAreaWidgetContents);
         label_530AM->setObjectName(QString::fromUtf8("label_530AM"));
-        sizePolicy3.setHeightForWidth(label_530AM->sizePolicy().hasHeightForWidth());
-        label_530AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_530AM->sizePolicy().hasHeightForWidth());
+        label_530AM->setSizePolicy(sizePolicy1);
         label_530AM->setMinimumSize(QSize(50, 30));
         label_530AM->setBaseSize(QSize(50, 25));
         label_530AM->setFont(font1);
@@ -857,9 +855,9 @@ public:
         horizontalLayout_600AM->setObjectName(QString::fromUtf8("horizontalLayout_600AM"));
         label_142 = new QLabel(scrollAreaWidgetContents);
         label_142->setObjectName(QString::fromUtf8("label_142"));
-        sizePolicy.setHeightForWidth(label_142->sizePolicy().hasHeightForWidth());
-        label_142->setSizePolicy(sizePolicy);
-        label_142->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_142->sizePolicy().hasHeightForWidth());
+        label_142->setSizePolicy(sizePolicy2);
+        label_142->setMinimumSize(QSize(100, 30));
         label_142->setFont(font1);
         label_142->setAlignment(Qt::AlignCenter);
 
@@ -867,8 +865,8 @@ public:
 
         label_600AM = new QLabel(scrollAreaWidgetContents);
         label_600AM->setObjectName(QString::fromUtf8("label_600AM"));
-        sizePolicy3.setHeightForWidth(label_600AM->sizePolicy().hasHeightForWidth());
-        label_600AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_600AM->sizePolicy().hasHeightForWidth());
+        label_600AM->setSizePolicy(sizePolicy1);
         label_600AM->setMinimumSize(QSize(50, 30));
         label_600AM->setBaseSize(QSize(50, 25));
         label_600AM->setFont(font1);
@@ -882,9 +880,9 @@ public:
         horizontalLayout_630AM->setObjectName(QString::fromUtf8("horizontalLayout_630AM"));
         label_126 = new QLabel(scrollAreaWidgetContents);
         label_126->setObjectName(QString::fromUtf8("label_126"));
-        sizePolicy.setHeightForWidth(label_126->sizePolicy().hasHeightForWidth());
-        label_126->setSizePolicy(sizePolicy);
-        label_126->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_126->sizePolicy().hasHeightForWidth());
+        label_126->setSizePolicy(sizePolicy2);
+        label_126->setMinimumSize(QSize(100, 30));
         label_126->setFont(font1);
         label_126->setAlignment(Qt::AlignCenter);
 
@@ -892,8 +890,8 @@ public:
 
         label_630AM = new QLabel(scrollAreaWidgetContents);
         label_630AM->setObjectName(QString::fromUtf8("label_630AM"));
-        sizePolicy3.setHeightForWidth(label_630AM->sizePolicy().hasHeightForWidth());
-        label_630AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_630AM->sizePolicy().hasHeightForWidth());
+        label_630AM->setSizePolicy(sizePolicy1);
         label_630AM->setMinimumSize(QSize(50, 30));
         label_630AM->setBaseSize(QSize(50, 25));
         label_630AM->setFont(font1);
@@ -907,9 +905,9 @@ public:
         horizontalLayout_700AM->setObjectName(QString::fromUtf8("horizontalLayout_700AM"));
         label_124 = new QLabel(scrollAreaWidgetContents);
         label_124->setObjectName(QString::fromUtf8("label_124"));
-        sizePolicy.setHeightForWidth(label_124->sizePolicy().hasHeightForWidth());
-        label_124->setSizePolicy(sizePolicy);
-        label_124->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_124->sizePolicy().hasHeightForWidth());
+        label_124->setSizePolicy(sizePolicy2);
+        label_124->setMinimumSize(QSize(100, 30));
         label_124->setFont(font1);
         label_124->setAlignment(Qt::AlignCenter);
 
@@ -917,8 +915,8 @@ public:
 
         label_700AM = new QLabel(scrollAreaWidgetContents);
         label_700AM->setObjectName(QString::fromUtf8("label_700AM"));
-        sizePolicy3.setHeightForWidth(label_700AM->sizePolicy().hasHeightForWidth());
-        label_700AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_700AM->sizePolicy().hasHeightForWidth());
+        label_700AM->setSizePolicy(sizePolicy1);
         label_700AM->setMinimumSize(QSize(50, 30));
         label_700AM->setBaseSize(QSize(50, 25));
         label_700AM->setFont(font1);
@@ -932,9 +930,9 @@ public:
         horizontalLayout_730AM->setObjectName(QString::fromUtf8("horizontalLayout_730AM"));
         label_56 = new QLabel(scrollAreaWidgetContents);
         label_56->setObjectName(QString::fromUtf8("label_56"));
-        sizePolicy.setHeightForWidth(label_56->sizePolicy().hasHeightForWidth());
-        label_56->setSizePolicy(sizePolicy);
-        label_56->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_56->sizePolicy().hasHeightForWidth());
+        label_56->setSizePolicy(sizePolicy2);
+        label_56->setMinimumSize(QSize(100, 30));
         label_56->setFont(font1);
         label_56->setAlignment(Qt::AlignCenter);
 
@@ -942,8 +940,8 @@ public:
 
         label_730AM = new QLabel(scrollAreaWidgetContents);
         label_730AM->setObjectName(QString::fromUtf8("label_730AM"));
-        sizePolicy3.setHeightForWidth(label_730AM->sizePolicy().hasHeightForWidth());
-        label_730AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_730AM->sizePolicy().hasHeightForWidth());
+        label_730AM->setSizePolicy(sizePolicy1);
         label_730AM->setMinimumSize(QSize(50, 30));
         label_730AM->setBaseSize(QSize(50, 25));
         label_730AM->setFont(font1);
@@ -957,9 +955,9 @@ public:
         horizontalLayout_800AM->setObjectName(QString::fromUtf8("horizontalLayout_800AM"));
         label_58 = new QLabel(scrollAreaWidgetContents);
         label_58->setObjectName(QString::fromUtf8("label_58"));
-        sizePolicy.setHeightForWidth(label_58->sizePolicy().hasHeightForWidth());
-        label_58->setSizePolicy(sizePolicy);
-        label_58->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_58->sizePolicy().hasHeightForWidth());
+        label_58->setSizePolicy(sizePolicy2);
+        label_58->setMinimumSize(QSize(100, 30));
         label_58->setFont(font1);
         label_58->setAlignment(Qt::AlignCenter);
 
@@ -967,8 +965,8 @@ public:
 
         label_800AM = new QLabel(scrollAreaWidgetContents);
         label_800AM->setObjectName(QString::fromUtf8("label_800AM"));
-        sizePolicy3.setHeightForWidth(label_800AM->sizePolicy().hasHeightForWidth());
-        label_800AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_800AM->sizePolicy().hasHeightForWidth());
+        label_800AM->setSizePolicy(sizePolicy1);
         label_800AM->setMinimumSize(QSize(50, 30));
         label_800AM->setBaseSize(QSize(50, 25));
         label_800AM->setFont(font1);
@@ -982,9 +980,9 @@ public:
         horizontalLayout_830AM->setObjectName(QString::fromUtf8("horizontalLayout_830AM"));
         label_2 = new QLabel(scrollAreaWidgetContents);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
-        label_2->setSizePolicy(sizePolicy);
-        label_2->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy2);
+        label_2->setMinimumSize(QSize(100, 30));
         label_2->setFont(font1);
         label_2->setAlignment(Qt::AlignCenter);
 
@@ -992,8 +990,8 @@ public:
 
         label_830AM = new QLabel(scrollAreaWidgetContents);
         label_830AM->setObjectName(QString::fromUtf8("label_830AM"));
-        sizePolicy3.setHeightForWidth(label_830AM->sizePolicy().hasHeightForWidth());
-        label_830AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_830AM->sizePolicy().hasHeightForWidth());
+        label_830AM->setSizePolicy(sizePolicy1);
         label_830AM->setMinimumSize(QSize(50, 30));
         label_830AM->setBaseSize(QSize(50, 25));
         label_830AM->setFont(font1);
@@ -1007,9 +1005,9 @@ public:
         horizontalLayout_900AM->setObjectName(QString::fromUtf8("horizontalLayout_900AM"));
         label_128 = new QLabel(scrollAreaWidgetContents);
         label_128->setObjectName(QString::fromUtf8("label_128"));
-        sizePolicy.setHeightForWidth(label_128->sizePolicy().hasHeightForWidth());
-        label_128->setSizePolicy(sizePolicy);
-        label_128->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_128->sizePolicy().hasHeightForWidth());
+        label_128->setSizePolicy(sizePolicy2);
+        label_128->setMinimumSize(QSize(100, 30));
         label_128->setFont(font1);
         label_128->setAlignment(Qt::AlignCenter);
 
@@ -1017,8 +1015,8 @@ public:
 
         label_900AM = new QLabel(scrollAreaWidgetContents);
         label_900AM->setObjectName(QString::fromUtf8("label_900AM"));
-        sizePolicy3.setHeightForWidth(label_900AM->sizePolicy().hasHeightForWidth());
-        label_900AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_900AM->sizePolicy().hasHeightForWidth());
+        label_900AM->setSizePolicy(sizePolicy1);
         label_900AM->setMinimumSize(QSize(50, 30));
         label_900AM->setBaseSize(QSize(50, 25));
         label_900AM->setFont(font1);
@@ -1032,9 +1030,9 @@ public:
         horizontalLayout_930AM->setObjectName(QString::fromUtf8("horizontalLayout_930AM"));
         label_60 = new QLabel(scrollAreaWidgetContents);
         label_60->setObjectName(QString::fromUtf8("label_60"));
-        sizePolicy.setHeightForWidth(label_60->sizePolicy().hasHeightForWidth());
-        label_60->setSizePolicy(sizePolicy);
-        label_60->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_60->sizePolicy().hasHeightForWidth());
+        label_60->setSizePolicy(sizePolicy2);
+        label_60->setMinimumSize(QSize(100, 30));
         label_60->setFont(font1);
         label_60->setAlignment(Qt::AlignCenter);
 
@@ -1042,8 +1040,8 @@ public:
 
         label_930AM = new QLabel(scrollAreaWidgetContents);
         label_930AM->setObjectName(QString::fromUtf8("label_930AM"));
-        sizePolicy3.setHeightForWidth(label_930AM->sizePolicy().hasHeightForWidth());
-        label_930AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_930AM->sizePolicy().hasHeightForWidth());
+        label_930AM->setSizePolicy(sizePolicy1);
         label_930AM->setMinimumSize(QSize(50, 30));
         label_930AM->setBaseSize(QSize(50, 25));
         label_930AM->setFont(font1);
@@ -1058,9 +1056,9 @@ public:
         horizontalLayout_1000AM->setObjectName(QString::fromUtf8("horizontalLayout_1000AM"));
         label_62 = new QLabel(scrollAreaWidgetContents);
         label_62->setObjectName(QString::fromUtf8("label_62"));
-        sizePolicy.setHeightForWidth(label_62->sizePolicy().hasHeightForWidth());
-        label_62->setSizePolicy(sizePolicy);
-        label_62->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_62->sizePolicy().hasHeightForWidth());
+        label_62->setSizePolicy(sizePolicy2);
+        label_62->setMinimumSize(QSize(100, 30));
         label_62->setFont(font1);
         label_62->setAlignment(Qt::AlignCenter);
 
@@ -1068,8 +1066,8 @@ public:
 
         label_1000AM = new QLabel(scrollAreaWidgetContents);
         label_1000AM->setObjectName(QString::fromUtf8("label_1000AM"));
-        sizePolicy3.setHeightForWidth(label_1000AM->sizePolicy().hasHeightForWidth());
-        label_1000AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_1000AM->sizePolicy().hasHeightForWidth());
+        label_1000AM->setSizePolicy(sizePolicy1);
         label_1000AM->setMinimumSize(QSize(50, 30));
         label_1000AM->setBaseSize(QSize(50, 25));
         label_1000AM->setFont(font1);
@@ -1083,9 +1081,9 @@ public:
         horizontalLayout_1030AM->setObjectName(QString::fromUtf8("horizontalLayout_1030AM"));
         label_64 = new QLabel(scrollAreaWidgetContents);
         label_64->setObjectName(QString::fromUtf8("label_64"));
-        sizePolicy.setHeightForWidth(label_64->sizePolicy().hasHeightForWidth());
-        label_64->setSizePolicy(sizePolicy);
-        label_64->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_64->sizePolicy().hasHeightForWidth());
+        label_64->setSizePolicy(sizePolicy2);
+        label_64->setMinimumSize(QSize(100, 30));
         label_64->setFont(font1);
         label_64->setAlignment(Qt::AlignCenter);
 
@@ -1093,8 +1091,8 @@ public:
 
         label_1030AM = new QLabel(scrollAreaWidgetContents);
         label_1030AM->setObjectName(QString::fromUtf8("label_1030AM"));
-        sizePolicy3.setHeightForWidth(label_1030AM->sizePolicy().hasHeightForWidth());
-        label_1030AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_1030AM->sizePolicy().hasHeightForWidth());
+        label_1030AM->setSizePolicy(sizePolicy1);
         label_1030AM->setMinimumSize(QSize(50, 30));
         label_1030AM->setBaseSize(QSize(50, 25));
         label_1030AM->setFont(font1);
@@ -1108,9 +1106,9 @@ public:
         horizontalLayout_1100AM->setObjectName(QString::fromUtf8("horizontalLayout_1100AM"));
         label_66 = new QLabel(scrollAreaWidgetContents);
         label_66->setObjectName(QString::fromUtf8("label_66"));
-        sizePolicy.setHeightForWidth(label_66->sizePolicy().hasHeightForWidth());
-        label_66->setSizePolicy(sizePolicy);
-        label_66->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_66->sizePolicy().hasHeightForWidth());
+        label_66->setSizePolicy(sizePolicy2);
+        label_66->setMinimumSize(QSize(100, 30));
         label_66->setFont(font1);
         label_66->setAlignment(Qt::AlignCenter);
 
@@ -1118,8 +1116,8 @@ public:
 
         label_1100AM = new QLabel(scrollAreaWidgetContents);
         label_1100AM->setObjectName(QString::fromUtf8("label_1100AM"));
-        sizePolicy3.setHeightForWidth(label_1100AM->sizePolicy().hasHeightForWidth());
-        label_1100AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_1100AM->sizePolicy().hasHeightForWidth());
+        label_1100AM->setSizePolicy(sizePolicy1);
         label_1100AM->setMinimumSize(QSize(50, 30));
         label_1100AM->setBaseSize(QSize(50, 25));
 
@@ -1132,9 +1130,9 @@ public:
         horizontalLayout_1130AM->setObjectName(QString::fromUtf8("horizontalLayout_1130AM"));
         label_68 = new QLabel(scrollAreaWidgetContents);
         label_68->setObjectName(QString::fromUtf8("label_68"));
-        sizePolicy.setHeightForWidth(label_68->sizePolicy().hasHeightForWidth());
-        label_68->setSizePolicy(sizePolicy);
-        label_68->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_68->sizePolicy().hasHeightForWidth());
+        label_68->setSizePolicy(sizePolicy2);
+        label_68->setMinimumSize(QSize(100, 30));
         label_68->setFont(font1);
         label_68->setAlignment(Qt::AlignCenter);
 
@@ -1142,8 +1140,8 @@ public:
 
         label_1130AM = new QLabel(scrollAreaWidgetContents);
         label_1130AM->setObjectName(QString::fromUtf8("label_1130AM"));
-        sizePolicy3.setHeightForWidth(label_1130AM->sizePolicy().hasHeightForWidth());
-        label_1130AM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_1130AM->sizePolicy().hasHeightForWidth());
+        label_1130AM->setSizePolicy(sizePolicy1);
         label_1130AM->setMinimumSize(QSize(50, 30));
         label_1130AM->setBaseSize(QSize(50, 25));
         label_1130AM->setFont(font1);
@@ -1157,9 +1155,9 @@ public:
         horizontalLayout_1200PM->setObjectName(QString::fromUtf8("horizontalLayout_1200PM"));
         label_70 = new QLabel(scrollAreaWidgetContents);
         label_70->setObjectName(QString::fromUtf8("label_70"));
-        sizePolicy.setHeightForWidth(label_70->sizePolicy().hasHeightForWidth());
-        label_70->setSizePolicy(sizePolicy);
-        label_70->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_70->sizePolicy().hasHeightForWidth());
+        label_70->setSizePolicy(sizePolicy2);
+        label_70->setMinimumSize(QSize(100, 30));
         label_70->setFont(font1);
         label_70->setAlignment(Qt::AlignCenter);
 
@@ -1167,8 +1165,8 @@ public:
 
         label_1200PM = new QLabel(scrollAreaWidgetContents);
         label_1200PM->setObjectName(QString::fromUtf8("label_1200PM"));
-        sizePolicy3.setHeightForWidth(label_1200PM->sizePolicy().hasHeightForWidth());
-        label_1200PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_1200PM->sizePolicy().hasHeightForWidth());
+        label_1200PM->setSizePolicy(sizePolicy1);
         label_1200PM->setMinimumSize(QSize(50, 30));
         label_1200PM->setBaseSize(QSize(50, 25));
         label_1200PM->setFont(font1);
@@ -1182,9 +1180,9 @@ public:
         horizontalLayout_1230PM->setObjectName(QString::fromUtf8("horizontalLayout_1230PM"));
         label_72 = new QLabel(scrollAreaWidgetContents);
         label_72->setObjectName(QString::fromUtf8("label_72"));
-        sizePolicy.setHeightForWidth(label_72->sizePolicy().hasHeightForWidth());
-        label_72->setSizePolicy(sizePolicy);
-        label_72->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_72->sizePolicy().hasHeightForWidth());
+        label_72->setSizePolicy(sizePolicy2);
+        label_72->setMinimumSize(QSize(100, 30));
         label_72->setFont(font1);
         label_72->setAlignment(Qt::AlignCenter);
 
@@ -1192,8 +1190,8 @@ public:
 
         label_1230PM = new QLabel(scrollAreaWidgetContents);
         label_1230PM->setObjectName(QString::fromUtf8("label_1230PM"));
-        sizePolicy3.setHeightForWidth(label_1230PM->sizePolicy().hasHeightForWidth());
-        label_1230PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_1230PM->sizePolicy().hasHeightForWidth());
+        label_1230PM->setSizePolicy(sizePolicy1);
         label_1230PM->setMinimumSize(QSize(50, 30));
         label_1230PM->setBaseSize(QSize(50, 25));
         label_1230PM->setFont(font1);
@@ -1207,9 +1205,9 @@ public:
         horizontalLayout_100PM->setObjectName(QString::fromUtf8("horizontalLayout_100PM"));
         label_74 = new QLabel(scrollAreaWidgetContents);
         label_74->setObjectName(QString::fromUtf8("label_74"));
-        sizePolicy.setHeightForWidth(label_74->sizePolicy().hasHeightForWidth());
-        label_74->setSizePolicy(sizePolicy);
-        label_74->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_74->sizePolicy().hasHeightForWidth());
+        label_74->setSizePolicy(sizePolicy2);
+        label_74->setMinimumSize(QSize(100, 30));
         label_74->setFont(font1);
         label_74->setAlignment(Qt::AlignCenter);
 
@@ -1217,8 +1215,8 @@ public:
 
         label_100PM = new QLabel(scrollAreaWidgetContents);
         label_100PM->setObjectName(QString::fromUtf8("label_100PM"));
-        sizePolicy3.setHeightForWidth(label_100PM->sizePolicy().hasHeightForWidth());
-        label_100PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_100PM->sizePolicy().hasHeightForWidth());
+        label_100PM->setSizePolicy(sizePolicy1);
         label_100PM->setMinimumSize(QSize(50, 30));
         label_100PM->setBaseSize(QSize(50, 25));
         label_100PM->setFont(font1);
@@ -1232,9 +1230,9 @@ public:
         horizontalLayout_130PM->setObjectName(QString::fromUtf8("horizontalLayout_130PM"));
         label_76 = new QLabel(scrollAreaWidgetContents);
         label_76->setObjectName(QString::fromUtf8("label_76"));
-        sizePolicy.setHeightForWidth(label_76->sizePolicy().hasHeightForWidth());
-        label_76->setSizePolicy(sizePolicy);
-        label_76->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_76->sizePolicy().hasHeightForWidth());
+        label_76->setSizePolicy(sizePolicy2);
+        label_76->setMinimumSize(QSize(100, 30));
         label_76->setFont(font1);
         label_76->setAlignment(Qt::AlignCenter);
 
@@ -1242,8 +1240,8 @@ public:
 
         label_130PM = new QLabel(scrollAreaWidgetContents);
         label_130PM->setObjectName(QString::fromUtf8("label_130PM"));
-        sizePolicy3.setHeightForWidth(label_130PM->sizePolicy().hasHeightForWidth());
-        label_130PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_130PM->sizePolicy().hasHeightForWidth());
+        label_130PM->setSizePolicy(sizePolicy1);
         label_130PM->setMinimumSize(QSize(50, 30));
         label_130PM->setBaseSize(QSize(50, 25));
         label_130PM->setFont(font1);
@@ -1257,9 +1255,9 @@ public:
         horizontalLayout_200PM->setObjectName(QString::fromUtf8("horizontalLayout_200PM"));
         label_78 = new QLabel(scrollAreaWidgetContents);
         label_78->setObjectName(QString::fromUtf8("label_78"));
-        sizePolicy.setHeightForWidth(label_78->sizePolicy().hasHeightForWidth());
-        label_78->setSizePolicy(sizePolicy);
-        label_78->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_78->sizePolicy().hasHeightForWidth());
+        label_78->setSizePolicy(sizePolicy2);
+        label_78->setMinimumSize(QSize(100, 30));
         label_78->setFont(font1);
         label_78->setAlignment(Qt::AlignCenter);
 
@@ -1267,8 +1265,8 @@ public:
 
         label_200PM = new QLabel(scrollAreaWidgetContents);
         label_200PM->setObjectName(QString::fromUtf8("label_200PM"));
-        sizePolicy3.setHeightForWidth(label_200PM->sizePolicy().hasHeightForWidth());
-        label_200PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_200PM->sizePolicy().hasHeightForWidth());
+        label_200PM->setSizePolicy(sizePolicy1);
         label_200PM->setMinimumSize(QSize(50, 30));
         label_200PM->setBaseSize(QSize(50, 25));
         label_200PM->setFont(font1);
@@ -1282,9 +1280,9 @@ public:
         horizontalLayout_230PM->setObjectName(QString::fromUtf8("horizontalLayout_230PM"));
         label_80 = new QLabel(scrollAreaWidgetContents);
         label_80->setObjectName(QString::fromUtf8("label_80"));
-        sizePolicy.setHeightForWidth(label_80->sizePolicy().hasHeightForWidth());
-        label_80->setSizePolicy(sizePolicy);
-        label_80->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_80->sizePolicy().hasHeightForWidth());
+        label_80->setSizePolicy(sizePolicy2);
+        label_80->setMinimumSize(QSize(100, 30));
         label_80->setFont(font1);
         label_80->setAlignment(Qt::AlignCenter);
 
@@ -1292,8 +1290,8 @@ public:
 
         label_230PM = new QLabel(scrollAreaWidgetContents);
         label_230PM->setObjectName(QString::fromUtf8("label_230PM"));
-        sizePolicy3.setHeightForWidth(label_230PM->sizePolicy().hasHeightForWidth());
-        label_230PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_230PM->sizePolicy().hasHeightForWidth());
+        label_230PM->setSizePolicy(sizePolicy1);
         label_230PM->setMinimumSize(QSize(50, 30));
         label_230PM->setBaseSize(QSize(50, 25));
         label_230PM->setFont(font1);
@@ -1307,9 +1305,9 @@ public:
         horizontalLayout_300PM->setObjectName(QString::fromUtf8("horizontalLayout_300PM"));
         label_82 = new QLabel(scrollAreaWidgetContents);
         label_82->setObjectName(QString::fromUtf8("label_82"));
-        sizePolicy.setHeightForWidth(label_82->sizePolicy().hasHeightForWidth());
-        label_82->setSizePolicy(sizePolicy);
-        label_82->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_82->sizePolicy().hasHeightForWidth());
+        label_82->setSizePolicy(sizePolicy2);
+        label_82->setMinimumSize(QSize(100, 30));
         label_82->setFont(font1);
         label_82->setAlignment(Qt::AlignCenter);
 
@@ -1317,8 +1315,8 @@ public:
 
         label_300PM = new QLabel(scrollAreaWidgetContents);
         label_300PM->setObjectName(QString::fromUtf8("label_300PM"));
-        sizePolicy3.setHeightForWidth(label_300PM->sizePolicy().hasHeightForWidth());
-        label_300PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_300PM->sizePolicy().hasHeightForWidth());
+        label_300PM->setSizePolicy(sizePolicy1);
         label_300PM->setMinimumSize(QSize(50, 30));
         label_300PM->setBaseSize(QSize(50, 25));
         label_300PM->setFont(font1);
@@ -1332,9 +1330,9 @@ public:
         horizontalLayout_330PM->setObjectName(QString::fromUtf8("horizontalLayout_330PM"));
         label_84 = new QLabel(scrollAreaWidgetContents);
         label_84->setObjectName(QString::fromUtf8("label_84"));
-        sizePolicy.setHeightForWidth(label_84->sizePolicy().hasHeightForWidth());
-        label_84->setSizePolicy(sizePolicy);
-        label_84->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_84->sizePolicy().hasHeightForWidth());
+        label_84->setSizePolicy(sizePolicy2);
+        label_84->setMinimumSize(QSize(100, 30));
         label_84->setFont(font1);
         label_84->setAlignment(Qt::AlignCenter);
 
@@ -1342,8 +1340,8 @@ public:
 
         label_330PM = new QLabel(scrollAreaWidgetContents);
         label_330PM->setObjectName(QString::fromUtf8("label_330PM"));
-        sizePolicy3.setHeightForWidth(label_330PM->sizePolicy().hasHeightForWidth());
-        label_330PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_330PM->sizePolicy().hasHeightForWidth());
+        label_330PM->setSizePolicy(sizePolicy1);
         label_330PM->setMinimumSize(QSize(50, 30));
         label_330PM->setBaseSize(QSize(50, 25));
         label_330PM->setFont(font1);
@@ -1357,9 +1355,9 @@ public:
         horizontalLayout_400PM->setObjectName(QString::fromUtf8("horizontalLayout_400PM"));
         label_86 = new QLabel(scrollAreaWidgetContents);
         label_86->setObjectName(QString::fromUtf8("label_86"));
-        sizePolicy.setHeightForWidth(label_86->sizePolicy().hasHeightForWidth());
-        label_86->setSizePolicy(sizePolicy);
-        label_86->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_86->sizePolicy().hasHeightForWidth());
+        label_86->setSizePolicy(sizePolicy2);
+        label_86->setMinimumSize(QSize(100, 30));
         label_86->setFont(font1);
         label_86->setAlignment(Qt::AlignCenter);
 
@@ -1367,8 +1365,8 @@ public:
 
         label_400PM = new QLabel(scrollAreaWidgetContents);
         label_400PM->setObjectName(QString::fromUtf8("label_400PM"));
-        sizePolicy3.setHeightForWidth(label_400PM->sizePolicy().hasHeightForWidth());
-        label_400PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_400PM->sizePolicy().hasHeightForWidth());
+        label_400PM->setSizePolicy(sizePolicy1);
         label_400PM->setMinimumSize(QSize(50, 30));
         label_400PM->setBaseSize(QSize(50, 25));
         label_400PM->setFont(font1);
@@ -1382,9 +1380,9 @@ public:
         horizontalLayout_430PM->setObjectName(QString::fromUtf8("horizontalLayout_430PM"));
         label_88 = new QLabel(scrollAreaWidgetContents);
         label_88->setObjectName(QString::fromUtf8("label_88"));
-        sizePolicy.setHeightForWidth(label_88->sizePolicy().hasHeightForWidth());
-        label_88->setSizePolicy(sizePolicy);
-        label_88->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_88->sizePolicy().hasHeightForWidth());
+        label_88->setSizePolicy(sizePolicy2);
+        label_88->setMinimumSize(QSize(100, 30));
         label_88->setFont(font1);
         label_88->setAlignment(Qt::AlignCenter);
 
@@ -1392,8 +1390,8 @@ public:
 
         label_430PM = new QLabel(scrollAreaWidgetContents);
         label_430PM->setObjectName(QString::fromUtf8("label_430PM"));
-        sizePolicy3.setHeightForWidth(label_430PM->sizePolicy().hasHeightForWidth());
-        label_430PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_430PM->sizePolicy().hasHeightForWidth());
+        label_430PM->setSizePolicy(sizePolicy1);
         label_430PM->setMinimumSize(QSize(50, 30));
         label_430PM->setBaseSize(QSize(50, 25));
         label_430PM->setFont(font1);
@@ -1407,9 +1405,9 @@ public:
         horizontalLayout_500PM->setObjectName(QString::fromUtf8("horizontalLayout_500PM"));
         label_90 = new QLabel(scrollAreaWidgetContents);
         label_90->setObjectName(QString::fromUtf8("label_90"));
-        sizePolicy.setHeightForWidth(label_90->sizePolicy().hasHeightForWidth());
-        label_90->setSizePolicy(sizePolicy);
-        label_90->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_90->sizePolicy().hasHeightForWidth());
+        label_90->setSizePolicy(sizePolicy2);
+        label_90->setMinimumSize(QSize(100, 30));
         label_90->setFont(font1);
         label_90->setAlignment(Qt::AlignCenter);
 
@@ -1417,8 +1415,8 @@ public:
 
         label_500PM = new QLabel(scrollAreaWidgetContents);
         label_500PM->setObjectName(QString::fromUtf8("label_500PM"));
-        sizePolicy3.setHeightForWidth(label_500PM->sizePolicy().hasHeightForWidth());
-        label_500PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_500PM->sizePolicy().hasHeightForWidth());
+        label_500PM->setSizePolicy(sizePolicy1);
         label_500PM->setMinimumSize(QSize(50, 30));
         label_500PM->setBaseSize(QSize(50, 25));
         label_500PM->setFont(font1);
@@ -1432,9 +1430,9 @@ public:
         horizontalLayout_530PM->setObjectName(QString::fromUtf8("horizontalLayout_530PM"));
         label_92 = new QLabel(scrollAreaWidgetContents);
         label_92->setObjectName(QString::fromUtf8("label_92"));
-        sizePolicy.setHeightForWidth(label_92->sizePolicy().hasHeightForWidth());
-        label_92->setSizePolicy(sizePolicy);
-        label_92->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_92->sizePolicy().hasHeightForWidth());
+        label_92->setSizePolicy(sizePolicy2);
+        label_92->setMinimumSize(QSize(100, 30));
         label_92->setFont(font1);
         label_92->setAlignment(Qt::AlignCenter);
 
@@ -1442,8 +1440,8 @@ public:
 
         label_530PM = new QLabel(scrollAreaWidgetContents);
         label_530PM->setObjectName(QString::fromUtf8("label_530PM"));
-        sizePolicy3.setHeightForWidth(label_530PM->sizePolicy().hasHeightForWidth());
-        label_530PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_530PM->sizePolicy().hasHeightForWidth());
+        label_530PM->setSizePolicy(sizePolicy1);
         label_530PM->setMinimumSize(QSize(50, 30));
         label_530PM->setBaseSize(QSize(50, 25));
         label_530PM->setFont(font1);
@@ -1457,9 +1455,9 @@ public:
         horizontalLayout_600PM->setObjectName(QString::fromUtf8("horizontalLayout_600PM"));
         label_94 = new QLabel(scrollAreaWidgetContents);
         label_94->setObjectName(QString::fromUtf8("label_94"));
-        sizePolicy.setHeightForWidth(label_94->sizePolicy().hasHeightForWidth());
-        label_94->setSizePolicy(sizePolicy);
-        label_94->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_94->sizePolicy().hasHeightForWidth());
+        label_94->setSizePolicy(sizePolicy2);
+        label_94->setMinimumSize(QSize(100, 30));
         label_94->setFont(font1);
         label_94->setAlignment(Qt::AlignCenter);
 
@@ -1467,8 +1465,8 @@ public:
 
         label_600PM = new QLabel(scrollAreaWidgetContents);
         label_600PM->setObjectName(QString::fromUtf8("label_600PM"));
-        sizePolicy3.setHeightForWidth(label_600PM->sizePolicy().hasHeightForWidth());
-        label_600PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_600PM->sizePolicy().hasHeightForWidth());
+        label_600PM->setSizePolicy(sizePolicy1);
         label_600PM->setMinimumSize(QSize(50, 30));
         label_600PM->setBaseSize(QSize(50, 25));
         label_600PM->setFont(font1);
@@ -1482,9 +1480,9 @@ public:
         horizontalLayout_630PM->setObjectName(QString::fromUtf8("horizontalLayout_630PM"));
         label_96 = new QLabel(scrollAreaWidgetContents);
         label_96->setObjectName(QString::fromUtf8("label_96"));
-        sizePolicy.setHeightForWidth(label_96->sizePolicy().hasHeightForWidth());
-        label_96->setSizePolicy(sizePolicy);
-        label_96->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_96->sizePolicy().hasHeightForWidth());
+        label_96->setSizePolicy(sizePolicy2);
+        label_96->setMinimumSize(QSize(100, 30));
         label_96->setFont(font1);
         label_96->setAlignment(Qt::AlignCenter);
 
@@ -1492,8 +1490,8 @@ public:
 
         label_630PM = new QLabel(scrollAreaWidgetContents);
         label_630PM->setObjectName(QString::fromUtf8("label_630PM"));
-        sizePolicy3.setHeightForWidth(label_630PM->sizePolicy().hasHeightForWidth());
-        label_630PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_630PM->sizePolicy().hasHeightForWidth());
+        label_630PM->setSizePolicy(sizePolicy1);
         label_630PM->setMinimumSize(QSize(50, 30));
         label_630PM->setBaseSize(QSize(50, 25));
         label_630PM->setFont(font1);
@@ -1507,9 +1505,9 @@ public:
         horizontalLayout_700PM->setObjectName(QString::fromUtf8("horizontalLayout_700PM"));
         label_98 = new QLabel(scrollAreaWidgetContents);
         label_98->setObjectName(QString::fromUtf8("label_98"));
-        sizePolicy.setHeightForWidth(label_98->sizePolicy().hasHeightForWidth());
-        label_98->setSizePolicy(sizePolicy);
-        label_98->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_98->sizePolicy().hasHeightForWidth());
+        label_98->setSizePolicy(sizePolicy2);
+        label_98->setMinimumSize(QSize(100, 30));
         label_98->setFont(font1);
         label_98->setAlignment(Qt::AlignCenter);
 
@@ -1517,8 +1515,8 @@ public:
 
         label_700PM = new QLabel(scrollAreaWidgetContents);
         label_700PM->setObjectName(QString::fromUtf8("label_700PM"));
-        sizePolicy3.setHeightForWidth(label_700PM->sizePolicy().hasHeightForWidth());
-        label_700PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_700PM->sizePolicy().hasHeightForWidth());
+        label_700PM->setSizePolicy(sizePolicy1);
         label_700PM->setMinimumSize(QSize(50, 30));
         label_700PM->setBaseSize(QSize(50, 25));
         label_700PM->setFont(font1);
@@ -1532,9 +1530,9 @@ public:
         horizontalLayout_730PM->setObjectName(QString::fromUtf8("horizontalLayout_730PM"));
         label_100 = new QLabel(scrollAreaWidgetContents);
         label_100->setObjectName(QString::fromUtf8("label_100"));
-        sizePolicy.setHeightForWidth(label_100->sizePolicy().hasHeightForWidth());
-        label_100->setSizePolicy(sizePolicy);
-        label_100->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_100->sizePolicy().hasHeightForWidth());
+        label_100->setSizePolicy(sizePolicy2);
+        label_100->setMinimumSize(QSize(100, 30));
         label_100->setFont(font1);
         label_100->setAlignment(Qt::AlignCenter);
 
@@ -1542,8 +1540,8 @@ public:
 
         label_730PM = new QLabel(scrollAreaWidgetContents);
         label_730PM->setObjectName(QString::fromUtf8("label_730PM"));
-        sizePolicy3.setHeightForWidth(label_730PM->sizePolicy().hasHeightForWidth());
-        label_730PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_730PM->sizePolicy().hasHeightForWidth());
+        label_730PM->setSizePolicy(sizePolicy1);
         label_730PM->setMinimumSize(QSize(50, 30));
         label_730PM->setBaseSize(QSize(50, 25));
         label_730PM->setFont(font1);
@@ -1557,9 +1555,9 @@ public:
         horizontalLayout_800PM->setObjectName(QString::fromUtf8("horizontalLayout_800PM"));
         label_102 = new QLabel(scrollAreaWidgetContents);
         label_102->setObjectName(QString::fromUtf8("label_102"));
-        sizePolicy.setHeightForWidth(label_102->sizePolicy().hasHeightForWidth());
-        label_102->setSizePolicy(sizePolicy);
-        label_102->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_102->sizePolicy().hasHeightForWidth());
+        label_102->setSizePolicy(sizePolicy2);
+        label_102->setMinimumSize(QSize(100, 30));
         label_102->setFont(font1);
         label_102->setAlignment(Qt::AlignCenter);
 
@@ -1567,8 +1565,8 @@ public:
 
         label_800PM = new QLabel(scrollAreaWidgetContents);
         label_800PM->setObjectName(QString::fromUtf8("label_800PM"));
-        sizePolicy3.setHeightForWidth(label_800PM->sizePolicy().hasHeightForWidth());
-        label_800PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_800PM->sizePolicy().hasHeightForWidth());
+        label_800PM->setSizePolicy(sizePolicy1);
         label_800PM->setMinimumSize(QSize(50, 30));
         label_800PM->setBaseSize(QSize(50, 25));
         label_800PM->setFont(font1);
@@ -1582,9 +1580,9 @@ public:
         horizontalLayout_830PM->setObjectName(QString::fromUtf8("horizontalLayout_830PM"));
         label_150 = new QLabel(scrollAreaWidgetContents);
         label_150->setObjectName(QString::fromUtf8("label_150"));
-        sizePolicy.setHeightForWidth(label_150->sizePolicy().hasHeightForWidth());
-        label_150->setSizePolicy(sizePolicy);
-        label_150->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_150->sizePolicy().hasHeightForWidth());
+        label_150->setSizePolicy(sizePolicy2);
+        label_150->setMinimumSize(QSize(100, 30));
         label_150->setFont(font1);
         label_150->setAlignment(Qt::AlignCenter);
 
@@ -1592,8 +1590,8 @@ public:
 
         label_830PM = new QLabel(scrollAreaWidgetContents);
         label_830PM->setObjectName(QString::fromUtf8("label_830PM"));
-        sizePolicy3.setHeightForWidth(label_830PM->sizePolicy().hasHeightForWidth());
-        label_830PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_830PM->sizePolicy().hasHeightForWidth());
+        label_830PM->setSizePolicy(sizePolicy1);
         label_830PM->setMinimumSize(QSize(50, 30));
         label_830PM->setBaseSize(QSize(50, 25));
         label_830PM->setFont(font1);
@@ -1607,9 +1605,9 @@ public:
         horizontalLayout_900PM->setObjectName(QString::fromUtf8("horizontalLayout_900PM"));
         label_148 = new QLabel(scrollAreaWidgetContents);
         label_148->setObjectName(QString::fromUtf8("label_148"));
-        sizePolicy.setHeightForWidth(label_148->sizePolicy().hasHeightForWidth());
-        label_148->setSizePolicy(sizePolicy);
-        label_148->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_148->sizePolicy().hasHeightForWidth());
+        label_148->setSizePolicy(sizePolicy2);
+        label_148->setMinimumSize(QSize(100, 30));
         label_148->setFont(font1);
         label_148->setAlignment(Qt::AlignCenter);
 
@@ -1617,8 +1615,8 @@ public:
 
         label_900PM = new QLabel(scrollAreaWidgetContents);
         label_900PM->setObjectName(QString::fromUtf8("label_900PM"));
-        sizePolicy3.setHeightForWidth(label_900PM->sizePolicy().hasHeightForWidth());
-        label_900PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_900PM->sizePolicy().hasHeightForWidth());
+        label_900PM->setSizePolicy(sizePolicy1);
         label_900PM->setMinimumSize(QSize(50, 30));
         label_900PM->setBaseSize(QSize(50, 25));
         label_900PM->setFont(font1);
@@ -1632,9 +1630,9 @@ public:
         horizontalLayout_930PM->setObjectName(QString::fromUtf8("horizontalLayout_930PM"));
         label_134 = new QLabel(scrollAreaWidgetContents);
         label_134->setObjectName(QString::fromUtf8("label_134"));
-        sizePolicy.setHeightForWidth(label_134->sizePolicy().hasHeightForWidth());
-        label_134->setSizePolicy(sizePolicy);
-        label_134->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_134->sizePolicy().hasHeightForWidth());
+        label_134->setSizePolicy(sizePolicy2);
+        label_134->setMinimumSize(QSize(100, 30));
         label_134->setFont(font1);
         label_134->setAlignment(Qt::AlignCenter);
 
@@ -1642,8 +1640,8 @@ public:
 
         label_930PM = new QLabel(scrollAreaWidgetContents);
         label_930PM->setObjectName(QString::fromUtf8("label_930PM"));
-        sizePolicy3.setHeightForWidth(label_930PM->sizePolicy().hasHeightForWidth());
-        label_930PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_930PM->sizePolicy().hasHeightForWidth());
+        label_930PM->setSizePolicy(sizePolicy1);
         label_930PM->setMinimumSize(QSize(50, 30));
         label_930PM->setBaseSize(QSize(50, 25));
         label_930PM->setFont(font1);
@@ -1657,9 +1655,9 @@ public:
         horizontalLayout_1000PM->setObjectName(QString::fromUtf8("horizontalLayout_1000PM"));
         label_132 = new QLabel(scrollAreaWidgetContents);
         label_132->setObjectName(QString::fromUtf8("label_132"));
-        sizePolicy.setHeightForWidth(label_132->sizePolicy().hasHeightForWidth());
-        label_132->setSizePolicy(sizePolicy);
-        label_132->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_132->sizePolicy().hasHeightForWidth());
+        label_132->setSizePolicy(sizePolicy2);
+        label_132->setMinimumSize(QSize(100, 30));
         label_132->setFont(font1);
         label_132->setAlignment(Qt::AlignCenter);
 
@@ -1667,8 +1665,8 @@ public:
 
         label_1000PM = new QLabel(scrollAreaWidgetContents);
         label_1000PM->setObjectName(QString::fromUtf8("label_1000PM"));
-        sizePolicy3.setHeightForWidth(label_1000PM->sizePolicy().hasHeightForWidth());
-        label_1000PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_1000PM->sizePolicy().hasHeightForWidth());
+        label_1000PM->setSizePolicy(sizePolicy1);
         label_1000PM->setMinimumSize(QSize(50, 30));
         label_1000PM->setBaseSize(QSize(50, 25));
         label_1000PM->setFont(font1);
@@ -1682,9 +1680,9 @@ public:
         horizontalLayout_1030PM->setObjectName(QString::fromUtf8("horizontalLayout_1030PM"));
         label_130 = new QLabel(scrollAreaWidgetContents);
         label_130->setObjectName(QString::fromUtf8("label_130"));
-        sizePolicy.setHeightForWidth(label_130->sizePolicy().hasHeightForWidth());
-        label_130->setSizePolicy(sizePolicy);
-        label_130->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_130->sizePolicy().hasHeightForWidth());
+        label_130->setSizePolicy(sizePolicy2);
+        label_130->setMinimumSize(QSize(100, 30));
         label_130->setFont(font1);
         label_130->setAlignment(Qt::AlignCenter);
 
@@ -1692,8 +1690,8 @@ public:
 
         label_1030PM = new QLabel(scrollAreaWidgetContents);
         label_1030PM->setObjectName(QString::fromUtf8("label_1030PM"));
-        sizePolicy3.setHeightForWidth(label_1030PM->sizePolicy().hasHeightForWidth());
-        label_1030PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_1030PM->sizePolicy().hasHeightForWidth());
+        label_1030PM->setSizePolicy(sizePolicy1);
         label_1030PM->setMinimumSize(QSize(50, 30));
         label_1030PM->setBaseSize(QSize(50, 25));
         label_1030PM->setFont(font1);
@@ -1707,9 +1705,9 @@ public:
         horizontalLayout_1100PM->setObjectName(QString::fromUtf8("horizontalLayout_1100PM"));
         label_114 = new QLabel(scrollAreaWidgetContents);
         label_114->setObjectName(QString::fromUtf8("label_114"));
-        sizePolicy.setHeightForWidth(label_114->sizePolicy().hasHeightForWidth());
-        label_114->setSizePolicy(sizePolicy);
-        label_114->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_114->sizePolicy().hasHeightForWidth());
+        label_114->setSizePolicy(sizePolicy2);
+        label_114->setMinimumSize(QSize(100, 30));
         label_114->setFont(font1);
         label_114->setAlignment(Qt::AlignCenter);
 
@@ -1717,8 +1715,8 @@ public:
 
         label_1100PM = new QLabel(scrollAreaWidgetContents);
         label_1100PM->setObjectName(QString::fromUtf8("label_1100PM"));
-        sizePolicy3.setHeightForWidth(label_1100PM->sizePolicy().hasHeightForWidth());
-        label_1100PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_1100PM->sizePolicy().hasHeightForWidth());
+        label_1100PM->setSizePolicy(sizePolicy1);
         label_1100PM->setMinimumSize(QSize(50, 30));
         label_1100PM->setBaseSize(QSize(50, 25));
         label_1100PM->setFont(font1);
@@ -1732,9 +1730,9 @@ public:
         horizontalLayout_1130PM->setObjectName(QString::fromUtf8("horizontalLayout_1130PM"));
         label_112 = new QLabel(scrollAreaWidgetContents);
         label_112->setObjectName(QString::fromUtf8("label_112"));
-        sizePolicy.setHeightForWidth(label_112->sizePolicy().hasHeightForWidth());
-        label_112->setSizePolicy(sizePolicy);
-        label_112->setMinimumSize(QSize(60, 30));
+        sizePolicy2.setHeightForWidth(label_112->sizePolicy().hasHeightForWidth());
+        label_112->setSizePolicy(sizePolicy2);
+        label_112->setMinimumSize(QSize(100, 30));
         label_112->setFont(font1);
         label_112->setAlignment(Qt::AlignCenter);
 
@@ -1742,8 +1740,8 @@ public:
 
         label_1130PM = new QLabel(scrollAreaWidgetContents);
         label_1130PM->setObjectName(QString::fromUtf8("label_1130PM"));
-        sizePolicy3.setHeightForWidth(label_1130PM->sizePolicy().hasHeightForWidth());
-        label_1130PM->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_1130PM->sizePolicy().hasHeightForWidth());
+        label_1130PM->setSizePolicy(sizePolicy1);
         label_1130PM->setMinimumSize(QSize(50, 30));
         label_1130PM->setBaseSize(QSize(50, 25));
         label_1130PM->setFont(font1);
@@ -1769,6 +1767,7 @@ public:
         verticalLayout_6->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_Progress = new QHBoxLayout();
         horizontalLayout_Progress->setObjectName(QString::fromUtf8("horizontalLayout_Progress"));
+        horizontalLayout_Progress->setContentsMargins(-1, -1, 5, -1);
         progressBar_Single = new QProgressBar(Create_Single);
         progressBar_Single->setObjectName(QString::fromUtf8("progressBar_Single"));
         progressBar_Single->setMinimumSize(QSize(0, 30));
@@ -1779,6 +1778,15 @@ public:
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_Progress->addItem(horizontalSpacer_3);
+
+        reset_Single = new QPushButton(Create_Single);
+        reset_Single->setObjectName(QString::fromUtf8("reset_Single"));
+        sizePolicy2.setHeightForWidth(reset_Single->sizePolicy().hasHeightForWidth());
+        reset_Single->setSizePolicy(sizePolicy2);
+        reset_Single->setMinimumSize(QSize(60, 30));
+        reset_Single->setBaseSize(QSize(75, 30));
+
+        horizontalLayout_Progress->addWidget(reset_Single);
 
 
         verticalLayout_6->addLayout(horizontalLayout_Progress);
@@ -1935,12 +1943,15 @@ public:
 
         radioButton_Concrete_Single = new QRadioButton(Create_Single);
         radioButton_Concrete_Single->setObjectName(QString::fromUtf8("radioButton_Concrete_Single"));
-        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(radioButton_Concrete_Single->sizePolicy().hasHeightForWidth());
-        radioButton_Concrete_Single->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(radioButton_Concrete_Single->sizePolicy().hasHeightForWidth());
+        radioButton_Concrete_Single->setSizePolicy(sizePolicy3);
         radioButton_Concrete_Single->setMinimumSize(QSize(0, 30));
+        radioButton_Concrete_Single->setCheckable(true);
+        radioButton_Concrete_Single->setChecked(false);
+        radioButton_Concrete_Single->setAutoExclusive(false);
 
         horizontalLayout_4->addWidget(radioButton_Concrete_Single);
 
@@ -1950,8 +1961,9 @@ public:
 
         radioButton_AllDay_Single = new QRadioButton(Create_Single);
         radioButton_AllDay_Single->setObjectName(QString::fromUtf8("radioButton_AllDay_Single"));
-        sizePolicy4.setHeightForWidth(radioButton_AllDay_Single->sizePolicy().hasHeightForWidth());
-        radioButton_AllDay_Single->setSizePolicy(sizePolicy4);
+        sizePolicy3.setHeightForWidth(radioButton_AllDay_Single->sizePolicy().hasHeightForWidth());
+        radioButton_AllDay_Single->setSizePolicy(sizePolicy3);
+        radioButton_AllDay_Single->setAutoExclusive(false);
 
         horizontalLayout_4->addWidget(radioButton_AllDay_Single);
 
@@ -2245,7 +2257,7 @@ public:
         scrollArea_3->setWidgetResizable(true);
         scrollAreaWidgetContents_3 = new QWidget();
         scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 443, 1836));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 136, 1836));
         verticalLayout_14 = new QVBoxLayout(scrollAreaWidgetContents_3);
         verticalLayout_14->setObjectName(QString::fromUtf8("verticalLayout_14"));
         horizontalLayout_1200AM_3 = new QHBoxLayout();
@@ -2261,8 +2273,11 @@ public:
 
         label_337 = new QLabel(scrollAreaWidgetContents_3);
         label_337->setObjectName(QString::fromUtf8("label_337"));
-        sizePolicy3.setHeightForWidth(label_337->sizePolicy().hasHeightForWidth());
-        label_337->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Minimum);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(label_337->sizePolicy().hasHeightForWidth());
+        label_337->setSizePolicy(sizePolicy4);
         label_337->setMinimumSize(QSize(50, 30));
         label_337->setBaseSize(QSize(50, 25));
 
@@ -2284,8 +2299,8 @@ public:
 
         label_245 = new QLabel(scrollAreaWidgetContents_3);
         label_245->setObjectName(QString::fromUtf8("label_245"));
-        sizePolicy3.setHeightForWidth(label_245->sizePolicy().hasHeightForWidth());
-        label_245->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_245->sizePolicy().hasHeightForWidth());
+        label_245->setSizePolicy(sizePolicy4);
         label_245->setMinimumSize(QSize(50, 30));
         label_245->setBaseSize(QSize(50, 25));
 
@@ -2307,8 +2322,8 @@ public:
 
         label_247 = new QLabel(scrollAreaWidgetContents_3);
         label_247->setObjectName(QString::fromUtf8("label_247"));
-        sizePolicy3.setHeightForWidth(label_247->sizePolicy().hasHeightForWidth());
-        label_247->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_247->sizePolicy().hasHeightForWidth());
+        label_247->setSizePolicy(sizePolicy4);
         label_247->setMinimumSize(QSize(50, 30));
         label_247->setBaseSize(QSize(50, 25));
 
@@ -2330,8 +2345,8 @@ public:
 
         label_249 = new QLabel(scrollAreaWidgetContents_3);
         label_249->setObjectName(QString::fromUtf8("label_249"));
-        sizePolicy3.setHeightForWidth(label_249->sizePolicy().hasHeightForWidth());
-        label_249->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_249->sizePolicy().hasHeightForWidth());
+        label_249->setSizePolicy(sizePolicy4);
         label_249->setMinimumSize(QSize(50, 30));
         label_249->setBaseSize(QSize(50, 25));
 
@@ -2353,8 +2368,8 @@ public:
 
         label_251 = new QLabel(scrollAreaWidgetContents_3);
         label_251->setObjectName(QString::fromUtf8("label_251"));
-        sizePolicy3.setHeightForWidth(label_251->sizePolicy().hasHeightForWidth());
-        label_251->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_251->sizePolicy().hasHeightForWidth());
+        label_251->setSizePolicy(sizePolicy4);
         label_251->setMinimumSize(QSize(50, 30));
         label_251->setBaseSize(QSize(50, 25));
 
@@ -2376,8 +2391,8 @@ public:
 
         label_253 = new QLabel(scrollAreaWidgetContents_3);
         label_253->setObjectName(QString::fromUtf8("label_253"));
-        sizePolicy3.setHeightForWidth(label_253->sizePolicy().hasHeightForWidth());
-        label_253->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_253->sizePolicy().hasHeightForWidth());
+        label_253->setSizePolicy(sizePolicy4);
         label_253->setMinimumSize(QSize(50, 30));
         label_253->setBaseSize(QSize(50, 25));
 
@@ -2399,8 +2414,8 @@ public:
 
         label_255 = new QLabel(scrollAreaWidgetContents_3);
         label_255->setObjectName(QString::fromUtf8("label_255"));
-        sizePolicy3.setHeightForWidth(label_255->sizePolicy().hasHeightForWidth());
-        label_255->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_255->sizePolicy().hasHeightForWidth());
+        label_255->setSizePolicy(sizePolicy4);
         label_255->setMinimumSize(QSize(50, 30));
         label_255->setBaseSize(QSize(50, 25));
 
@@ -2422,8 +2437,8 @@ public:
 
         label_257 = new QLabel(scrollAreaWidgetContents_3);
         label_257->setObjectName(QString::fromUtf8("label_257"));
-        sizePolicy3.setHeightForWidth(label_257->sizePolicy().hasHeightForWidth());
-        label_257->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_257->sizePolicy().hasHeightForWidth());
+        label_257->setSizePolicy(sizePolicy4);
         label_257->setMinimumSize(QSize(50, 30));
         label_257->setBaseSize(QSize(50, 25));
 
@@ -2445,8 +2460,8 @@ public:
 
         label_259 = new QLabel(scrollAreaWidgetContents_3);
         label_259->setObjectName(QString::fromUtf8("label_259"));
-        sizePolicy3.setHeightForWidth(label_259->sizePolicy().hasHeightForWidth());
-        label_259->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_259->sizePolicy().hasHeightForWidth());
+        label_259->setSizePolicy(sizePolicy4);
         label_259->setMinimumSize(QSize(50, 30));
         label_259->setBaseSize(QSize(50, 25));
 
@@ -2468,8 +2483,8 @@ public:
 
         label_261 = new QLabel(scrollAreaWidgetContents_3);
         label_261->setObjectName(QString::fromUtf8("label_261"));
-        sizePolicy3.setHeightForWidth(label_261->sizePolicy().hasHeightForWidth());
-        label_261->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_261->sizePolicy().hasHeightForWidth());
+        label_261->setSizePolicy(sizePolicy4);
         label_261->setMinimumSize(QSize(50, 30));
         label_261->setBaseSize(QSize(50, 25));
 
@@ -2491,8 +2506,8 @@ public:
 
         label_263 = new QLabel(scrollAreaWidgetContents_3);
         label_263->setObjectName(QString::fromUtf8("label_263"));
-        sizePolicy3.setHeightForWidth(label_263->sizePolicy().hasHeightForWidth());
-        label_263->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_263->sizePolicy().hasHeightForWidth());
+        label_263->setSizePolicy(sizePolicy4);
         label_263->setMinimumSize(QSize(50, 30));
         label_263->setBaseSize(QSize(50, 25));
 
@@ -2514,8 +2529,8 @@ public:
 
         label_265 = new QLabel(scrollAreaWidgetContents_3);
         label_265->setObjectName(QString::fromUtf8("label_265"));
-        sizePolicy3.setHeightForWidth(label_265->sizePolicy().hasHeightForWidth());
-        label_265->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_265->sizePolicy().hasHeightForWidth());
+        label_265->setSizePolicy(sizePolicy4);
         label_265->setMinimumSize(QSize(50, 30));
         label_265->setBaseSize(QSize(50, 25));
 
@@ -2537,8 +2552,8 @@ public:
 
         label_267 = new QLabel(scrollAreaWidgetContents_3);
         label_267->setObjectName(QString::fromUtf8("label_267"));
-        sizePolicy3.setHeightForWidth(label_267->sizePolicy().hasHeightForWidth());
-        label_267->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_267->sizePolicy().hasHeightForWidth());
+        label_267->setSizePolicy(sizePolicy4);
         label_267->setMinimumSize(QSize(50, 30));
         label_267->setBaseSize(QSize(50, 25));
 
@@ -2560,8 +2575,8 @@ public:
 
         label_269 = new QLabel(scrollAreaWidgetContents_3);
         label_269->setObjectName(QString::fromUtf8("label_269"));
-        sizePolicy3.setHeightForWidth(label_269->sizePolicy().hasHeightForWidth());
-        label_269->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_269->sizePolicy().hasHeightForWidth());
+        label_269->setSizePolicy(sizePolicy4);
         label_269->setMinimumSize(QSize(50, 30));
         label_269->setBaseSize(QSize(50, 25));
 
@@ -2583,8 +2598,8 @@ public:
 
         label_271 = new QLabel(scrollAreaWidgetContents_3);
         label_271->setObjectName(QString::fromUtf8("label_271"));
-        sizePolicy3.setHeightForWidth(label_271->sizePolicy().hasHeightForWidth());
-        label_271->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_271->sizePolicy().hasHeightForWidth());
+        label_271->setSizePolicy(sizePolicy4);
         label_271->setMinimumSize(QSize(50, 30));
         label_271->setBaseSize(QSize(50, 25));
 
@@ -2606,8 +2621,8 @@ public:
 
         label_273 = new QLabel(scrollAreaWidgetContents_3);
         label_273->setObjectName(QString::fromUtf8("label_273"));
-        sizePolicy3.setHeightForWidth(label_273->sizePolicy().hasHeightForWidth());
-        label_273->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_273->sizePolicy().hasHeightForWidth());
+        label_273->setSizePolicy(sizePolicy4);
         label_273->setMinimumSize(QSize(50, 30));
         label_273->setBaseSize(QSize(50, 25));
 
@@ -2629,8 +2644,8 @@ public:
 
         label_275 = new QLabel(scrollAreaWidgetContents_3);
         label_275->setObjectName(QString::fromUtf8("label_275"));
-        sizePolicy3.setHeightForWidth(label_275->sizePolicy().hasHeightForWidth());
-        label_275->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_275->sizePolicy().hasHeightForWidth());
+        label_275->setSizePolicy(sizePolicy4);
         label_275->setMinimumSize(QSize(50, 30));
         label_275->setBaseSize(QSize(50, 25));
 
@@ -2652,8 +2667,8 @@ public:
 
         label_7 = new QLabel(scrollAreaWidgetContents_3);
         label_7->setObjectName(QString::fromUtf8("label_7"));
-        sizePolicy3.setHeightForWidth(label_7->sizePolicy().hasHeightForWidth());
-        label_7->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_7->sizePolicy().hasHeightForWidth());
+        label_7->setSizePolicy(sizePolicy4);
         label_7->setMinimumSize(QSize(50, 30));
         label_7->setBaseSize(QSize(50, 25));
 
@@ -2675,8 +2690,8 @@ public:
 
         label_277 = new QLabel(scrollAreaWidgetContents_3);
         label_277->setObjectName(QString::fromUtf8("label_277"));
-        sizePolicy3.setHeightForWidth(label_277->sizePolicy().hasHeightForWidth());
-        label_277->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_277->sizePolicy().hasHeightForWidth());
+        label_277->setSizePolicy(sizePolicy4);
         label_277->setMinimumSize(QSize(50, 30));
         label_277->setBaseSize(QSize(50, 25));
 
@@ -2698,8 +2713,8 @@ public:
 
         label_279 = new QLabel(scrollAreaWidgetContents_3);
         label_279->setObjectName(QString::fromUtf8("label_279"));
-        sizePolicy3.setHeightForWidth(label_279->sizePolicy().hasHeightForWidth());
-        label_279->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_279->sizePolicy().hasHeightForWidth());
+        label_279->setSizePolicy(sizePolicy4);
         label_279->setMinimumSize(QSize(50, 30));
         label_279->setBaseSize(QSize(50, 25));
 
@@ -2721,8 +2736,8 @@ public:
 
         label_281 = new QLabel(scrollAreaWidgetContents_3);
         label_281->setObjectName(QString::fromUtf8("label_281"));
-        sizePolicy3.setHeightForWidth(label_281->sizePolicy().hasHeightForWidth());
-        label_281->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_281->sizePolicy().hasHeightForWidth());
+        label_281->setSizePolicy(sizePolicy4);
         label_281->setMinimumSize(QSize(50, 30));
         label_281->setBaseSize(QSize(50, 25));
 
@@ -2744,8 +2759,8 @@ public:
 
         label_283 = new QLabel(scrollAreaWidgetContents_3);
         label_283->setObjectName(QString::fromUtf8("label_283"));
-        sizePolicy3.setHeightForWidth(label_283->sizePolicy().hasHeightForWidth());
-        label_283->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_283->sizePolicy().hasHeightForWidth());
+        label_283->setSizePolicy(sizePolicy4);
         label_283->setMinimumSize(QSize(50, 30));
         label_283->setBaseSize(QSize(50, 25));
 
@@ -2767,8 +2782,8 @@ public:
 
         label_285 = new QLabel(scrollAreaWidgetContents_3);
         label_285->setObjectName(QString::fromUtf8("label_285"));
-        sizePolicy3.setHeightForWidth(label_285->sizePolicy().hasHeightForWidth());
-        label_285->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_285->sizePolicy().hasHeightForWidth());
+        label_285->setSizePolicy(sizePolicy4);
         label_285->setMinimumSize(QSize(50, 30));
         label_285->setBaseSize(QSize(50, 25));
 
@@ -2790,8 +2805,8 @@ public:
 
         label_287 = new QLabel(scrollAreaWidgetContents_3);
         label_287->setObjectName(QString::fromUtf8("label_287"));
-        sizePolicy3.setHeightForWidth(label_287->sizePolicy().hasHeightForWidth());
-        label_287->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_287->sizePolicy().hasHeightForWidth());
+        label_287->setSizePolicy(sizePolicy4);
         label_287->setMinimumSize(QSize(50, 30));
         label_287->setBaseSize(QSize(50, 25));
 
@@ -2813,8 +2828,8 @@ public:
 
         label_289 = new QLabel(scrollAreaWidgetContents_3);
         label_289->setObjectName(QString::fromUtf8("label_289"));
-        sizePolicy3.setHeightForWidth(label_289->sizePolicy().hasHeightForWidth());
-        label_289->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_289->sizePolicy().hasHeightForWidth());
+        label_289->setSizePolicy(sizePolicy4);
         label_289->setMinimumSize(QSize(50, 30));
         label_289->setBaseSize(QSize(50, 25));
 
@@ -2836,8 +2851,8 @@ public:
 
         label_291 = new QLabel(scrollAreaWidgetContents_3);
         label_291->setObjectName(QString::fromUtf8("label_291"));
-        sizePolicy3.setHeightForWidth(label_291->sizePolicy().hasHeightForWidth());
-        label_291->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_291->sizePolicy().hasHeightForWidth());
+        label_291->setSizePolicy(sizePolicy4);
         label_291->setMinimumSize(QSize(50, 30));
         label_291->setBaseSize(QSize(50, 25));
 
@@ -2859,8 +2874,8 @@ public:
 
         label_293 = new QLabel(scrollAreaWidgetContents_3);
         label_293->setObjectName(QString::fromUtf8("label_293"));
-        sizePolicy3.setHeightForWidth(label_293->sizePolicy().hasHeightForWidth());
-        label_293->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_293->sizePolicy().hasHeightForWidth());
+        label_293->setSizePolicy(sizePolicy4);
         label_293->setMinimumSize(QSize(50, 30));
         label_293->setBaseSize(QSize(50, 25));
 
@@ -2882,8 +2897,8 @@ public:
 
         label_295 = new QLabel(scrollAreaWidgetContents_3);
         label_295->setObjectName(QString::fromUtf8("label_295"));
-        sizePolicy3.setHeightForWidth(label_295->sizePolicy().hasHeightForWidth());
-        label_295->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_295->sizePolicy().hasHeightForWidth());
+        label_295->setSizePolicy(sizePolicy4);
         label_295->setMinimumSize(QSize(50, 30));
         label_295->setBaseSize(QSize(50, 25));
 
@@ -2905,8 +2920,8 @@ public:
 
         label_297 = new QLabel(scrollAreaWidgetContents_3);
         label_297->setObjectName(QString::fromUtf8("label_297"));
-        sizePolicy3.setHeightForWidth(label_297->sizePolicy().hasHeightForWidth());
-        label_297->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_297->sizePolicy().hasHeightForWidth());
+        label_297->setSizePolicy(sizePolicy4);
         label_297->setMinimumSize(QSize(50, 30));
         label_297->setBaseSize(QSize(50, 25));
 
@@ -2928,8 +2943,8 @@ public:
 
         label_299 = new QLabel(scrollAreaWidgetContents_3);
         label_299->setObjectName(QString::fromUtf8("label_299"));
-        sizePolicy3.setHeightForWidth(label_299->sizePolicy().hasHeightForWidth());
-        label_299->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_299->sizePolicy().hasHeightForWidth());
+        label_299->setSizePolicy(sizePolicy4);
         label_299->setMinimumSize(QSize(50, 30));
         label_299->setBaseSize(QSize(50, 25));
 
@@ -2951,8 +2966,8 @@ public:
 
         label_301 = new QLabel(scrollAreaWidgetContents_3);
         label_301->setObjectName(QString::fromUtf8("label_301"));
-        sizePolicy3.setHeightForWidth(label_301->sizePolicy().hasHeightForWidth());
-        label_301->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_301->sizePolicy().hasHeightForWidth());
+        label_301->setSizePolicy(sizePolicy4);
         label_301->setMinimumSize(QSize(50, 30));
         label_301->setBaseSize(QSize(50, 25));
 
@@ -2974,8 +2989,8 @@ public:
 
         label_303 = new QLabel(scrollAreaWidgetContents_3);
         label_303->setObjectName(QString::fromUtf8("label_303"));
-        sizePolicy3.setHeightForWidth(label_303->sizePolicy().hasHeightForWidth());
-        label_303->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_303->sizePolicy().hasHeightForWidth());
+        label_303->setSizePolicy(sizePolicy4);
         label_303->setMinimumSize(QSize(50, 30));
         label_303->setBaseSize(QSize(50, 25));
 
@@ -2997,8 +3012,8 @@ public:
 
         label_305 = new QLabel(scrollAreaWidgetContents_3);
         label_305->setObjectName(QString::fromUtf8("label_305"));
-        sizePolicy3.setHeightForWidth(label_305->sizePolicy().hasHeightForWidth());
-        label_305->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_305->sizePolicy().hasHeightForWidth());
+        label_305->setSizePolicy(sizePolicy4);
         label_305->setMinimumSize(QSize(50, 30));
         label_305->setBaseSize(QSize(50, 25));
 
@@ -3020,8 +3035,8 @@ public:
 
         label_307 = new QLabel(scrollAreaWidgetContents_3);
         label_307->setObjectName(QString::fromUtf8("label_307"));
-        sizePolicy3.setHeightForWidth(label_307->sizePolicy().hasHeightForWidth());
-        label_307->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_307->sizePolicy().hasHeightForWidth());
+        label_307->setSizePolicy(sizePolicy4);
         label_307->setMinimumSize(QSize(50, 30));
         label_307->setBaseSize(QSize(50, 25));
 
@@ -3043,8 +3058,8 @@ public:
 
         label_309 = new QLabel(scrollAreaWidgetContents_3);
         label_309->setObjectName(QString::fromUtf8("label_309"));
-        sizePolicy3.setHeightForWidth(label_309->sizePolicy().hasHeightForWidth());
-        label_309->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_309->sizePolicy().hasHeightForWidth());
+        label_309->setSizePolicy(sizePolicy4);
         label_309->setMinimumSize(QSize(50, 30));
         label_309->setBaseSize(QSize(50, 25));
 
@@ -3066,8 +3081,8 @@ public:
 
         label_311 = new QLabel(scrollAreaWidgetContents_3);
         label_311->setObjectName(QString::fromUtf8("label_311"));
-        sizePolicy3.setHeightForWidth(label_311->sizePolicy().hasHeightForWidth());
-        label_311->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_311->sizePolicy().hasHeightForWidth());
+        label_311->setSizePolicy(sizePolicy4);
         label_311->setMinimumSize(QSize(50, 30));
         label_311->setBaseSize(QSize(50, 25));
 
@@ -3089,8 +3104,8 @@ public:
 
         label_313 = new QLabel(scrollAreaWidgetContents_3);
         label_313->setObjectName(QString::fromUtf8("label_313"));
-        sizePolicy3.setHeightForWidth(label_313->sizePolicy().hasHeightForWidth());
-        label_313->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_313->sizePolicy().hasHeightForWidth());
+        label_313->setSizePolicy(sizePolicy4);
         label_313->setMinimumSize(QSize(50, 30));
         label_313->setBaseSize(QSize(50, 25));
 
@@ -3112,8 +3127,8 @@ public:
 
         label_315 = new QLabel(scrollAreaWidgetContents_3);
         label_315->setObjectName(QString::fromUtf8("label_315"));
-        sizePolicy3.setHeightForWidth(label_315->sizePolicy().hasHeightForWidth());
-        label_315->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_315->sizePolicy().hasHeightForWidth());
+        label_315->setSizePolicy(sizePolicy4);
         label_315->setMinimumSize(QSize(50, 30));
         label_315->setBaseSize(QSize(50, 25));
 
@@ -3135,8 +3150,8 @@ public:
 
         label_317 = new QLabel(scrollAreaWidgetContents_3);
         label_317->setObjectName(QString::fromUtf8("label_317"));
-        sizePolicy3.setHeightForWidth(label_317->sizePolicy().hasHeightForWidth());
-        label_317->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_317->sizePolicy().hasHeightForWidth());
+        label_317->setSizePolicy(sizePolicy4);
         label_317->setMinimumSize(QSize(50, 30));
         label_317->setBaseSize(QSize(50, 25));
 
@@ -3158,8 +3173,8 @@ public:
 
         label_319 = new QLabel(scrollAreaWidgetContents_3);
         label_319->setObjectName(QString::fromUtf8("label_319"));
-        sizePolicy3.setHeightForWidth(label_319->sizePolicy().hasHeightForWidth());
-        label_319->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_319->sizePolicy().hasHeightForWidth());
+        label_319->setSizePolicy(sizePolicy4);
         label_319->setMinimumSize(QSize(50, 30));
         label_319->setBaseSize(QSize(50, 25));
 
@@ -3181,8 +3196,8 @@ public:
 
         label_321 = new QLabel(scrollAreaWidgetContents_3);
         label_321->setObjectName(QString::fromUtf8("label_321"));
-        sizePolicy3.setHeightForWidth(label_321->sizePolicy().hasHeightForWidth());
-        label_321->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_321->sizePolicy().hasHeightForWidth());
+        label_321->setSizePolicy(sizePolicy4);
         label_321->setMinimumSize(QSize(50, 30));
         label_321->setBaseSize(QSize(50, 25));
 
@@ -3204,8 +3219,8 @@ public:
 
         label_323 = new QLabel(scrollAreaWidgetContents_3);
         label_323->setObjectName(QString::fromUtf8("label_323"));
-        sizePolicy3.setHeightForWidth(label_323->sizePolicy().hasHeightForWidth());
-        label_323->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_323->sizePolicy().hasHeightForWidth());
+        label_323->setSizePolicy(sizePolicy4);
         label_323->setMinimumSize(QSize(50, 30));
         label_323->setBaseSize(QSize(50, 25));
 
@@ -3227,8 +3242,8 @@ public:
 
         label_325 = new QLabel(scrollAreaWidgetContents_3);
         label_325->setObjectName(QString::fromUtf8("label_325"));
-        sizePolicy3.setHeightForWidth(label_325->sizePolicy().hasHeightForWidth());
-        label_325->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_325->sizePolicy().hasHeightForWidth());
+        label_325->setSizePolicy(sizePolicy4);
         label_325->setMinimumSize(QSize(50, 30));
         label_325->setBaseSize(QSize(50, 25));
 
@@ -3250,8 +3265,8 @@ public:
 
         label_327 = new QLabel(scrollAreaWidgetContents_3);
         label_327->setObjectName(QString::fromUtf8("label_327"));
-        sizePolicy3.setHeightForWidth(label_327->sizePolicy().hasHeightForWidth());
-        label_327->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_327->sizePolicy().hasHeightForWidth());
+        label_327->setSizePolicy(sizePolicy4);
         label_327->setMinimumSize(QSize(50, 30));
         label_327->setBaseSize(QSize(50, 25));
 
@@ -3273,8 +3288,8 @@ public:
 
         label_329 = new QLabel(scrollAreaWidgetContents_3);
         label_329->setObjectName(QString::fromUtf8("label_329"));
-        sizePolicy3.setHeightForWidth(label_329->sizePolicy().hasHeightForWidth());
-        label_329->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_329->sizePolicy().hasHeightForWidth());
+        label_329->setSizePolicy(sizePolicy4);
         label_329->setMinimumSize(QSize(50, 30));
         label_329->setBaseSize(QSize(50, 25));
 
@@ -3296,8 +3311,8 @@ public:
 
         label_331 = new QLabel(scrollAreaWidgetContents_3);
         label_331->setObjectName(QString::fromUtf8("label_331"));
-        sizePolicy3.setHeightForWidth(label_331->sizePolicy().hasHeightForWidth());
-        label_331->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_331->sizePolicy().hasHeightForWidth());
+        label_331->setSizePolicy(sizePolicy4);
         label_331->setMinimumSize(QSize(50, 30));
         label_331->setBaseSize(QSize(50, 25));
 
@@ -3319,8 +3334,8 @@ public:
 
         label_333 = new QLabel(scrollAreaWidgetContents_3);
         label_333->setObjectName(QString::fromUtf8("label_333"));
-        sizePolicy3.setHeightForWidth(label_333->sizePolicy().hasHeightForWidth());
-        label_333->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_333->sizePolicy().hasHeightForWidth());
+        label_333->setSizePolicy(sizePolicy4);
         label_333->setMinimumSize(QSize(50, 30));
         label_333->setBaseSize(QSize(50, 25));
 
@@ -3342,8 +3357,8 @@ public:
 
         label_335 = new QLabel(scrollAreaWidgetContents_3);
         label_335->setObjectName(QString::fromUtf8("label_335"));
-        sizePolicy3.setHeightForWidth(label_335->sizePolicy().hasHeightForWidth());
-        label_335->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_335->sizePolicy().hasHeightForWidth());
+        label_335->setSizePolicy(sizePolicy4);
         label_335->setMinimumSize(QSize(50, 30));
         label_335->setBaseSize(QSize(50, 25));
 
@@ -3452,7 +3467,7 @@ public:
 
         retranslateUi(Torg);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Torg);
@@ -3580,6 +3595,7 @@ public:
         label_1100PM->setText(QString());
         label_112->setText(QCoreApplication::translate("Torg", "11:30 PM -", nullptr));
         label_1130PM->setText(QString());
+        reset_Single->setText(QCoreApplication::translate("Torg", "Reset", nullptr));
         lineEdit_Title_Single->setInputMask(QString());
         lineEdit_Title_Single->setText(QString());
         lineEdit_Title_Single->setPlaceholderText(QCoreApplication::translate("Torg", "Title", nullptr));

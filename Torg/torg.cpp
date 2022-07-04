@@ -289,7 +289,7 @@ void Torg::on_pushButton_Add_Single_clicked()
     QString startTime = ui->Create_Single->findChild<QTimeEdit *>("timeEditStart_Single")->text();
     QString endTime = ui->Create_Single->findChild<QTimeEdit *>("timeEditEnd_Single")->text();
     QDate date = ui->Create_Single->findChild<QDateEdit *>("dateEdit_Single")->date();
-    QString repeat = ui->Create_Single->findChild<QComboBox *>("comboBox_Repeat_Single")->currentText();
+    QString repeat = ui->Create_Single->findChild<QComboBox *>("comboBox_Repeat_Single")->currentText(); //Need to process at somepoint
     QString reminder = ui->Create_Single->findChild<QComboBox *>("comboBox_Reminder_Single")->currentText(); //Need to process at somepoint
     QString color = ui->Create_Single->findChild<QComboBox *>("comboBox_Color_Single")->currentText();
     bool concrete = ui->Create_Single->findChild<QRadioButton *>("radioButton_Concrete_Single")->isChecked();
@@ -319,6 +319,12 @@ void Torg::on_pushButton_Add_Single_clicked()
     ui->stackedWidget->setCurrentWidget(ui->Day_View);
 
     //Reset progress bar and input fields to allow for new event to be created
+    resetSingleProgressBar();
+    resetSingleInputFields();
+}
+
+void Torg::on_reset_Single_clicked()
+{
     resetSingleProgressBar();
     resetSingleInputFields();
 }
@@ -382,12 +388,9 @@ void Torg::on_sideMenuToggleButton_clicked()
         QRect stackedWidgetEndValue(this->ui->stackedWidget->geometry());
         QRect sideMenuEndValue(this->ui->SideMenuFrame->geometry());
 
-        //Calcaulate the change in size needed
-        int deltaX = sideMenuEndValue.width() - ((stackedWidgetEndValue.width() + sideMenuEndValue.width()) * sideMenuPercentOfScreenClosed);
-
         // Y-Values and Heights don't need to change
-        stackedWidgetEndValue.setWidth(stackedWidgetEndValue.width() + deltaX); //Only Width is changing, not postion
-        sideMenuEndValue.setX(sideMenuEndValue.x() + deltaX); //Position Changes (Width automatically changes)
+        stackedWidgetEndValue.setWidth(stackedWidgetEndValue.width() + sideMenuDeltaX); //Only Width is changing, not postion
+        sideMenuEndValue.setX(sideMenuEndValue.x() + sideMenuDeltaX); //Position Changes (Width automatically changes)
 
         //Apply the new End Values
         stackedWidgetAnimator->setEndValue(stackedWidgetEndValue);
@@ -399,12 +402,12 @@ void Torg::on_sideMenuToggleButton_clicked()
         QRect stackedWidgetEndValue(this->ui->stackedWidget->geometry());
         QRect sideMenuEndValue(this->ui->SideMenuFrame->geometry());
 
-        //Calcaulate the change in size needed
-        int deltaX = ((stackedWidgetEndValue.width() + sideMenuEndValue.width()) * sideMenuPercentOfScreenOpened) - sideMenuEndValue.width();
+        //Calcaulate the change in size needed to be the proper percent of the screen when opened
+        sideMenuDeltaX = ((stackedWidgetEndValue.width() + sideMenuEndValue.width()) * sideMenuPercentOfScreenOpened) - sideMenuEndValue.width();
 
         // Y-Values and Heights don't need to change
-        stackedWidgetEndValue.setWidth(stackedWidgetEndValue.width() - deltaX); //Only Width is changing, not postion
-        sideMenuEndValue.setX(sideMenuEndValue.x() - deltaX); //Position Changes (Width automatically changes)
+        stackedWidgetEndValue.setWidth(stackedWidgetEndValue.width() - sideMenuDeltaX); //Only Width is changing, not postion
+        sideMenuEndValue.setX(sideMenuEndValue.x() - sideMenuDeltaX); //Position Changes (Width automatically changes)
 
         //Apply the new End Values
         stackedWidgetAnimator->setEndValue(stackedWidgetEndValue);
@@ -438,4 +441,3 @@ void Torg::on_workingDayLabel_customContextMenuRequested(const QPoint &pos)
     ui->stackedWidget->setCurrentWidget(ui->Create_Single);
     setDateInputFields(this->workingDate, false);
 }
-

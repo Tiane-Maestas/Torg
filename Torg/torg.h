@@ -52,6 +52,9 @@ private slots:
     //Brings you to single event creation with that working day (Right Click Event)
     void on_workingDayLabel_customContextMenuRequested(const QPoint &pos);
 
+    //Allows for reset single event creation page
+    void on_reset_Single_clicked();
+
 private:
     Ui::Torg *ui;
 
@@ -88,6 +91,7 @@ private:
     bool sideMenuOpened = false;
     float sideMenuPercentOfScreenOpened = 0.30;
     float sideMenuPercentOfScreenClosed = 0.05;
+    int sideMenuDeltaX;
 
     //Helpers for setting event creation input fields without changing the progress bars
     void setDateInputFields(QDate date, bool changeDynamically);
@@ -111,7 +115,7 @@ private:
     const QMap<QString, QString> colorMap = {{"Red", "QLabel { background-color : #910d14; color: white;} QLabel:hover{background-color: #ffaa00; color: black;}"},
                                             {"Blue", "QLabel { background-color : #131875; color: white;} QLabel:hover{background-color: #ffaa00; color: black;}"},
                                             {"Green", "QLabel { background-color : #14450e; color: white;} QLabel:hover{background-color: #ffaa00; color: black;}"},
-                                            {"Yellow", "QLabel { background-color : #d4d139; color: white;} QLabel:hover{background-color: #ffaa00; color: black;}"},
+                                            {"Yellow", "QLabel { background-color : #d4d139; color: black;} QLabel:hover{background-color: #ffaa00; color: black;}"},
                                             {"Pink", "QLabel { background-color : #ce39d4; color: white;} QLabel:hover{background-color: #ffaa00; color: black;}"},
                                             {"Black", "QLabel { background-color : #0f101f; color: white;} QLabel:hover{background-color: #ffaa00; color: black;}"}};
     //To be able to revert label color back to normal
